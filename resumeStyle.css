@@ -1,0 +1,173 @@
+/* logo styling */
+
+.squareLogo {
+    width: 70px;
+    height: auto;
+
+    padding: 10px 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    padding: 25px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+
+    margin-right: auto;
+}
+
+/* nav bar styling */
+
+.nav {
+    list-style-type: none;
+    font-size: 23px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    top: 0;
+    margin: 0;
+    padding: 0;
+
+    /*flexbox*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.nav li {
+    list-style-type: none;
+    padding: 12px;
+    display: flex;            /* NEW; nested flex container */
+    justify-content: center;  /* NEW; align anchor elements horizontally */
+    align-items: center; 
+}
+
+.more {
+    margin-right: 20px;
+}
+
+/*
+.more, .navLink {
+    padding: 10px;
+}
+*/
+
+/* nav bar links and shit */
+.more a:link, .navLink a:link {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.logo a:link {
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.more a:hover, .navLink a:hover {
+    color: black;
+    background-color: #FFEE9D;
+}
+
+
+/* resume image styling */
+.resume {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    margin-top: 50px;
+}
+
+.resume img {
+    width: 65vw;
+    height: auto;
+}
+
+
+
+/* little blurb styling */
+.blurb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 60px;
+}
+
+h1, h2 {
+    font-size: 18px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+
+    margin: 0;
+}
+
+h2 {
+    color: #707070;
+}
+
+.pdf a:link {
+    text-decoration: none;
+    color: black;
+
+    font-size: 25px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+
+    padding: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 8px #FF655F;
+    
+    margin-top: 15px;
+}
+
+.pdf a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* footer styling */
+
+.footer {
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.footer li {
+    padding: 0;
+}
+
+.leftFoot {
+    margin-right: 20vw;
+    margin-left: 0;
+}
+
+.rightFoot {
+    margin-left: 20vw;
+    margin-right: 0;
+}
+
+
+
+

@@ -1,0 +1,130 @@
+/* logo styling */
+
+.squareLogo {
+    width: 70px;
+    height: auto;
+
+    padding: 10px 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    padding: 25px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+
+    margin-right: auto;
+}
+
+/* nav bar styling */
+
+.nav {
+    list-style-type: none;
+    font-size: 18px;
+    font-family: 'Source Code Pro', monospace;
+    top: 0;
+    margin: 0;
+    padding: 0;
+
+    /*flexbox*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.nav li {
+    list-style-type: none;
+    padding: 12px;
+    display: flex;            /* NEW; nested flex container */
+    justify-content: center;  /* NEW; align anchor elements horizontally */
+    align-items: center; 
+}
+
+.more {
+    margin-right: 20px;
+}
+
+/*
+.more, .navLink {
+    padding: 10px;
+}
+*/
+
+/* nav bar links and shit */
+.more a:link, .navLink a:link {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.logo a:link {
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.more a:hover, .navLink a:hover {
+    color: black;
+    background-color: #FFEE9D;
+}
+
+
+/*  content styling */
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 50px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin-right: 2vw;
+}
+
+.text h1, .text p {
+    margin: 0;
+}
+
+.selfPhoto {
+    display: flex;
+    justify-content: center;
+
+    margin-left: 2vw;
+}
+
+.selfPhoto img {
+    width: 25vw;
+    box-shadow: 8px 8px 15px #445DC9;
+}
+
+.text h1 {
+    color: #FF655F;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 45px;
+}
+
+.text p {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 24px;
+    font-weight: lighter;
+}
