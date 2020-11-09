@@ -114,6 +114,7 @@
 
 .selfPhoto img {
     width: 25vw;
+    height: auto;
     box-shadow: 8px 8px 15px #445DC9;
 }
 
@@ -127,4 +128,77 @@
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 24px;
     font-weight: lighter;
+}
+
+
+/* social styling */
+
+.socials {
+    display: flex;
+    justify-content: flex-start;
+
+    margin-top: 50px;
+    margin-left: 14vw;
+
+}
+
+
+.abstract {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+}
+
+
+.socials svg {
+    width: 30px;
+    height: auto;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 12px;
+}
+
+.emailIcon {
+    margin-top: 3px;
+}
+
+.socials a:hover {
+    fill: #445DC9;
+}
+
+
+/* footer styling */
+
+.footer {
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+
+    margin-top: 100px;
+}
+
+.footer li {
+    padding: 0;
+}
+
+
+.leftFoot {
+    margin-right: 20vw;
+    margin-left: 0;
+}
+
+.rightFoot {
+    margin-left: 20vw;
+    margin-right: 0;
+}
+
+
+.github {
+    color: black;
 }

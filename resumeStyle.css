@@ -28,7 +28,7 @@
 
 .nav {
     list-style-type: none;
-    font-size: 23px;
+    font-size: 18px;
     font-family: 'Source Code Pro', monospace;
     font-weight: 500;
     top: 0;
@@ -166,6 +166,10 @@ h2 {
 .rightFoot {
     margin-left: 20vw;
     margin-right: 0;
+}
+
+.github {
+    color: black;
 }
 
 
