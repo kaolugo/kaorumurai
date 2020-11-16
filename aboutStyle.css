@@ -68,6 +68,7 @@
 .logo a:link {
     padding: 0;
     text-decoration: none;
+    color: black;
 }
 
 .nav a:visited {
@@ -115,6 +116,7 @@
 .selfPhoto img {
     width: 25vw;
     height: auto;
+    align-self: center;
     box-shadow: 8px 8px 15px #445DC9;
 }
 
@@ -201,4 +203,5 @@
 
 .github {
     color: black;
+    text-decoration: underline;
 }

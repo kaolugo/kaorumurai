@@ -69,6 +69,7 @@
 .logo a:link {
     padding: 0;
     text-decoration: none;
+    color: black;
 }
 
 .nav a:visited {
@@ -167,7 +168,7 @@ button:hover {
 }
 
 #digital, #video {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
@@ -178,7 +179,7 @@ button:hover {
 }
 
 #nail {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
@@ -195,6 +196,9 @@ button:hover {
     width: 400px; 
     height: auto;
 
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     /*box-shadow: 10px 10px 15px grey;*/
     filter: drop-shadow(10px 10px 10px grey);
 
@@ -207,3 +211,39 @@ button:hover {
     align-self: center;
 }
 
+
+/* footer styling */
+
+.footer {
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+
+    margin-top: 100px;
+}
+
+.footer li {
+    padding: 0;
+}
+
+
+.leftFoot {
+    margin-right: 20vw;
+    margin-left: 0;
+}
+
+.rightFoot {
+    margin-left: 20vw;
+    margin-right: 0;
+}
+
+
+.github {
+    color: black;
+    text-decoration: underline;
+}

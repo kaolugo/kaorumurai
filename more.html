@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;600&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">    
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">  
         <!-- Favicon <link rel="icon" type="image/x-icon" href="icon.ico"/>-->
         <title>More Kaoru Murai</title>
     </head>
@@ -71,123 +71,47 @@
             <img src = "img/style/art4.png" alt = "Oooz">
         </div>
 
+        <ul class = "footer">
+            <li class = "leftFoot">Copyright © 2020 Kaoru Murai</li>
+            <li class = "rightFoot">Handcrafted with &lt3 on <a class = "github" href = "https://github.com/kaolugo/kaorumurai">kaolugo</a>.</li>
+        </ul>
 
         <script>
-            var a = document.getElementById("analog");
-            var d = document.getElementById("digital");
-            var v = document.getElementById("video");
-            var s = document.getElementById("nail");
+
+            const a = document.getElementById("analog");
+            const d = document.getElementById("digital");
+            const v = document.getElementById("video");
+            const s = document.getElementById("nail");
 
             function analog() {
-                /*
-              var sections = ["digital", "video", "style"];
-              for (var i = 0; i < sections.length; i++) {
-                  if (sections[i].style.display === "flex") {
-                        var x = document.getElementById(sections[i]);
-                        x.style.display === "none";
-                  }
-              }
-
-              a.style.display = "flex";
-              */
-             if (d.style.display === "flex") {
-                 d.style.display = "none";
-             }
-
-             if (v.style.display === "flex") {
-                 v.style.display = "none";
-             }
-
-             if (s.style.display === "flex") {
-                 s.style.display = "none";
-             }
-
-             a.style.display = "flex";
+                d.style.display = "none";
+                v.style.display = "none";
+                s.style.display = "none";
+                a.style.display = "flex";
             }
 
-            
+
             function digital() {
-                /*
-                var sections = ["analog", "video", "style"];
-                for (var i = 0; i < sections.length; i++) {
-                    if (sections[i].style.display === "flex") {
-                        var x = document.getElementById(sections[i]);
-                        x.style.display === "none";
-                    }
-                }
-                d.style.display = "flex";
-                */
-
-                if (a.style.display === "flex") {
-                    a.style.display = "none";
-                }
-
-                if (v.style.display === "flex") {
-                    v.style.display = "none";
-                }
-
-                if (s.style.display === "flex") {
-                    s.style.display = "none";
-                }
-
+                a.style.display = "none";
+                v.style.display = "none";
+                s.style.display = "none";
                 d.style.display = "flex";
             }
 
             function video() {
-                /*
-                var sections = ["analog", "digital", "style"];
-                for (var i = 0; i < sections.length; i++) {
-                    if (sections[i].style.display === "flex") {
-                        var x = document.getElementById(sections[i]);
-                        x.style.display === "none";
-                    }
-                }
-
-                v.style.display = "flex";
-                */
-                if (d.style.display === "flex") {
-                    d.style.display = "none";
-                }
-
-                if (a.style.display === "flex") {
-                    a.style.display = "none";
-                }
-
-                if (s.style.display === "flex") {
-                    s.style.display = "none";
-                }
-
+                d.style.display = "none";
+                a.style.display = "none";
+                s.style.display = "none";
                 v.style.display = "flex";
             }
 
             function nail() {
-                /*
-                var sections = ["analog", "video", "digital"];
-                for (var i = 0; i < sections.length; i++) {
-                    if (sections[i].style.display === "flex") {
-                        var x = document.getElementById(sections[i]);
-                        x.style.display === "none";
-                    }
-                }
-
-                s.style.display = "flex";
-                */
-
-                if (d.style.display === "flex") {
-                    d.style.display = "none";
-                }
-
-                if (v.style.display === "flex") {
-                    v.style.display = "none";
-                }
-
-                if (a.style.display === "flex") {
-                    a.style.display = "none";
-                }
-
+                d.style.display = "none";
+                v.style.display = "none";
+                a.style.display = "none";
                 s.style.display = "flex";
             }
-            
         </script>
+        
     </body>
 </html>

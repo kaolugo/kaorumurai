@@ -69,6 +69,7 @@
 .logo a:link {
     padding: 0;
     text-decoration: none;
+    color: black;
 }
 
 .nav a:visited {
@@ -94,6 +95,8 @@
 .resume img {
     width: 65vw;
     height: auto;
+
+    align-self: center;
 }
 
 
@@ -170,6 +173,7 @@ h2 {
 
 .github {
     color: black;
+    text-decoration: underline;
 }
 
 
