@@ -5,11 +5,189 @@
         <meta name = "viewport" content = "width=device-width, initial-scale = 1">
         <meta name="description" content="The portfolio site for Kaoru Murai, including CS projects, websites, design work, and art.">
         <link rel="stylesheet" type="text/css" href="moreStyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">    
         <!-- Favicon <link rel="icon" type="image/x-icon" href="icon.ico"/>-->
         <title>More Kaoru Murai</title>
     </head>
     
     <body>
+        <ul class = "nav">
+            <li><img src = "img/siteLogo.png" alt = "Kaoru Logo" class = "squareLogo"></li>
+            <li class = "logo"><a href = "index.html">Kaoru Murai</a></li>
+            <li class = "navLink"><a href = "about.html">ABOUT</a></li>
+            <li class = "navLink"><a href = "index.html#work">WORK</a></li>
+            <li class = "navLink"><a href = "resume.html">RESUME</a></li>
+            <li class = "more"><a href = "more.html">MORE+</a></li>
+        </ul>
 
+        <div class = "intro">
+            <ul class = "title">
+                <li class = "blue">More Work.</li>
+                <li class = "red">More Passion.</li>
+                <li class = "yellow">More Love.</li>
+            </ul>
+
+            <div class = "subTitle">
+                <h1>Things I've made, just for sh!ts and giggles.</h1>
+                <ul class = "subNav">
+                    <li><button onclick = "analog()">ANALOG</button></li>
+                    <li><button onclick = "digital()">DIGITAL</button></li>
+                    <li><button onclick = "video()">VIDEO</button></li>
+                    <li><button onclick = "nail()">STYLE</button></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id = "analog">
+            <img src = "img/analog/art1.png" alt = "Perspective">
+            <img src = "img/analog/art2.png" alt = "Value Shading">
+            <img src = "img/analog/art3.png" alt = "Drapery">
+            <img src = "img/analog/art4.png" alt = "State Street">
+            <img src = "img/analog/art5.png" alt = "Joji Eric">
+            <img src = "img/analog/art6.png" alt = "Whisp">
+        </div>
+
+        <div id = "digital">
+            <img src = "img/digital/art1.png" alt = "Perspective">
+            <img src = "img/digital/art2.png" alt = "Value Shading">
+            <img src = "img/digital/art3.png" alt = "Drapery">
+            <img src = "img/digital/art4.png" alt = "State Street">
+            <img src = "img/digital/art5.png" alt = "Joji Eric">
+        </div>
+
+        <div id = "video">
+            <iframe width="500" height="300" src="https://www.youtube.com/embed/TMa8ZfCdH1U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div id = "nail">
+            <img src = "img/style/art1.png" alt = "Clouds">
+            <img src = "img/style/art2.png" alt = "Primaries">
+            <img src = "img/style/art3.png" alt = "Eggs">
+            <img src = "img/style/art4.png" alt = "Oooz">
+        </div>
+
+
+        <script>
+            var a = document.getElementById("analog");
+            var d = document.getElementById("digital");
+            var v = document.getElementById("video");
+            var s = document.getElementById("nail");
+
+            function analog() {
+                /*
+              var sections = ["digital", "video", "style"];
+              for (var i = 0; i < sections.length; i++) {
+                  if (sections[i].style.display === "flex") {
+                        var x = document.getElementById(sections[i]);
+                        x.style.display === "none";
+                  }
+              }
+
+              a.style.display = "flex";
+              */
+             if (d.style.display === "flex") {
+                 d.style.display = "none";
+             }
+
+             if (v.style.display === "flex") {
+                 v.style.display = "none";
+             }
+
+             if (s.style.display === "flex") {
+                 s.style.display = "none";
+             }
+
+             a.style.display = "flex";
+            }
+
+            
+            function digital() {
+                /*
+                var sections = ["analog", "video", "style"];
+                for (var i = 0; i < sections.length; i++) {
+                    if (sections[i].style.display === "flex") {
+                        var x = document.getElementById(sections[i]);
+                        x.style.display === "none";
+                    }
+                }
+                d.style.display = "flex";
+                */
+
+                if (a.style.display === "flex") {
+                    a.style.display = "none";
+                }
+
+                if (v.style.display === "flex") {
+                    v.style.display = "none";
+                }
+
+                if (s.style.display === "flex") {
+                    s.style.display = "none";
+                }
+
+                d.style.display = "flex";
+            }
+
+            function video() {
+                /*
+                var sections = ["analog", "digital", "style"];
+                for (var i = 0; i < sections.length; i++) {
+                    if (sections[i].style.display === "flex") {
+                        var x = document.getElementById(sections[i]);
+                        x.style.display === "none";
+                    }
+                }
+
+                v.style.display = "flex";
+                */
+                if (d.style.display === "flex") {
+                    d.style.display = "none";
+                }
+
+                if (a.style.display === "flex") {
+                    a.style.display = "none";
+                }
+
+                if (s.style.display === "flex") {
+                    s.style.display = "none";
+                }
+
+                v.style.display = "flex";
+            }
+
+            function nail() {
+                /*
+                var sections = ["analog", "video", "digital"];
+                for (var i = 0; i < sections.length; i++) {
+                    if (sections[i].style.display === "flex") {
+                        var x = document.getElementById(sections[i]);
+                        x.style.display === "none";
+                    }
+                }
+
+                s.style.display = "flex";
+                */
+
+                if (d.style.display === "flex") {
+                    d.style.display = "none";
+                }
+
+                if (v.style.display === "flex") {
+                    v.style.display = "none";
+                }
+
+                if (a.style.display === "flex") {
+                    a.style.display = "none";
+                }
+
+                s.style.display = "flex";
+            }
+            
+        </script>
     </body>
 </html>

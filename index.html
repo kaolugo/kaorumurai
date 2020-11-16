@@ -5,11 +5,203 @@
         <meta name = "viewport" content = "width=device-width, initial-scale = 1">
         <meta name="description" content="The portfolio site for Kaoru Murai, including CS projects, websites, design work, and art.">
         <link rel="stylesheet" type="text/css" href="indexStyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">    
         <!-- Favicon <link rel="icon" type="image/x-icon" href="icon.ico"/>-->
         <title>Kaoru Murai</title>
     </head>
     
     <body>
+        <ul class = "nav">
+            <li><img src = "img/siteLogo.png" alt = "Kaoru Logo" class = "squareLogo"></li>
+            <li class = "logo"><a href = "index.html">Kaoru Murai</a></li>
+            <li class = "navLink"><a href = "about.html">ABOUT</a></li>
+            <li class = "navLink"><a href = "#work">WORK</a></li>
+            <li class = "navLink"><a href = "resume.html">RESUME</a></li>
+            <li class = "more"><a href = "more.html">MORE+</a></li>
+        </ul>
 
+        <div id = "intro">
+            <div id = "text">
+                <h1>Hello & Welcome.<br>
+                My name is Kaoru Murai.</h1>
+
+                <div id = "animation">
+                    <h2>I am a </h2>
+                    <!--<h3>ENGINEER</h3>-->
+                    <div id="changeText" title = "ENGINEER.">ENGINEER.</div>
+
+                    <script>
+                        var text = ["DESIGNER.", "ARTIST.", "CREATIVE.", "ENGINEER."];
+                        var counter = 0;
+                        var elem = document.getElementById("changeText");
+                        var inst = setInterval(change,1500);
+
+                        function change() {
+                            elem.innerHTML = text[counter];
+                            elem.title = text[counter];
+                            counter++;
+                            if (counter >= text.length) {
+                                counter = 0;
+                            }
+                        }
+                    </script>
+
+                </div>
+
+                <h4>My passion is connecting with others through the experiences I create.</h4>
+            </div>
+            
+            <div class = "selfPhoto">
+                <img src = "img/selfPortrait.png" alt = "kaoru murai self portrait">
+            </div>
+
+        </div>
+
+
+
+        <div id = "work">
+            <div id = "col1">
+                <a href = "about.html">
+                    <div id ="card" class = "red">
+                        <div id = "workTitle" class = "white">Yaochi</div>
+                        <div id = "subTitle" class = "white">Freelance Design + Web Development</div>
+                        <div id = "duration" class = "black">June 2020 - Present</div>
+
+                        <div id = "workContent">
+                            <div id = "workText">
+                                <div id = "descriptionYaochi" class = "black">A okonomiyaki restaurant based in Takarazuka, Japan. Designed their digital brand from scratch, built a restaurant homepage, and now working on engineering a customized online ordering platform.</div>
+                                <div id = "skillsTitle" class = "white">SKILLS + TOOLS:</div>
+                                <div id = "skills" class = "black">Adobe XD, Adobe InDesign, Adobe Illustrator, HTML, CSS, Javascript, Japanese</div>
+                            </div>
+
+                            <div id = "workLogo">
+                                <img class = "yaochi" src = "img/yaochiLogo.png" alt = "Yaochi Logo">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href = "about.html">
+                    <div id ="card" class = "blue">
+                        <div id = "workTitle" class = "white">Rookie Road</div>
+                        <div id = "subTitle" class = "white">Software Engineering + UX Design Internship</div>
+                        <div id = "duration" class = "white">May 2020 - Aug.2020</div>
+
+                        <div id = "workContent">
+                            <div id = "workText">
+                                <div id = "description" class = "white">A joint engineering and design internship with Rookie Road, an online resource that provides high quality educational content on all things sports.</div>
+                                <div id = "skillsTitle" class = "white">SKILLS + TOOLS:</div>
+                                <div id = "skills" class = "white">Adobe XD, Prototyping, User Research, Information Analysis, Javascript</div>
+                            </div>
+
+                            <div id = "workLogo">
+                                <img class = "rookieRoad" src = "img/rookieRoadLogo.png" alt = "Rookie Road Logo">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href = "about.html">
+                    <div id ="card" class = "yellow">
+                        <div id = "workTitle" class = "black">The Good News</div>
+                        <div id = "subTitle" class = "black">2 Day Passion Project, Website</div>
+                        <div id = "duration" class = "black">July 2020</div>
+
+                        <div id = "workContent">
+                            <div id = "workText">
+                                <div id = "description" class = "black">A wholesome website that exclusively curates positive news stories collected with a customized web scraper. Created in response to the prompt: how might we empower people in the world after COVID-19 ?</div>
+                                <div id = "skillsTitle" class = "black">SKILLS + TOOLS:</div>
+                                <div id = "skills" class = "black">Adobe XD, Python, HTML, CSS, Javascript</div>
+                            </div>
+
+                            <div id = "workLogo">
+                                <img class = "goodNews" src = "img/goodNewsLogo.png" alt = "Rookie Road Logo">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div id = "col2">
+                <a href = "about.html">
+                    <div id ="card" class = "blue">
+                        <div id = "workTitle" class = "white">Sandbox Logos</div>
+                        <div id = "subTitle" class = "white">1 Day Passion Project, Branding</div>
+                        <div id = "duration" class = "white">October 2020</div>
+
+                        <div id = "workContent">
+                            <div id = "workText">
+                                <div id = "description" class = "white">An intellectual and creative branding exercise on how I can represent four very different groups of people who all have an extremely distinct vibe and focus, with one logo.</div>
+                                <div id = "skillsTitle" class = "white">SKILLS + TOOLS:</div>
+                                <div id = "skills" class = "white">Adobe Photoshop, Adobe Illustrator, Logo Design, Branding</div>
+                            </div>
+
+                            <div id = "workLogo">
+                                <img class = "shiftLogo" src = "img/shiftLogo.png" alt = "Shift Creator Space Logo">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href = "about.html">
+                    <div id ="card" class = "yellow">
+                        <div id = "workTitle" class = "black">Central Stampede</div>
+                        <div id = "subTitle" class = "black">Student News Publication</div>
+                        <div id = "duration" class = "black">Sep.2016 - May 2019</div>
+
+                        <div id = "workContent">
+                            <div id = "workText">
+                                <div id = "descriptionStampede" class = "black">Served as writer, graphic designer, website developer and editor in chief. Built a digital presence from scratch, designed logos, developed style guides and created an official website. Also designed some dope editorial spreads and art that went into print.</div>
+                                <div id = "skillsTitle" class = "black">SKILLS + TOOLS:</div>
+                                <div id = "skills" class = "black">Adobe InDesign, Adobe Photoshop, Wordpress</div>
+                            </div>
+
+                            <div id = "workLogo">
+                                <img class = "stampede" src = "img/stampedeLogo.png" alt = "Central Stampede Logo">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+                <a href = "about.html">
+                    <div id ="card" class = "red">
+                        <div id = "workTitle" class = "white">0hh1</div>
+                        <div id = "subTitle" class = "white">Passion Project, iOS Puzzle Game</div>
+                        <div id = "duration" class = "black">Dec.2019 - May 2020</div>
+
+                        <div id = "workContent">
+                            <div id = "workText">
+                                <div id = "description" class = "black"> 0hh1 is a puzzle game featuring red, blue, and white tiles ordered by a particular set of rules. Inspired by a project assigned during my very first Computer Science course at the University of Michigan.</div>
+                                <div id = "skillsTitle" class = "white">SKILLS + TOOLS:</div>
+                                <div id = "skills" class = "black">Swift, SpriteKit, Figma, Mobile App Development</div>
+                            </div>
+
+                            <div id = "workLogo">
+                                <img class = "tileMan" src = "img/tileMan.png" alt = "0hh1 Tile Man Logo">
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class = "blurb">
+                <h5>…would you like to see more of my passion projects ?</h5>
+                <h6 class = "MORE"><a href = "more.html">MORE+</a></h6>
+            </div>
+
+            <ul class = "footer">
+                <li class = "leftFoot">Copyright © 2020 Kaoru Murai</li>
+                <li class = "rightFoot">Handcrafted with &lt3 on <a class = "github" href = "https://github.com/kaolugo/kaorumurai">kaolugo</a>.</li>
+            </ul>
+
+        </div>
     </body>
 </html>

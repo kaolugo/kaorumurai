@@ -1,0 +1,209 @@
+/* logo styling */
+
+.squareLogo {
+    width: 70px;
+    height: auto;
+
+    padding: 10px 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    padding: 25px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+
+    margin-right: auto;
+}
+
+/* nav bar styling */
+
+.nav {
+    list-style-type: none;
+    font-size: 18px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    top: 0;
+    margin: 0;
+    padding: 0;
+
+    /*flexbox*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.nav li {
+    list-style-type: none;
+    padding: 12px;
+    display: flex;            /* NEW; nested flex container */
+    justify-content: center;  /* NEW; align anchor elements horizontally */
+    align-items: center; 
+}
+
+.more {
+    margin-right: 20px;
+}
+
+/*
+.more, .navLink {
+    padding: 10px;
+}
+*/
+
+/* nav bar links and shit */
+.more a:link, .navLink a:link {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.logo a:link {
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.more a:hover, .navLink a:hover {
+    color: black;
+    background-color: #FFEE9D;
+}
+
+
+/* intro styling */
+
+.intro {
+    margin-top: 50px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.title, .subNav {
+    list-style-type: none;
+}
+
+.subTitle {
+    align-self: flex-end;
+}
+
+.blue, .red, .yellow {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 60px;
+}
+
+.blue {
+    color: #445DC9;
+}
+
+.red {
+    color: #FF655F;
+}
+
+.yellow {
+    background-color: #FFEE9D;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+
+/* subnav styling */
+.subNav, button{
+    font-family: 'Source Code Pro', monospace;
+    font-size: 25px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+button, button::after {
+    background-color: #FFFFFF;
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+button:hover {
+    background-color: #445DC9;
+    color: white;
+}
+
+/* content styling */
+#analog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    margin-top: 50px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+#digital, #video {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    margin-top: 50px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+#nail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    margin-top: 50px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+
+
+
+#analog img, #digital img, #nail img{
+    width: 400px; 
+    height: auto;
+
+    /*box-shadow: 10px 10px 15px grey;*/
+    filter: drop-shadow(10px 10px 10px grey);
+
+    align-self: center;
+}
+
+#video iframe {
+    filter: drop-shadow(10px 10px 10px grey);
+
+    align-self: center;
+}
+

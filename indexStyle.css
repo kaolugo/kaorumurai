@@ -1,0 +1,434 @@
+/* logo styling */
+
+.squareLogo {
+    width: 70px;
+    height: auto;
+
+    padding: 10px 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    padding: 25px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+
+    margin-right: auto;
+}
+
+/* nav bar styling */
+
+.nav {
+    list-style-type: none;
+    font-size: 18px;
+    font-family: 'Source Code Pro', monospace;
+    top: 0;
+    margin: 0;
+    padding: 0;
+
+    /*flexbox*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.nav li {
+    list-style-type: none;
+    padding: 12px;
+    display: flex;            /* NEW; nested flex container */
+    justify-content: center;  /* NEW; align anchor elements horizontally */
+    align-items: center; 
+}
+
+.more {
+    margin-right: 20px;
+}
+
+/*
+.more, .navLink {
+    padding: 10px;
+}
+*/
+
+/* nav bar links and shit */
+.more a:link, .navLink a:link {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+}
+
+.logo a:link {
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.more a:hover, .navLink a:hover {
+    color: black;
+    background-color: #FFEE9D;
+}
+
+
+/* top slide styling */
+
+
+#intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
+    margin-left: 10vw;
+    margin-right: 8vw;
+    
+}
+
+#text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-grow: 1.2;
+    align-items: flex-start;
+
+    margin-top: 35px;
+
+}
+
+
+#animation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    margin-right: 1vw;
+}
+
+
+h1 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 35px;
+    margin-right: 1vw;
+}
+
+h4 {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+
+
+/* animation */
+
+h3, #changeText {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 6vw;
+    letter-spacing: 5px;
+}
+
+#changeText {
+    animation: glitch 1.8s linear infinite;
+  }
+  
+  @keyframes glitch{
+    2%,64%{
+      transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+      transform: translate(-2px,0) skew(0deg);
+    }
+    62%{
+      transform: translate(0,0) skew(5deg); 
+    }
+  }
+  
+  #changeText:before,
+  #changeText:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+  
+  #changeText:before{
+    animation: glitchTop 1.8s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+  
+  @keyframes glitchTop{
+    2%,64%{
+      transform: translate(2px,-2px);
+    }
+    4%,60%{
+      transform: translate(-2px,2px);
+    }
+    62%{
+      transform: translate(13px,-1px) skew(-13deg); 
+    }
+  }
+  
+  #changeText:after{
+    animation: glitchBotom 1.8s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  
+  @keyframes glitchBotom{
+    2%,64%{
+      transform: translate(-2px,0);
+    }
+    4%,60%{
+      transform: translate(-2px,0);
+    }
+    62%{
+      transform: translate(-22px,5px) skew(21deg); 
+    }
+  }
+
+
+/* self portrait styling*/
+
+.selfPhoto {
+    display: flex;
+    justify-content: center;
+}
+
+.selfPhoto img {
+    width: 40vw;
+    height: auto;
+
+    margin-top: 50px;
+}
+
+/*work styling */
+#work {
+    background-color: #F4F4F4;
+    padding-top: 80px;
+    padding-bottom: 10px;
+}
+
+#col1, #col2 {
+    display: flex;
+    justify-content: space-around;
+
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#col2 {
+    padding-top: 50px;
+}
+
+/* cards styling */
+
+a {
+    text-decoration: none;
+}
+
+#card {
+    width: 380px;
+    height: 260px;
+    padding: 10px 15px;
+
+    box-shadow: 10px 10px 15px grey;
+}
+
+#card:hover {
+    z-index: 100;
+    transform: scale(1.02) rotate(0deg) translate(0, 0) !important;
+    /* max-height: 20rem; */
+    /* margin-bottom: -8rem; */
+  }
+
+
+#workContent {
+    display: flex;
+}
+
+#workContent {
+    flex-grow: 2;
+}
+
+#workLogo {
+    align-self: flex-end;
+}
+
+#workTitle {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 33px;
+    font-weight: 500;
+}
+
+#subTitle {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+#duration {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+#description {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+#descriptionYaochi {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+#descriptionStampede {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+#skillsTitle {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+#skills {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 15px;
+}
+
+.white {
+    color: white;
+    font-weight: 300;
+}
+
+.black {
+    color: black;
+    font-weight: 400;
+}
+
+.red {
+    background-color: #FF655F;
+    
+}
+
+.blue {
+    background-color: #445DC9;
+}
+
+.yellow {
+    background-color: #FFEE9D;
+}
+
+
+
+/* logo styling */
+.yaochi {
+    width: 100px;
+    height: auto;
+}
+
+.rookieRoad, .goodNews, .shiftLogo, .stampede, .tileMan {
+    width: 75px;
+    height: auto;
+}
+
+
+/* blurb styling */
+.blurb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 80px;
+}
+
+h5 {
+    font-size: 18px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+
+    margin: 0;
+}
+
+
+.MORE a:link {
+    color: black;
+
+    font-size: 25px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+
+    padding: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 8px grey;
+    
+    margin-top: 15px;
+}
+
+.MORE a:visited {
+    color: black;
+}
+
+
+/* footer styling */
+
+.footer {
+    list-style-type: none;
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.footer li {
+    padding: 0;
+}
+
+
+.leftFoot {
+    margin-right: 20vw;
+    margin-left: 0;
+}
+
+.rightFoot {
+    margin-left: 20vw;
+    margin-right: 0;
+}
+
+
+.github {
+    color: black;
+}
