@@ -132,6 +132,27 @@
     font-weight: lighter;
 }
 
+.Shift, .Anime, .Clarinet {
+    text-decoration: none;
+
+}
+
+.Shift {
+    color: #445DC9;
+    font-weight: 600;
+}
+
+.Clarinet {
+    color: #FF655F;
+    font-weight: 600;
+}
+
+.Anime {
+    background-color: #FFEE9D;
+    color: black;
+    font-weight: 600;
+}
+
 
 /* social styling */
 
