@@ -535,7 +535,8 @@ h5 {
     /* top slide styling */
     h1 {
         font-size: 25px;
-        box-shadow: 10px 10px black;
+        background-color: white;
+        opacity: 0.2;
     }
 
     h2 {
