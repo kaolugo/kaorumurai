@@ -533,6 +533,11 @@ h5 {
 
 
     /* top slide styling */
+    #intro {
+        display: flex;
+        wrap: nowrap;
+    }
+
     h1 {
         font-size: 25px;
     }
@@ -547,8 +552,6 @@ h5 {
 
     #text {
         margin-left: 5vw;
-
-        display: flex;
     }
 
     /* animation styling */
@@ -570,11 +573,13 @@ h5 {
 
         margin-top: 50px;
 
+        /*
         position: absolute;
         top: 100px;
         left: 50vw;
         
         z-index: -2000;
+        */
     }
 
 
