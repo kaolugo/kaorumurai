@@ -547,6 +547,8 @@ h5 {
 
     #text {
         margin-left: 5vw;
+
+        display: flex;
     }
 
     /* animation styling */
