@@ -535,7 +535,7 @@ h5 {
     /* top slide styling */
     h1 {
         font-size: 25px;
-        filter: drop-shadow(10px 10px 10px grey);
+        filter: drop-shadow(10px 10px 10px black);
     }
 
     h2 {
