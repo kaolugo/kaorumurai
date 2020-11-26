@@ -373,7 +373,7 @@ h1 {
     }
 
     .subNav, button {
-        justify-content: space-evenly;
+        justify-content: center;
         font-size: 18px;
     }
 
