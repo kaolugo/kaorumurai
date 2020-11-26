@@ -28,7 +28,7 @@
 .contentPhoto img{
     max-width: 90%;
     width: auto;
-    
+    height: 100%;
 
     box-shadow: 8px 8px 15px #445DC9;
 
