@@ -354,7 +354,7 @@ h1 {
 
     /* intro styling */
     .intro {
-        margin-top: 20px;
+        margin-top: 0;
         flex-direction: column;
     }
 
