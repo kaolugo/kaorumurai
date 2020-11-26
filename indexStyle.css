@@ -125,8 +125,6 @@ a {
 }
 
 #card {
-    width: 380px;
-    height: 260px;
     padding: 10px 15px;
 
     box-shadow: 10px 10px 15px grey;
@@ -310,6 +308,13 @@ h5 {
     h1 span::before {
         content: "\A";
         white-space: pre;
+    }
+
+    /* cards styling */
+    #card {
+        margin: 15px;
+        width: 300px;
+        height: 260px;
     }
 }
 
@@ -599,6 +604,8 @@ h5 {
     /* cards styling */
     #card {
         margin: 15px;
+        width: 380px;
+        height: 260px;
     }
 }
 
@@ -756,6 +763,8 @@ h5 {
     /* cards styling */
     #card {
         margin: 15px;
+        width: 380px;
+        height: 260px;
     }
 }
 
