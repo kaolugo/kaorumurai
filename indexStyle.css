@@ -494,6 +494,7 @@ h5 {
 
 
     /* top slide styling */
+
     h1 {
         font-size: 25px;
     }
@@ -512,7 +513,7 @@ h5 {
 
     /* animation styling */
     h3, #changeText {
-        font-size: 6vw;
+        font-size: 10vw;
     }
 
     /* self portrait styling */
@@ -577,12 +578,12 @@ h5 {
 
     /* logo styling */
     .yaochi {
-        width: 80px;
+        width: 75px;
         height: auto;
     }
 
     .rookieRoad, .goodNews, .shiftLogo, .stampede, .tileMan {
-        width: 70px;
+        width: 65px;
         height: auto;
     }
 
