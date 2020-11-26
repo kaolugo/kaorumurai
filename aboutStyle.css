@@ -23,11 +23,15 @@
 .contentPhoto {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .contentPhoto img{
     max-width: 90%;
+    width: auto;
     height: auto;
+
+    
 
     box-shadow: 8px 8px 15px #445DC9;
 
