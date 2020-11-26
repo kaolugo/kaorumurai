@@ -984,6 +984,10 @@ h5 {
         display: none;
     }
 
+    .menuOpen {
+        display: none;
+    }
+
 
     .nav {
         list-style-type: none;
