@@ -306,6 +306,13 @@ h5 {
     text-decoration: underline;
 }
 
+@media only screen and (max-width: 420px) {
+    h1 span::before {
+        content: "\A";
+        white-space: pre;
+    }
+}
+
 
 @media only screen and (max-width: 768px) {
     /* mobile nav styling */
@@ -563,8 +570,6 @@ h5 {
     .selfPhoto img {
         width: 50vw;
         height: auto;
-
-        opacity: 0.5;
 
         align-self: center;
 
