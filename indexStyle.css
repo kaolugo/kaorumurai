@@ -145,8 +145,6 @@ a {
 
 #workTitle {
     font-family: 'Source Code Pro', monospace;
-    /*font-size: 33px;*/
-    font-size: 22px;
     font-weight: 500;
 }
 
@@ -213,19 +211,6 @@ a {
 
 .yellow {
     background-color: #FFEE9D;
-}
-
-
-
-/* logo styling */
-.yaochi {
-    width: 100px;
-    height: auto;
-}
-
-.rookieRoad, .goodNews, .shiftLogo, .stampede, .tileMan {
-    width: 75px;
-    height: auto;
 }
 
 
@@ -311,6 +296,29 @@ h5 {
         margin: 15px;
         width: 300px;
         height: 260px;
+    }
+
+    #workTitle {
+        font-size: 30px;
+    }
+
+    #subTitle, #duration, #skillsTitle, #skills {
+        font-size: 10px;
+    }
+
+    #description, #descriptionYaochi, #descriptionStampede {
+        font-size: 15px;
+    }
+
+    /* logo styling */
+    .yaochi {
+        width: 50px;
+        height: auto;
+    }
+
+    .rookieRoad, .goodNews, .shiftLogo, .stampede, .tileMan {
+        width: 45px;
+        height: auto;
     }
 }
 
@@ -603,6 +611,30 @@ h5 {
         width: 380px;
         height: 260px;
     }
+
+    #workTitle {
+        font-size: 33px;
+    }
+
+    #subTitle, #duration, #skillsTitle, #skills {
+        font-size: 15px;
+    }
+
+    #description, #descriptionYaochi, #descriptionStampede {
+        font-size: 17px;
+    }
+
+    /* logo styling */
+    .yaochi {
+        width: 100px;
+        height: auto;
+    }
+
+    .rookieRoad, .goodNews, .shiftLogo, .stampede, .tileMan {
+        width: 75px;
+        height: auto;
+    }
+
 }
 
 
@@ -761,6 +793,29 @@ h5 {
         margin: 15px;
         width: 380px;
         height: 260px;
+    }
+
+    #workTitle {
+        font-size: 33px;
+    }
+
+    #subTitle, #duration, #skillsTitle, #skills {
+        font-size: 15px;
+    }
+
+    #description, #descriptionYaochi, #descriptionStampede {
+        font-size: 17px;
+    }
+
+    /* logo styling */
+    .yaochi {
+        width: 100px;
+        height: auto;
+    }
+
+    .rookieRoad, .goodNews, .shiftLogo, .stampede, .tileMan {
+        width: 75px;
+        height: auto;
     }
 }
 
