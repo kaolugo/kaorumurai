@@ -1,3 +1,9 @@
+/* nav styling */
+.nav {
+    font-weight: 500;
+}
+
+
 /* top slide styling */
 h1 {
     font-family: 'Darker Grotesque', sans-serif;
@@ -971,6 +977,10 @@ h5 {
     }
 
     input {
+        display: none;
+    }
+
+    .open {
         display: none;
     }
 

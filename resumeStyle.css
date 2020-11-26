@@ -1,3 +1,8 @@
+/* nav styling */
+.nav {
+    font-weight: 500;
+}
+
 /* resume image styling */
 .resume {
     display: flex;
@@ -352,6 +357,10 @@ h2 {
     }
 
     input {
+        display: none;
+    }
+
+    .open {
         display: none;
     }
 
