@@ -543,12 +543,20 @@ h5 {
         padding-top: 25px;
     }
 
-    #col1, #col2 {
+    #col1{
         display: flex;
         justify-content: space-between;
         align-items: center;
         align-content: space-between;
         flex-direction: column;
+    }
+
+    #col2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: space-between;
+        flex-direction: column-reverse;
     }
 
 
@@ -870,12 +878,20 @@ h5 {
         padding-top: 25px;
     }
 
-    #col1, #col2 {
+    #col1 {
         display: flex;
         justify-content: space-between;
         align-items: center;
         align-content: space-between;
         flex-direction: column;
+    }
+
+    #col2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: space-between;
+        flex-direction: column-reverse;
     }
 
     /* cards styling */
