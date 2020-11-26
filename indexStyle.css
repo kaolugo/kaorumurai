@@ -139,17 +139,14 @@ a {
     display: flex;
 }
 
-#workContent {
-    flex-grow: 2;
-}
-
 #workLogo {
     align-self: flex-end;
 }
 
 #workTitle {
     font-family: 'Source Code Pro', monospace;
-    font-size: 33px;
+    /*font-size: 33px;*/
+    font-size: 22px;
     font-weight: 500;
 }
 
