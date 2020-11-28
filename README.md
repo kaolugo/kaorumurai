@@ -5,6 +5,6 @@ Welcome to the behind the scenes of my portfolio site. All the code you'll find 
 
 Feast on my delicious code organization and ratchet CSS hacks 🤪🤪
 
-See the final product here --> kaorumurai.com 
+See the final product here --> [a link](https://www.kaorumurai.com/)
 
 
