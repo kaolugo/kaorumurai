@@ -7,11 +7,37 @@
         <link rel="stylesheet" type="text/css" href="resumeStyle.css">
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" href="img/siteLogo.png"> 
         <link rel="icon" type="image/x-icon" href="icon.ico"/>
         <title>Resume</title>
     </head>
     
     <body>
+        <div id="menuArea">
+            <input type="checkbox" id="menuToggle"></input>
+          
+            <label for="menuToggle" class="menuOpen">
+                <div class="open"></div>
+            </label>
+          
+            <div class="menu menuEffects">
+                <label for="menuToggle"></label>
+                <div class="menuContent">
+                    <ul class = "mobileNav">
+                        <li class = "navLink"><a href = "about.html">ABOUT</a></li>
+                        <li class = "navLink"><a href = "index.html#work">WORK</a></li>
+                        <li class = "navLink"><a href = "resume.html">RESUME</a></li>
+                        <li class = "more"><a href = "more.html">MORE+</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <ul class = "mobileTitle">
+            <li><img src = "img/siteLogo.png" alt = "Kaoru Logo" class = "squareLogo"></li>
+            <li class = "logo"><a href = "index.html">Kaoru Murai</a></li>
+        </ul>
+
         <ul class = "nav">
             <li><img src = "img/siteLogo.png" alt = "Kaoru Logo" class = "squareLogo"></li>
             <li class = "logo"><a href = "index.html">Kaoru Murai</a></li>
