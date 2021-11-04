@@ -1,51 +1,6 @@
-/* nav styling */
-.nav {
-    font-weight: 500;
-}
-
-
-/* top slide styling */
-h1 {
-    font-family: 'Darker Grotesque', sans-serif;
-    font-weight: 300;
-}
-
-h2 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    margin-right: 1vw;
-}
-
-h4 {
-    font-family: 'Darker Grotesque', sans-serif;
-    font-weight: 300;
-}
-
-#text {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    flex-grow: 1.2;
-    align-items: flex-start;
-
-    margin-top: 35px;
-
-}
-
-h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    letter-spacing: 5px;
-}
-
-/* blurb styling */
-.blurb {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    margin-top: 20px;
+/* general styling */
+body {
+    background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
 }
 
 /* footer styling */
@@ -65,240 +20,7 @@ h3 {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 420px) {
-    /* mobile nav styling */
-
-    .nav {
-        display: none;
-    }
-
-    input {
-        display: none;
-    }
-      
-    .open {
-        background-color: black;
-        width: 24px;
-        height: 4px;
-        display: block;
-        border-radius: 2px;
-        cursor: pointer;
-        position: relative;
-        top: 8px;
-    }
-      
-    .open:before {
-        content: "";
-        background-color: black;
-        width: 24px;
-        height: 4px;
-        display: block;
-        border-radius: 2px;
-        position: relative;
-        top: -8px;
-        transform: rotate(0deg);
-        transition: all 0.3s ease;
-    }
-      
-    .open:after {
-        content: "";
-        background-color: black;
-        width: 24px;
-        height: 4px;
-        display: block;
-        border-radius: 2px;
-        position: relative;
-        top: 4px;
-        transform: rotate(0deg);
-        transition: all 0.3s ease;
-    }
-      
-    .menuOpen {
-        width: 24px;
-        height: 20px;
-        display: block;
-        padding: 15px;
-        cursor: pointer;
-        float: right;
-    }
-      
-    .menuOpen:hover .open:before {
-        top: -9px;
-    }
-      
-    .menuOpen:hover .open:after {
-        top: 5px;
-    }
-      
-    .menu {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: white;
-    }
-      
-    .menu label {
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        background-size: 100%;
-        cursor: pointer;
-    }
-      
-    .menu .menuContent {
-        position: relative;
-        top: 50%;
-        font-size:40px;
-        line-height: 60px;
-        text-align: center;
-        padding-bottom: 20px;
-        margin-top: -170px;
-    }
-      
-    .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 auto;
-    }
-      
-    .menu ul li a {
-        display: block;
-        color:black;
-        text-decoration: none;
-        transition: color 0.2s;
-        font-family: 'Nanum Gothic', sans-serif;
-        padding: 10px 0;
-    }
-      
-    .menu ul li a:hover {
-        color: black;
-    }
-      
-    .menu ul li:hover {
-        background: #FFEE9D;
-    }
-    
-    .menuEffects {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s, visibility 0.5s;
-    }
-    
-    .menuEffects ul {
-        transform: translateY(0%);
-        transition: all 0.5s;
-    }
-    
-    #menuToggle:checked ~ .menuEffects {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.5s;
-    }
-    
-    #menuToggle:checked ~ .menuEffects ul {
-        opacity: 1;
-    }
-    
-    #menuToggle:checked ~ .menuOpen .open {
-        background-color: transparent;
-    }
-    
-    #menuToggle:checked ~ .menuOpen .open:before {
-        content: "";
-        background-color: black;
-        transform: rotate(45deg);
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 1;
-    }
-    
-    #menuToggle:checked ~ .menuOpen .open:after {
-        content: "";
-        background-color:black;
-        transform: rotate(-45deg);
-        position: relative;
-        top: 0;
-        right: 0;
-        z-index: 1;
-    }
-    
-    #menuToggle:not(:checked) ~ .menuEffects ul {
-        transform: translateY(-30%);
-    }
-    
-    /* logo styling */
-    .squareLogo {
-        width: 50px;
-        height: auto;
-    
-        padding: 10px 10px;
-        margin-left: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .logo {
-        padding: 25px 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-        font-size: 30px;
-        font-family: 'Nanum Gothic', sans-serif;
-        font-weight: 700;
-    
-        margin-right: auto;
-    }
-
-    .mobileTitle {
-        list-style-type: none;
-        font-size: 18px;
-        font-family: 'Source Code Pro', monospace;
-        top: 0;
-        margin: 0;
-        padding: 0;
-    
-        /*flexbox*/
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-    }
-    
-    .mobileTitle li {
-        list-style-type: none;
-        padding: 12px;
-        display: flex;            /* NEW; nested flex container */
-        justify-content: center;  /* NEW; align anchor elements horizontally */
-        align-items: center; 
-    }
-
-    .logo a:link {
-        padding: 0;
-        text-decoration: none;
-        color: black;
-    }
-    
-    .mobileTitle a:visited {
-        text-decoration: none;
-        color: black;
-    }
-
-    /* footer styling */
-    .footer {
-        padding-left: 0;
-        text-align: center;
-        font-size: 12px;
-    }
-}
-
-
-@media only screen and (min-width: 420px) {
+@media only screen and (max-width: 768px) {
     /* mobile nav styling */
 
     .nav {
@@ -369,7 +91,7 @@ h3 {
         height: 100vh;
         top: 0;
         left: 0;
-        background: white;
+        background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
     }
       
     .menu label {
@@ -400,19 +122,11 @@ h3 {
       
     .menu ul li a {
         display: block;
-        color:black;
+        color:white;
         text-decoration: none;
         transition: color 0.2s;
         font-family: 'Nanum Gothic', sans-serif;
         padding: 10px 0;
-    }
-      
-    .menu ul li a:hover {
-        color: black;
-    }
-      
-    .menu ul li:hover {
-        background: #FFEE9D;
     }
     
     .menuEffects {
@@ -526,11 +240,9 @@ h3 {
     .footer {
         padding-left: 0;
         text-align: center;
+        font-size: 12px;
     }
 }
-
-
-
 
 @media only screen and (min-width: 768px) {
     /* nav bar styling */
