@@ -1,6 +1,10 @@
 /* general styling */
 html {
     background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /* footer styling */
