@@ -22,7 +22,7 @@ html {
 
 /* for the wave */
 /* for the wave */
-@media (max-aspect-ratio: 6/5) {
+@media (max-aspect-ratio: 5/6) {
     #hokusai {
         width: 100vw;
         margin-left: -50vw;
@@ -36,7 +36,7 @@ html {
     }
 }
 
-@media (min-aspect-ratio: 6/5) {
+@media (min-aspect-ratio: 5/6) {
     #hokusai {
         width: 100vw;
         margin-left: -50vw;
