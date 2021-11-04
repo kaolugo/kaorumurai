@@ -178,29 +178,30 @@ body {
         transform: translateY(-30%);
     }
     
-    /* logo styling */
+    /* mobile title styling */
     .squareLogo {
         width: 50px;
         height: auto;
-    
-        padding: 10px 10px;
-        margin-left: 5px;
+
+        margin-left: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
-    .logo {
+    .title {
+        margin-right: auto;
         padding: 25px 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     
         font-size: 30px;
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 700;
-    
-        margin-right: auto;
+    }
+
+    .title a:link {
+        padding: 0;
+        text-decoration: none;
+        color: white;
     }
 
     .mobileTitle {
@@ -224,16 +225,10 @@ body {
         justify-content: center;  /* NEW; align anchor elements horizontally */
         align-items: center; 
     }
-
-    .logo a:link {
-        padding: 0;
-        text-decoration: none;
-        color: black;
-    }
     
     .mobileTitle a:visited {
         text-decoration: none;
-        color: black;
+        color: white;
     }
 
     /* footer styling */
