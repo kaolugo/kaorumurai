@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="indexStyle.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
@@ -51,24 +52,54 @@
         </ul>
 
         <div id = "intro">
+            <br>
+            <br>
             <div id = "text">
                 <h1>Hello & Welcome.<br>
                 My name is <span>Kaoru Murai.</span></h1>
 
-                <div id = "animation">
-                    <h2>I am a </h2>
-                    <h3>ENGINEER</h3>
-                    <!-- animation here lol -->
-                </div>
+                <h2><span class="typewriter" id="changeText">I am an Engineer.</span></h2>
 
-                <h4>My passion is connecting with others through the experiences I create.</h4>
+                <script>
+                    var text = ["I am a Designer.",
+                                "I am a Creative.",
+                                "I am an Artist.",
+                                "I am an Engineer."];
+                    var counter = 0;
+                    var elem = document.getElementById("changeText");
+                    var inst = setInterval(change, 10000);
+
+                    function change() {
+                        elem.innerHTML = text[counter];
+                        elem.title = text[counter];
+                        counter++;
+                        if (counter >= text.length) {
+                            counter = 0;
+                        }
+                    }
+                </script>
+
+                <h3>My passion is connecting with others through the experiences I create.</h3>
             </div>
+
+            <!--<script src="https://cdnjs.com/libraries/lottie-web" type="text/javascript"></script>-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+            <div id="hokusai"></div>
+            <!--<div style="width:1067px;height:600px" class="lottie" data-animation-path="img/hokusai.json" data-anim-loop="true" data-name="hokusai"></div>-->
+            <script>
+                var animation = bodymovin.loadAnimation({
+                // animationData: { /* ... */ },
+                container: document.getElementById('hokusai'), // required
+                path: 'https://assets10.lottiefiles.com/packages/lf20_biqqehly.json', // required
+                renderer: 'svg', // required
+                loop: true, // optional
+                autoplay: true, // optional
+                name: "Demo Animation", // optional
+            });
+            </script>
+        </div>
             
-            <div class = "selfPhoto">
-                <img src = "img/selfPortrait.png" alt = "kaoru murai self portrait">
-            </div>
-
-        </div>    
+        <div>    
             <ul class = "footer">
                 <li class = "leftFoot">Copyright © 2020 Kaoru Murai</li>
                 <li class = "rightFoot">Handcrafted with &lt3 on <a class = "github" href = "https://github.com/kaolugo/kaorumurai">kaolugo</a>.</li>

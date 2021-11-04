@@ -177,6 +177,7 @@ body {
     #menuToggle:not(:checked) ~ .menuEffects ul {
         transform: translateY(-30%);
     }
+
     
     /* mobile title styling */
     .squareLogo {
@@ -193,7 +194,7 @@ body {
         margin-right: auto;
         padding: 25px 25px;
     
-        font-size: 30px;
+        font-size: 25px;
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 700;
     }
@@ -230,6 +231,93 @@ body {
         text-decoration: none;
         color: white;
     }
+
+
+    /* introduction styling */
+    #intro {
+        height: 100vh;
+    }
+
+    h1 {
+        font-family: 'Overpass Mono';
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+    }
+
+    h2 {
+        font-family: 'Scheherazade New';
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: white;
+    }
+
+    h3 {
+        font-family: 'Overpass Mono';
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        margin-bottom: -40px;
+    }
+
+
+    /* typewriter effect */
+    @keyframes typewriter {
+        0%, 100% {
+          width: 0;
+        }
+        20%, 80% {
+          width: 7.8em;
+        }
+      }
+      
+    @keyframes caret {
+        0%, 100% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+
+    .typewriter {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typewriter;
+        display: inline-block;
+        position: relative;
+        animation-duration: 10s;
+        animation-timing-function: steps(25, end);
+        animation-iteration-count: infinite;
+      }
+      
+      
+      .typewriter::after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        animation: caret infinite;
+        animation-duration: 1s;
+        animation-timing-function: steps(1, end);
+      }
+      
+    /* hokusai animation */
+    #hokusai {
+        width: 100vw;
+        position: relative;
+        margin-left: -50vw;
+        left: 50%;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .text, .intro {
+        margin: 0;
+        padding: 0;
+    }
+
 
     /* footer styling */
     .footer {
