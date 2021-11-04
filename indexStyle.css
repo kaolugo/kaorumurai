@@ -266,6 +266,8 @@ body {
     /* introduction styling */
     #intro {
         height: 100vh;
+        margin: 0;
+        padding: 0;
     }
 
     h1 {
