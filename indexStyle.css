@@ -622,7 +622,7 @@ h5 {
     }
       
     .open {
-        background-color: black;
+        background-color: white;
         width: 24px;
         height: 4px;
         display: block;
@@ -634,7 +634,7 @@ h5 {
       
     .open:before {
         content: "";
-        background-color: black;
+        background-color: white;
         width: 24px;
         height: 4px;
         display: block;
@@ -647,7 +647,7 @@ h5 {
       
     .open:after {
         content: "";
-        background-color: black;
+        background-color: white;
         width: 24px;
         height: 4px;
         display: block;
@@ -754,7 +754,7 @@ h5 {
     
     #menuToggle:checked ~ .menuOpen .open:before {
         content: "";
-        background-color: black;
+        background-color: white;
         transform: rotate(45deg);
         position: absolute;
         top: 0;
@@ -764,7 +764,7 @@ h5 {
     
     #menuToggle:checked ~ .menuOpen .open:after {
         content: "";
-        background-color:black;
+        background-color:white;
         transform: rotate(-45deg);
         position: relative;
         top: 0;
