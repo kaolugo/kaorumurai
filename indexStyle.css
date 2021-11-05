@@ -413,11 +413,11 @@ html {
         margin-left: -10px;
     }
 
-    .more {
+    .moreStuff {
         padding-left: 10px;
     }
     
-    .more p {
+    .moreStuff p {
         color: white;
         font-family: 'Overpass Mono';
         font-size: 13px;
@@ -822,11 +822,11 @@ html {
         margin-left: -10px;
     }
 
-    .more {
+    .moreStuff {
         padding-left: 10px;
     }
 
-    .more p {
+    .moreStuff p {
         color: white;
         font-family: 'Overpass Mono';
         font-size: 13px;
@@ -897,6 +897,11 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
+    /* intro styling */
+    #text {
+        margin-left: 5vw;
+    }
+    
     /* the wave styling */
     #hokusai {
         width: 100vw;
@@ -937,7 +942,7 @@ html {
         top: 120vh;
     }
 
-    .computer {
+    .gifaoru2 {
         display: none;
     }
 
@@ -955,13 +960,13 @@ html {
 
 
     /* portfolio content styling */
-    .more {
+    .moreStuff {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .more p {
+    .moreStuff p {
         font-size: 16px;
     }
 
@@ -971,6 +976,10 @@ html {
 
     .portfolio a:link {
         font-size: 16px;
+    }
+
+    .portfolio a:hover {
+        background-color: #445DC9;
     }
 
 
@@ -1009,7 +1018,7 @@ html {
 
 
 @media only screen and (min-width: 835px) {
-    /* nav bar styling */
+    /* putting away mobile nav */
     .mobileNav {
         display: none;
     }
@@ -1029,18 +1038,311 @@ html {
     .menuOpen {
         display: none;
     }
+
+    /* title styling */
+    .squareLogo {
+        width: 50px;
+        height: auto;
+    
+        padding: 10px 10px;
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        padding: 25px 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        font-size: 25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+    
+        margin-right: auto;
+    }
+
+    /* navigation bar styling */
+    .nav {
+        list-style-type: none;
+        font-size: 16px;
+        font-family: 'Nanum Gothic';
+        top: 0;
+        margin: 0;
+        padding: 0;
+    
+        /*flexbox*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    
+    .nav li {
+        list-style-type: none;
+        padding: 12px;
+        display: flex;            /* NEW; nested flex container */
+        justify-content: center;  /* NEW; align anchor elements horizontally */
+        align-items: center; 
+    }
+    
+    .more {
+        margin-right: 20px;
+    }
+    
+    .more a:link, .navLink a:link {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+    }
+    
+    .logo a:link {
+        padding: 0;
+        text-decoration: none;
+        color:white;
+    }
+    
+    .nav a:visited {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .more a:hover, .navLink a:hover {
+        color: white;
+        background-color: #445DC9;
+    }
+
+
+    /* intro styling */
+    #text {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: -30px;
+        padding-bottom: 0;
+    }
+
+    h2 {
+        font-size: 45px;
+        padding-bottom: 0;
+        margin-bottom: -10px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    #intro {
+        margin-bottom: 50px;
+    }
+
+    /* the wave styling */
+    #hokusai {
+        position: absolute;
+        bottom: -20vh;
+    }
+
+    
+    /* background images styling */
+    .cloud1 {
+        width: 100vw;
+        height: auto;
+        right: -20vw;
+        top: 20vh;
+    }
+
+    .cloud2 {
+        width: 100vw;
+        height: auto;
+        right: 50vw;
+        top: 60vh;
+    }
+
+    .grid {
+        z-index: -15;
+        right: 5vw;
+        top: 20vh;
+    }
+
+
+    /* work experience styling */
+    h4 {
+        font-size: 30px;
+        margin-bottom: -30px;
+    }
+
+    .places h5 {
+        margin-bottom: -10px;
+    }
+
+    .places a:link {
+        font-size: 38px;
+        font-weight: 400;
+    }
+
+    .places a:hover {
+        color: #FFEE9D;
+    }
+
+    .places h6 {
+        font-size: 16px;
+    }
+
+
+    /* work art styling */
+    .grid2 {
+        top: 130vh;
+    }
+
+    .gifaoru {
+        width: 55vw;
+        margin-right: -20vw;
+    }
+
+    /* footer styling */
+    .footer {
+        font-size: 16px;
+    }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1000px) {
+    h2 {
+        font-size: 60px;
+    }
+    
+    .workContent {
+        margin-top: 50px;
+    }
 
+    /* work experience styling */
+    h4 {
+        font-size: 35px;
+        margin-bottom: -30px;
+    }
+
+    .places h5 {
+        margin-bottom: -10px;
+    }
+
+    .places a:link {
+        font-size: 42px;
+        font-weight: 400;
+    }
+
+    .places a:hover {
+        color: #FFEE9D;
+    }
+
+    .places h6 {
+        font-size: 18px;
+    }
+
+    /* work art styling */
+
+    .gifaoru {
+        margin-right: -10vw;
+    }
+
+    /* portfolio links styling */
+    .moreStuff p {
+        font-size: 20px;
+    }
+    
+    .portfolio a:link {
+        font-size: 20px;
+    }
 }
 
 
 @media only screen and (min-width: 1200px) {
+    /* title styling */
+    .logo {
+        font-size: 30px;
+    }
 
+    .squareLogo {
+        width: 50px;
+    }
+
+    /* intro styling */
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 70px;
+    }
+
+    h3 {
+        font-size:20px;
+    }
+
+    #text {
+        margin-right: 40vw;
+    }
+
+    /* work experience styling */
+    #work {
+        margin-top: 100px;
+    }
+
+    .workContent {
+        margin-top: 0;
+        margin-right: 5vw;
+    }
+
+    /* work art styling */
+    .grid2 {
+        width: 50vw;
+
+        right: 50vw;
+        top: 130vh;
+    }
+
+    .gifaoru {
+        display: none;
+    }
+
+    .gifaoru2 {
+        display: block;
+        width: 55vw;
+        height: auto;
+        padding: 0;
+        margin-top: 100px;
+    }
 }
 
 
 @media only screen and (min-width: 1500px) {
+    /* intro styling */
+    h1 {
+        font-size: 25px;
+    }
 
+    h2 {
+        font-size: 80px;
+    }
+
+    h3 {
+        font-size:22px;
+    }
+
+    #text {
+        margin-right: 40vw;
+    }
+
+    /* work experience styling */
+    #work {
+        margin-top: 150px;
+    }
+
+    /* work art styling */
+    .gifaoru2 {
+        width: 50vw;
+        height: auto;
+    }
 }
