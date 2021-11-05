@@ -66,49 +66,6 @@ html {
     animation-timing-function: steps(1, end);
 }
 
-/* for the wave */
-@media (max-aspect-ratio: 10/11) {
-    #hokusai {
-        width: 100vw;
-        margin-left: -50vw;
-        position: absolute;
-        left: 50%;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        bottom: 0;
-        z-index: -10;
-    }
-
-    #intro {
-        height: 100vh;
-        margin-bottom: -60px;
-        padding-bottom: 0;
-    }
-}
-
-@media (min-aspect-ratio: 10/11) {
-    #hokusai {
-        width: 100vw;
-        margin-left: -50vw;
-        position: relative;
-        left: 50%;
-        margin-top: -50px;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        z-index: -10;
-    }
-
-    #intro {
-        height: 100vh;
-        margin-bottom: 300px;
-        padding-bottom: 0;
-    }
-}
-
-
 
 @media only screen and (max-width: 520px) {
     /* mobile nav styling */
@@ -347,6 +304,50 @@ html {
         margin: 0;
     }
 
+
+    /* for the wave */
+    @media (max-aspect-ratio: 10/11) {
+        #hokusai {
+            width: 100vw;
+            margin-left: -50vw;
+            position: absolute;
+            left: 50%;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            bottom: 0;
+            z-index: -10;
+        }
+
+        #intro {
+            height: 100vh;
+            margin-bottom: -60px;
+            padding-bottom: 0;
+        }
+    }
+
+    @media (min-aspect-ratio: 10/11) {
+        #hokusai {
+            width: 100vw;
+            margin-left: -50vw;
+            position: relative;
+            left: 50%;
+            margin-top: -50px;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            z-index: -10;
+        }
+
+        #intro {
+            height: 100vh;
+            margin-bottom: 300px;
+            padding-bottom: 0;
+        }
+    }
+
+
     /* work experience styling */
     h4 {
         color: white;
@@ -397,6 +398,12 @@ html {
         padding-top: 0;
         padding-bottom: -10px;
         margin: 0;
+    }
+
+
+    /* work art styling */
+    .workArt {
+        display: none;
     }
 
 
@@ -712,6 +719,50 @@ html {
         margin: 0;
     }
 
+
+    /* for the wave */
+    @media (max-aspect-ratio: 10/11) {
+        #hokusai {
+            width: 100vw;
+            margin-left: -50vw;
+            position: absolute;
+            left: 50%;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            bottom: 0;
+            z-index: -10;
+        }
+
+        #intro {
+            height: 100vh;
+            margin-bottom: -60px;
+            padding-bottom: 0;
+        }
+    }
+
+    @media (min-aspect-ratio: 10/11) {
+        #hokusai {
+            width: 100vw;
+            margin-left: -50vw;
+            position: relative;
+            left: 50%;
+            margin-top: -50px;
+            margin-bottom: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            z-index: -10;
+        }
+
+        #intro {
+            height: 100vh;
+            margin-bottom: 300px;
+            padding-bottom: 0;
+        }
+    }
+
+
     /* work experience styling */
     h4 {
         color: white;
@@ -801,17 +852,23 @@ html {
     }
 
 
+    /* work art styling */
+    .workArt {
+        display: none;
+    }
+
+
     /* background clouds styling */
     .cloud1, .cloud2 {
         position: fixed;
         z-index: -20;
-        width: 150vw;
+        width: 120vw;
         height: auto;
     }
 
     .cloud1 {
-        right: -80vw;
-        top: 15vh;
+        right: -60vw;
+        top: 5vh;
     }
 
     .cloud2 {
@@ -840,6 +897,118 @@ html {
 }
 
 @media only screen and (min-width: 768px) {
+    /* the wave styling */
+    #hokusai {
+        width: 100vw;
+        margin-left: -50vw;
+        position: absolute;
+        left: 50%;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        bottom: -10vh;
+        z-index: -15;
+    }
+
+    #intro {
+        height: 100vh;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+
+    /* work art styling */
+    #work {
+        display: flex;
+    }
+
+    .workArt {
+        display: block;
+    } 
+
+    .grid2 {
+        position: absolute;
+        z-index: -25;
+        width: 60vw;
+        height: auto;
+
+        right:70vw;
+        top: 120vh;
+    }
+
+    .computer {
+        display: none;
+    }
+
+    .gifaoru {
+        width: 50vw;
+        height: auto;
+
+        padding-right: 0;
+        margin-right: -10vw;
+    }
+
+    .workContent {
+        padding-right: 4vw;
+    }
+
+
+    /* portfolio content styling */
+    .more {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .more p {
+        font-size: 16px;
+    }
+
+    .portfolio li {
+        font-size: 16px;
+    }
+
+    .portfolio a:link {
+        font-size: 16px;
+    }
+
+
+    /* background image styling */
+
+    .grid {
+        position: absolute;
+        z-index: -25;
+        width: 40vw;
+        height: auto;
+
+        right: 0vw;
+        top: 60vh;
+    }
+
+
+    /* footer styling */
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    .leftFoot {
+        margin-right: 20vw;
+        margin-left: 0;
+    }
+    
+    .rightFoot {
+        margin-left: 20vw;
+        margin-right: 0;
+    }
+}
+
+
+
+@media only screen and (min-width: 835px) {
     /* nav bar styling */
     .mobileNav {
         display: none;
@@ -860,12 +1029,6 @@ html {
     .menuOpen {
         display: none;
     }
-}
-
-
-
-@media only screen and (min-width: 835px) {
-
 }
 
 @media only screen and (min-width: 992px) {
