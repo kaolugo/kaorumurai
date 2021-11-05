@@ -979,7 +979,7 @@ html {
     }
 
     .portfolio a:hover {
-        background-color: #FF655F;
+        background-color: #445DC9;
     }
 
 
@@ -1110,7 +1110,7 @@ html {
     
     .more a:hover, .navLink a:hover {
         color: white;
-        background-color: #445DC9;
+        background-color: #FF655F;
     }
 
 
@@ -1213,7 +1213,7 @@ html {
     h2 {
         font-size: 60px;
     }
-
+    
     .workContent {
         margin-top: 50px;
     }
