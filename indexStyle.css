@@ -67,7 +67,7 @@ html {
 }
 
 /* for the wave */
-@media (max-aspect-ratio: 7/8) {
+@media (max-aspect-ratio: 10/11) {
     #hokusai {
         width: 100vw;
         margin-left: -50vw;
@@ -88,7 +88,7 @@ html {
     }
 }
 
-@media (min-aspect-ratio: 7/8) {
+@media (min-aspect-ratio: 10/11) {
     #hokusai {
         width: 100vw;
         margin-left: -50vw;
@@ -103,7 +103,7 @@ html {
 
     #intro {
         height: 100vh;
-        margin-bottom: 150px;
+        margin-bottom: 300px;
         padding-bottom: 0;
     }
 }
@@ -406,6 +406,10 @@ html {
         margin-left: -10px;
     }
 
+    .more {
+        padding-left: 10px;
+    }
+    
     .more p {
         color: white;
         font-family: 'Overpass Mono';
@@ -655,10 +659,6 @@ html {
 
 
     /* introduction styling */
-    #intro {
-        margin-bottom: 300px;
-    }
-
     h1 {
         font-family: 'Overpass Mono';
         font-size: 18px;
@@ -739,6 +739,10 @@ html {
     .portfolio {
         list-style-type: none;
         margin-left: -10px;
+    }
+
+    .more {
+        padding-left: 10px;
     }
 
     .more p {
