@@ -5,10 +5,12 @@ html {
 
 /* footer styling */
 .footer {
+    color: white;
+
     list-style-type: none;
-    font-size: 16px;
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 500;
+
+    font-family: 'Nanum Gothic';
+    font-weight: 400;
 }
 
 .footer li {
@@ -16,13 +18,56 @@ html {
 }
 
 .github {
-    color: black;
+    color: white;
     text-decoration: underline;
 }
 
+/* typewriter effect */
+#changeText {
+    z-index: -10;
+}
+
+@keyframes typewriter {
+    0%, 100% {
+        width: 0;
+    }
+    20%, 80% {
+        width: 7.8em;
+    }
+}
+    
+@keyframes caret {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter;
+    display: inline-block;
+    position: relative;
+    animation-duration: 10s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+}
+    
+    
+.typewriter::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+}
+
 /* for the wave */
-/* for the wave */
-@media (max-aspect-ratio: 5/6) {
+@media (max-aspect-ratio: 7/8) {
     #hokusai {
         width: 100vw;
         margin-left: -50vw;
@@ -33,24 +78,370 @@ html {
         padding-top: 0;
         padding-bottom: 0;
         bottom: 0;
+        z-index: -10;
+    }
+
+    #intro {
+        height: 100vh;
+        margin-bottom: -60px;
+        padding-bottom: 0;
     }
 }
 
-@media (min-aspect-ratio: 5/6) {
+@media (min-aspect-ratio: 7/8) {
     #hokusai {
         width: 100vw;
         margin-left: -50vw;
         position: relative;
         left: 50%;
-        margin-top: 0;
+        margin-top: -50px;
         margin-bottom: 0;
         padding-top: 0;
+        padding-bottom: 0;
+        z-index: -10;
+    }
+
+    #intro {
+        height: 100vh;
+        margin-bottom: 150px;
         padding-bottom: 0;
     }
 }
 
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 520px) {
+    /* mobile nav styling */
+
+    .nav {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+      
+    .open {
+        background-color: white;
+        width: 24px;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        top: 8px;
+    }
+      
+    .open:before {
+        content: "";
+        background-color: white;
+        width: 24px;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: -8px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+      
+    .open:after {
+        content: "";
+        background-color: white;
+        width: 24px;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: 4px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+      
+    .menuOpen {
+        width: 24px;
+        height: 20px;
+        display: block;
+        padding: 15px;
+        cursor: pointer;
+        float: right;
+    }
+      
+    .menuOpen:hover .open:before {
+        top: -9px;
+    }
+      
+    .menuOpen:hover .open:after {
+        top: 5px;
+    }
+      
+    .menu {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
+    }
+      
+    .menu label {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-size: 100%;
+        cursor: pointer;
+    }
+      
+    .menu .menuContent {
+        position: relative;
+        top: 50%;
+        font-size:40px;
+        line-height: 60px;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-top: -170px;
+    }
+      
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+      
+    .menu ul li a {
+        display: block;
+        color:white;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-family: 'Nanum Gothic', sans-serif;
+        padding: 10px 0;
+    }
+    
+    .menuEffects {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+    
+    .menuEffects ul {
+        transform: translateY(0%);
+        transition: all 0.5s;
+    }
+    
+    #menuToggle:checked ~ .menuEffects {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s;
+    }
+    
+    #menuToggle:checked ~ .menuEffects ul {
+        opacity: 1;
+    }
+    
+    #menuToggle:checked ~ .menuOpen .open {
+        background-color: transparent;
+    }
+    
+    #menuToggle:checked ~ .menuOpen .open:before {
+        content: "";
+        background-color: white;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    #menuToggle:checked ~ .menuOpen .open:after {
+        content: "";
+        background-color:white;
+        transform: rotate(-45deg);
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    #menuToggle:not(:checked) ~ .menuEffects ul {
+        transform: translateY(-30%);
+    }
+
+    
+    /* mobile title styling */
+    .squareLogo {
+        width: 50px;
+        height: auto;
+
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .title {
+        margin-right: auto;
+        padding: 25px 25px;
+    
+        font-size: 25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+    }
+
+    .title a:link {
+        padding: 0;
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobileTitle {
+        list-style-type: none;
+        font-size: 18px;
+        font-family: 'Source Code Pro', monospace;
+        top: 0;
+        margin: 0;
+        padding: 0;
+    
+        /*flexbox*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    
+    .mobileTitle li {
+        list-style-type: none;
+        padding: 12px;
+        display: flex;            /* NEW; nested flex container */
+        justify-content: center;  /* NEW; align anchor elements horizontally */
+        align-items: center; 
+    }
+    
+    .mobileTitle a:visited {
+        text-decoration: none;
+        color: white;
+    }
+
+
+    /* introduction styling */
+    h1 {
+        font-family: 'Overpass Mono';
+        font-size: 18px;
+        font-weight: 400;
+        color: white;
+    }
+
+    h2 {
+        font-family: 'Scheherazade New';
+        font-size: 38px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: white;
+    }
+
+    h3 {
+        font-family: 'Overpass Mono';
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+    }
+
+    /* work experience styling */
+    h4 {
+        color: white;
+
+        font-family: 'Scheherazade New';
+        font-size: 25px;
+        font-weight: 100;
+        font-style: italic;
+        letter-spacing: 1px;
+
+        
+        margin-left: 10px;
+        margin-bottom: -20px;
+    }
+
+    .places {
+        list-style-type: none;
+        margin-bottom: 80px;
+    }
+
+    .places h5 {
+        padding: 0;
+        margin-bottom: -20px;
+    }
+
+    .places a:link {
+        color: white;
+        text-decoration: none;
+
+        font-family: 'Scheherazade New';
+        font-weight: 700;
+        font-size: 35px;
+        letter-spacing: 1px;
+    }
+
+    .places a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .places h6 {
+        color: white;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 13px;
+
+        padding-top: 0;
+        padding-bottom: -10px;
+        margin: 0;
+    }
+
+
+    /* portfolio link styling */
+    .portfolio {
+        list-style-type: none;
+        margin-left: -10px;
+    }
+
+    .more p {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .portfolio li {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .portfolio a:link {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+    .portfolio a:visited {
+        color: white;
+    }
+
+    /* footer styling */
+    .footer {
+        padding-left: 0;
+        margin-top: 50px;
+        
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 520px) {
     /* mobile nav styling */
 
     .nav {
@@ -265,9 +656,7 @@ html {
 
     /* introduction styling */
     #intro {
-        height: 100vh;
-        margin-bottom: -60px;
-        padding-bottom: 0;
+        margin-bottom: 300px;
     }
 
     h1 {
@@ -293,48 +682,6 @@ html {
         margin: 0;
     }
 
-
-    /* typewriter effect */
-    @keyframes typewriter {
-        0%, 100% {
-          width: 0;
-        }
-        20%, 80% {
-          width: 7.8em;
-        }
-      }
-      
-    @keyframes caret {
-        0%, 100% {
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-    }
-
-    .typewriter {
-        overflow: hidden;
-        white-space: nowrap;
-        animation: typewriter;
-        display: inline-block;
-        position: relative;
-        animation-duration: 10s;
-        animation-timing-function: steps(25, end);
-        animation-iteration-count: infinite;
-      }
-      
-      
-    .typewriter::after {
-        content: "|";
-        position: absolute;
-        right: 0;
-        animation: caret infinite;
-        animation-duration: 1s;
-        animation-timing-function: steps(1, end);
-    }
-
-
     /* work experience styling */
     h4 {
         color: white;
@@ -345,12 +692,14 @@ html {
         font-style: italic;
         letter-spacing: 1px;
 
+        
         margin-left: 10px;
         margin-bottom: -20px;
     }
 
     .places {
         list-style-type: none;
+        margin-bottom: 80px;
     }
 
     .places h5 {
@@ -385,9 +734,43 @@ html {
         margin: 0;
     }
 
+
+    /* portfolio link styling */
+    .portfolio {
+        list-style-type: none;
+        margin-left: -10px;
+    }
+
+    .more p {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .portfolio li {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .portfolio a:link {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+    .portfolio a:visited {
+        color: white;
+    }
+
     /* footer styling */
     .footer {
         padding-left: 0;
+        margin-top: 50px;
+        
         text-align: center;
         font-size: 12px;
     }
@@ -415,6 +798,8 @@ html {
         display: none;
     }
 }
+
+
 
 @media only screen and (min-width: 835px) {
 
