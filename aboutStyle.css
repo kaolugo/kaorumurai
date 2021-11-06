@@ -246,6 +246,7 @@ html {
         letter-spacing: 1px;
 
         margin-left: 4vw;
+        margin-right: 4vw;
     }
 
     .headshot {
@@ -253,16 +254,25 @@ html {
         justify-content: center;
     }
 
+    .firstBlurbA {
+        display: none;
+    }
+
+    .tabletLinks {
+        display: none;
+    }
+
     .roo {
         width: 90vw;
         height: auto;
     }
 
-    .blurb {
+    .mobileBlurb {
         margin-left: 4vw;
+        margin-right: 4vw;
     }
 
-    .blurb p {
+    .mobileBlurb p {
         color: white;
 
         font-family: 'Overpass Mono';
@@ -583,9 +593,155 @@ html {
         color: white;
     }
 
+    /* about me section */
+    h1 {
+        color: white;
 
-    
+        font-family: 'Scheherazade New';
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: 1px;
 
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    .headshot {
+        display: flex;
+        justify-content: center;
+
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    .firstBlurbA {
+        display: block;
+        padding-left: 10px;
+
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .tabletLinks {
+        display: none;
+    }
+
+    .roo {
+        width: 50vw;
+        height: auto;
+    }
+
+    .mobileBlurb {
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    .firstBlurb {
+        display: none;
+    }
+
+    .mobileBlurb p {
+        color: white;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 16px;
+
+        margin-bottom: 30px;
+    }
+
+    /* personal links styling */
+    .personalLinks {
+        display: flex;
+    }
+
+    .resume, .social {
+        list-style-type: none;
+        margin-left: -10px;
+    }
+
+
+    .resume li, .social li {
+        color: white;
+
+        font-family: 'Overpass Mono';
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .resume a:link, .social a:link {
+        color: white;
+
+        font-family: 'Overpass Mono';
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .resume a:visited, .social a:visited {
+        color: white;
+    }
+
+
+    /* work experience styling */
+    h4 {
+        color: white;
+
+        font-family: 'Scheherazade New';
+        font-size: 25px;
+        font-weight: 100;
+        font-style: italic;
+        letter-spacing: 1px;
+
+        
+        margin-left: 10px;
+        margin-bottom: -20px;
+        margin-top: 70px;
+    }
+
+    .places {
+        list-style-type: none;
+        margin-bottom: 80px;
+    }
+
+    .places h5 {
+        padding: 0;
+        margin-bottom: -20px;
+    }
+
+    .places a:link {
+        color: white;
+        text-decoration: none;
+
+        font-family: 'Scheherazade New';
+        font-weight: 700;
+        font-size: 35px;
+        letter-spacing: 1px;
+    }
+
+    .places a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .places h6 {
+        color: white;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 13px;
+
+        padding-top: 0;
+        padding-bottom: -10px;
+        margin: 0;
+    }
+
+
+    /* work art styling */
+    .grid2, .gifaoru, .gifaoru2 {
+        display: none;
+    }
 
     /* footer styling */
     .footer {
@@ -598,9 +754,62 @@ html {
 
 }
 
+@media only screen and (min-width: 600px) {
+    /* about content styling */
+    .firstBlurbA {
+        display: none;
+    }
+
+    .firstBlurb {
+        display: block;
+    }
+
+    .aboutContent {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 4vw;
+        margin-left: 4vw;
+    }
+
+    .mobileBlurb {
+        margin: initial;
+    }
+
+    /* headshot styling */
+
+    .headshot {
+        align-self: flex-start;
+
+        display: block;
+        margin: initial;
+    }
+
+    .roo {
+        width: 38vw;
+    }
+
+    /* links styling */
+    .tabletLinks {
+        display: block;
+    }
+
+    .personalLinks {
+        display: none;
+    }
+
+
+}
+
+@media only screen and (min-width: 700px) {
+    /* blurb styling */
+} 
+
 
 @media only screen and (min-width: 768px) {
-
+    /* title styling */
+    h1 {
+        font-size: 60px;
+    }
 }
 
 @media only screen and (min-width: 835px) {
