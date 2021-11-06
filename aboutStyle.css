@@ -237,6 +237,10 @@ html {
 
 
     /* about me section */
+    .cloud1, .cloud2 {
+        display: none;
+    }
+
     h1 {
         color: white;
 
@@ -365,8 +369,43 @@ html {
 
 
     /* work art styling */
-    .grid2, .gifaoru, .gifaoru2 {
+    .workArt {
         display: none;
+    }
+
+    /* portfolio link styling */
+    .portfolio {
+        list-style-type: none;
+        margin-left: -10px;
+    }
+
+    .moreStuff {
+        padding-left: 10px;
+    }
+    
+    .moreStuff p {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .portfolio li {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .portfolio a:link {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 13px;
+    }
+
+    .portfolio a:visited {
+        color: white;
     }
 
 
@@ -594,6 +633,30 @@ html {
     }
 
     /* about me section */
+    .cloud1 {
+        display: block;
+
+        position: fixed;
+        z-index: -20;
+        width: 100vw;
+        height: auto;
+        
+        top: 60vh;
+        right: -30vw;
+    }
+
+    .cloud2 {
+        display: block;
+
+        position: fixed;
+        z-index: -20;
+        width: 100vw;
+        height: auto;
+
+        top: 30vh;
+        right: 30vw;
+    }
+
     h1 {
         color: white;
 
@@ -737,9 +800,44 @@ html {
         margin: 0;
     }
 
+    /* portfolio link styling */
+    .portfolio {
+        list-style-type: none;
+        margin-left: -10px;
+    }
+
+    .moreStuff {
+        padding-left: 10px;
+    }
+
+    .moreStuff p {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .portfolio li {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .portfolio a:link {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .portfolio a:visited {
+        color: white;
+    }
+
 
     /* work art styling */
-    .grid2, .gifaoru, .gifaoru2 {
+    .workArt {
         display: none;
     }
 
@@ -782,6 +880,7 @@ html {
 
         display: block;
         margin: initial;
+        margin-left: 10px;
     }
 
     .roo {
@@ -803,24 +902,286 @@ html {
     }
 }
 
-@media only screen and (min-width: 700px) {
-    /* blurb styling */
-} 
-
 
 @media only screen and (min-width: 768px) {
     /* title styling */
     h1 {
         font-size: 60px;
     }
+
+    /* about content styling */
+    .mobileBlurb {
+        font-size: 18px;
+    }
+
+
+    /* portfolio content styling */
+    .moreStuff {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .moreStuff p {
+        font-size: 16px;
+    }
+
+    .portfolio li {
+        font-size: 16px;
+    }
+
+    .portfolio a:link {
+        font-size: 16px;
+    }
+
+    .portfolio a:hover {
+        background-color: #445DC9;
+    }
+
+    /* work art styling */
+
+    #work {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .workArt {
+        display: block;
+    } 
+
+    .grid2 {
+        display: none;
+    }
+
+    .gifaoru2 {
+        display: none;
+    }
+
+    .gifaoru {
+        width: 55vw;
+        height: auto;
+
+        padding-right: 0;
+        margin-right: -10vw;
+    }
+
+    .workContent {
+        padding-right: 4vw;
+    }
+
+    h4 {
+        margin: initial;
+    }
+
+    /* footer styling */
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    .leftFoot {
+        margin-right: 20vw;
+        margin-left: 0;
+    }
+    
+    .rightFoot {
+        margin-left: 20vw;
+        margin-right: 0;
+    }
 }
 
 @media only screen and (min-width: 835px) {
+    /* putting away mobile nav */
+    .mobileNav {
+        display: none;
+    }
 
+    .mobileTitle {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+
+    .open {
+        display: none;
+    }
+
+    .menuOpen {
+        display: none;
+    }
+
+    /* title styling */
+    .squareLogo {
+        width: 50px;
+        height: auto;
+    
+        padding: 10px 10px;
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        padding: 25px 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        font-size: 25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+    
+        margin-right: auto;
+    }
+
+
+    /* navigation bar styling */
+    .nav {
+        list-style-type: none;
+        font-size: 16px;
+        font-family: 'Nanum Gothic';
+        top: 0;
+        margin: 0;
+        padding: 0;
+    
+        /*flexbox*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    
+    .nav li {
+        list-style-type: none;
+        padding: 12px;
+        display: flex;            /* NEW; nested flex container */
+        justify-content: center;  /* NEW; align anchor elements horizontally */
+        align-items: center; 
+    }
+    
+    .more {
+        margin-right: 20px;
+    }
+    
+    .more a:link, .navLink a:link {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+    }
+    
+    .logo a:link {
+        padding: 0;
+        text-decoration: none;
+        color:white;
+    }
+    
+    .nav a:visited {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .more a:hover, .navLink a:hover {
+        color: white;
+        background-color: #FF655F;
+    }
+
+    /* work experience styling */
+    h4 {
+        font-size: 30px;
+        margin-bottom: -30px;
+    }
+
+    .places h5 {
+        margin-bottom: -10px;
+    }
+
+    .places a:link {
+        font-size: 38px;
+        font-weight: 400;
+    }
+
+    .places a:hover {
+        color: #FFEE9D;
+    }
+
+    .places h6 {
+        font-size: 16px;
+    }
+
+
+    /* footer styling */
+    .footer {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (min-width: 1000px) {
+    /* headshot styling */
+    .headshot {
+        margin-left: 20px;
+    }
 
+    /* about content styling */
+    .mobileBlurb p{
+        font-size: 18px;
+    }
+
+    .resume li, .social li {
+        font-size: 18px;
+    }
+
+    .resume a:link, .social a:link {
+        font-size: 18px;
+    }
+
+    /* work experience styling */
+    h4 {
+        font-size: 35px;
+        margin-bottom: -30px;
+    }
+
+    .places h5 {
+        margin-bottom: -10px;
+    }
+
+    .places a:link {
+        font-size: 42px;
+        font-weight: 400;
+    }
+
+    .places a:hover {
+        color: #FFEE9D;
+    }
+
+    .places h6 {
+        font-size: 18px;
+    }
+
+    /* work art styling */
+
+    .gifaoru {
+        margin-right: -10vw;
+
+        width: 50vw;
+    }
+
+    /* work content styling */
+    .workContent {
+        margin-top: 50px;
+    }
+
+    /* portfolio links styling */
+    .moreStuff p {
+        font-size: 20px;
+    }
+    
+    .portfolio a:link {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
