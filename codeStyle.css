@@ -1,0 +1,488 @@
+/* general styling */
+html {
+    background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
+}
+
+/* footer styling */
+.footer {
+    color: white;
+
+    list-style-type: none;
+
+    font-family: 'Nanum Gothic';
+    font-weight: 400;
+}
+
+.footer li {
+    padding: 0;
+}
+
+.github {
+    color: white;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 520px) {
+    /* mobile nav styling */
+
+    .nav {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+      
+    .open {
+        background-color: white;
+        width: 24px;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        top: 8px;
+    }
+      
+    .open:before {
+        content: "";
+        background-color: white;
+        width: 24px;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: -8px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+      
+    .open:after {
+        content: "";
+        background-color: white;
+        width: 24px;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: 4px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+      
+    .menuOpen {
+        width: 24px;
+        height: 20px;
+        display: block;
+        padding: 15px;
+        cursor: pointer;
+        float: right;
+    }
+      
+    .menuOpen:hover .open:before {
+        top: -9px;
+    }
+      
+    .menuOpen:hover .open:after {
+        top: 5px;
+    }
+      
+    .menu {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
+    }
+      
+    .menu label {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-size: 100%;
+        cursor: pointer;
+    }
+      
+    .menu .menuContent {
+        position: relative;
+        top: 50%;
+        font-size:40px;
+        line-height: 60px;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-top: -170px;
+    }
+      
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+      
+    .menu ul li a {
+        display: block;
+        color:white;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-family: 'Nanum Gothic', sans-serif;
+        padding: 10px 0;
+    }
+    
+    .menuEffects {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+    
+    .menuEffects ul {
+        transform: translateY(0%);
+        transition: all 0.5s;
+    }
+    
+    #menuToggle:checked ~ .menuEffects {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s;
+    }
+    
+    #menuToggle:checked ~ .menuEffects ul {
+        opacity: 1;
+    }
+    
+    #menuToggle:checked ~ .menuOpen .open {
+        background-color: transparent;
+    }
+    
+    #menuToggle:checked ~ .menuOpen .open:before {
+        content: "";
+        background-color: white;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    #menuToggle:checked ~ .menuOpen .open:after {
+        content: "";
+        background-color:white;
+        transform: rotate(-45deg);
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    #menuToggle:not(:checked) ~ .menuEffects ul {
+        transform: translateY(-30%);
+    }
+
+    
+    /* mobile title styling */
+    .squareLogo {
+        width: 50px;
+        height: auto;
+
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .title {
+        margin-right: auto;
+        padding: 25px 25px;
+    
+        font-size: 25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+    }
+
+    .title a:link {
+        padding: 0;
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobileTitle {
+        list-style-type: none;
+        font-size: 18px;
+        font-family: 'Source Code Pro', monospace;
+        top: 0;
+        margin: 0;
+        padding: 0;
+    
+        /*flexbox*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    
+    .mobileTitle li {
+        list-style-type: none;
+        padding: 12px;
+        display: flex;            /* NEW; nested flex container */
+        justify-content: center;  /* NEW; align anchor elements horizontally */
+        align-items: center; 
+    }
+    
+    .mobileTitle a:visited {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* footer styling */
+    .footer {
+        padding-left: 0;
+        margin-top: 50px;
+        
+        text-align: center;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (min-width: 520px) {
+    /* mobile nav styling */
+
+    .nav {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+      
+    .open {
+        background-color: white;
+        width: 24px;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        cursor: pointer;
+        position: relative;
+        top: 8px;
+    }
+      
+    .open:before {
+        content: "";
+        background-color: white;
+        width: 24px;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: -8px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+      
+    .open:after {
+        content: "";
+        background-color: white;
+        width: 24px;
+        height: 4px;
+        display: block;
+        border-radius: 2px;
+        position: relative;
+        top: 4px;
+        transform: rotate(0deg);
+        transition: all 0.3s ease;
+    }
+      
+    .menuOpen {
+        width: 24px;
+        height: 20px;
+        display: block;
+        padding: 15px;
+        cursor: pointer;
+        float: right;
+    }
+      
+    .menuOpen:hover .open:before {
+        top: -9px;
+    }
+      
+    .menuOpen:hover .open:after {
+        top: 5px;
+    }
+      
+    .menu {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
+    }
+      
+    .menu label {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background-size: 100%;
+        cursor: pointer;
+    }
+      
+    .menu .menuContent {
+        position: relative;
+        top: 50%;
+        font-size:40px;
+        line-height: 60px;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-top: -170px;
+    }
+      
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+    }
+      
+    .menu ul li a {
+        display: block;
+        color:white;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-family: 'Nanum Gothic', sans-serif;
+        padding: 10px 0;
+    }
+    
+    .menuEffects {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+    
+    .menuEffects ul {
+        transform: translateY(0%);
+        transition: all 0.5s;
+    }
+    
+    #menuToggle:checked ~ .menuEffects {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s;
+    }
+    
+    #menuToggle:checked ~ .menuEffects ul {
+        opacity: 1;
+    }
+    
+    #menuToggle:checked ~ .menuOpen .open {
+        background-color: transparent;
+    }
+    
+    #menuToggle:checked ~ .menuOpen .open:before {
+        content: "";
+        background-color: white;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    #menuToggle:checked ~ .menuOpen .open:after {
+        content: "";
+        background-color:white;
+        transform: rotate(-45deg);
+        position: relative;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    #menuToggle:not(:checked) ~ .menuEffects ul {
+        transform: translateY(-30%);
+    }
+
+    
+    /* mobile title styling */
+    .squareLogo {
+        width: 50px;
+        height: auto;
+
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .title {
+        margin-right: auto;
+        padding: 25px 25px;
+    
+        font-size: 25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+    }
+
+    .title a:link {
+        padding: 0;
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobileTitle {
+        list-style-type: none;
+        font-size: 18px;
+        font-family: 'Source Code Pro', monospace;
+        top: 0;
+        margin: 0;
+        padding: 0;
+    
+        /*flexbox*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    
+    .mobileTitle li {
+        list-style-type: none;
+        padding: 12px;
+        display: flex;            /* NEW; nested flex container */
+        justify-content: center;  /* NEW; align anchor elements horizontally */
+        align-items: center; 
+    }
+    
+    .mobileTitle a:visited {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* footer styling */
+    .footer {
+        padding-left: 0;
+        margin-top: 50px;
+        
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+@media only screen and (min-width: 835px) {
+
+}
+
+@media only screen and (min-width: 1000px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+    
+}
+
+@media only screen and (min-width: 1500px) {
+
+}
