@@ -274,7 +274,7 @@ html {
         margin-bottom: 50px;
     }
 
-    .case img {
+    .caseImage img {
         width: 90vw;
         height: auto;
     }
@@ -613,13 +613,18 @@ html {
 
     /* case study styling */
     .case {
-        margin-right: 4vw;
-        margin-left: 4vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
         margin-bottom: 50px;
     }
 
-    .case img {
-        width: 90vw;
+    .caseImage {
+        display: flex;
+        justify-content: center;
+    }
+
+    .caseImage img {
+        width: 80vw;
         height: auto;
     }
 
@@ -711,11 +716,147 @@ html {
 }
 
 @media only screen and (min-width: 600px) {
+    /* case studies */
+    .caseStudies {
+        display: flex;
+        flex-direction: column;
+    }
+    /* case study styling */
+    .case {
+        width: 452px;
+        height: auto;
+
+        align-self: center;
+    }
+
+    .caseImage img {
+        width: 416px;
+        height: auto;
+    }
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 700px) {
+    .intro {
+        height: initial;
+        margin-top: 250px;
+        margin-bottom: 200px;
+    }
 
+    h1 {
+        font-size: 60px;
+        
+        margin-right: 6vw;
+        margin-left: 6vw;
+        margin-top: initial;
+    }
+
+    h2 {
+        margin-right: 6vw;
+        margin-left: 6vw;
+    }
+
+    /* case study styling */
+    .case {
+        display: flex;
+        justify-content: space-evenly;
+
+        margin-right: 6vw;
+        margin-left: 6vw;
+        margin-bottom: 60px;
+
+        width: initial;
+        height: auto;
+    }
+
+    .caseImage {
+        display: initial;
+    }
+
+    .caseImage img {
+        display: initial;
+        width: 40vw;
+        height: auto;
+
+        align-self: center;
+    }
+
+    .caseText {
+        width: 45vw;
+    }
+
+    /* cases styling */
+    #lynq .caseText {
+        margin-left: 10px;
+    }
+
+    #motherHen {
+        flex-direction: row-reverse;
+    }
+
+    #motherHen .caseText {
+        margin-right: 10px;
+    }
+
+    #yaochi .caseText {
+        margin-left: 10px;
+    }
+
+    #indianCreek {
+        flex-direction: row-reverse;
+    }
+
+    #oo .caseText {
+        margin-left: 10px;
+    }
+
+
+    /* portfolio content styling */
+    .moreStuff {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .moreStuff p {
+        font-size: 18px;
+    }
+
+    .portfolio li {
+        font-size: 18px;
+    }
+
+    .portfolio a:link {
+        font-size: 18px;
+    }
+
+    .portfolio a:hover {
+        background-color: #445DC9;
+    }
+
+    /* footer styling */
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    .leftFoot {
+        margin-right: 20vw;
+        margin-left: 0;
+    }
+    
+    .rightFoot {
+        margin-left: 20vw;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .case {
+        align-items: center;
+    }
 }
 
 @media only screen and (min-width: 835px) {
