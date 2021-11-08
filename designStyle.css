@@ -268,9 +268,91 @@ html {
 
 
     /* case study styling */
+    .case {
+        margin-right: 4vw;
+        margin-left: 4vw;
+        margin-bottom: 50px;
+    }
+
     .case img {
-        width: 20vw;
+        width: 90vw;
         height: auto;
+    }
+
+    .caseText h3 {
+        color: white;
+
+        font-family:'Nanum Gothic';
+        font-weight: 400;
+        font-size: 16px;
+
+        margin-bottom: -50px;
+    }
+
+    .caseText h4 {
+        color: white;
+
+        font-family: 'Overpass Mono';
+        font-weight: 700;
+        font-size: 40px;
+
+        margin-bottom: -30px;
+    }
+
+    .caseText h5 {
+        color: white;
+
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 16px;
+
+        margin-bottom: 10px;
+    }
+
+    .caseText a {
+        color: white;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+
+    /* portfolio link styling */
+    .portfolio {
+        list-style-type: none;
+        margin-left: -10px;
+    }
+
+    .moreStuff {
+        padding-left: 10px;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+    
+    .moreStuff p {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .portfolio li {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .portfolio a:link {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .portfolio a:visited {
+        color: white;
     }
     
 
@@ -494,6 +576,129 @@ html {
         text-decoration: none;
         color: white;
     }
+
+
+     /* code portfolio title styling */
+     .intro {
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        color: white;
+        font-family: "Scheherazade New";
+        font-size: 70px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 90%;
+
+        margin-left: 4vw;
+        margin-right: 4vw;
+        margin-top: -20vh;
+    }
+
+    h2 {
+        color: white;
+        font-family: "Overpass Mono";
+        font-size: 16px;
+        font-weight: 400;
+        
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+
+    /* case study styling */
+    .case {
+        margin-right: 4vw;
+        margin-left: 4vw;
+        margin-bottom: 50px;
+    }
+
+    .case img {
+        width: 90vw;
+        height: auto;
+    }
+
+    .caseText h3 {
+        color: white;
+
+        font-family:'Nanum Gothic';
+        font-weight: 400;
+        font-size: 16px;
+
+        margin-bottom: -50px;
+    }
+
+    .caseText h4 {
+        color: white;
+
+        font-family: 'Overpass Mono';
+        font-weight: 700;
+        font-size: 40px;
+
+        margin-bottom: -30px;
+    }
+
+    .caseText h5 {
+        color: white;
+
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 16px;
+
+        margin-bottom: 10px;
+    }
+
+    .caseText a {
+        color: white;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+
+    /* portfolio link styling */
+    .portfolio {
+        list-style-type: none;
+        margin-left: -10px;
+    }
+
+    .moreStuff {
+        padding-left: 10px;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+    
+    .moreStuff p {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .portfolio li {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .portfolio a:link {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .portfolio a:visited {
+        color: white;
+    }
+
 
     /* footer styling */
     .footer {
