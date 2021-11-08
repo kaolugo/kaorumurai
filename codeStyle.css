@@ -270,6 +270,8 @@ html {
     .projects {
         margin-left: 4vw;
         margin-right: 4vw;
+
+        margin-bottom: 50px;
     }
 
     /* card styling */
@@ -671,6 +673,225 @@ html {
         text-decoration: none;
         color: white;
     }
+
+
+    /* code portfolio title styling */
+    .intro {
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        color: white;
+        font-family: "Scheherazade New";
+        font-size: 70px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 90%;
+
+        margin-left: 4vw;
+        margin-right: 4vw;
+        margin-top: -20vh;
+    }
+
+    h2 {
+        color: white;
+        font-family: "Overpass Mono";
+        font-size: 18px;
+        font-weight: 400;
+        
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    .projects {
+        margin-left: 4vw;
+        margin-right: 4vw;
+
+        margin-bottom: 50px;
+    }
+
+    /* card styling */
+    .card {
+        background-color: rgb(255,255,255, 0.6);
+        outline: 3px solid #404040;
+
+        margin-top: 60px;
+        margin-bottom: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        box-shadow: 10px 5px 10px #ff655f;
+    }
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        outline: 3px solid #404040;
+        padding: 5px;
+    }
+
+    .x {
+        width: 20px;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .topbar h3 {
+        color: #404040;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 18px;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottombar {
+        display: flex;
+
+        padding: 15px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .projectText h4 {
+        color: #404040;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 90%;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .type {
+        color: #404040;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 95%;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .projectText h6 {
+        color: #404040;
+
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 18px;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .skills {
+        color: #404040;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 20px;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .projectText p {
+        color: #404040;
+
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 16px;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .projectImages {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        margin-left: 5px;
+    }
+
+    .projectImages img {
+        width: 30vw;
+        height: auto;
+
+        margin-bottom: 10px;
+
+        align-self: center;
+    }
+
+    .projectImages a {
+        background-color: #FF9793;
+        outline: 2px solid #404040;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+
+        align-self: center;
+
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+
+    /* portfolio link styling */
+    .portfolio {
+        list-style-type: none;
+        margin-left: -10px;
+    }
+
+    .moreStuff {
+        padding-left: 10px;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+    
+    .moreStuff p {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .portfolio li {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .portfolio a:link {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    .portfolio a:visited {
+        color: white;
+    }
+    
 
     /* footer styling */
     .footer {
