@@ -915,35 +915,35 @@ html {
         width: 536px;
         height: 340px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #birdApp{
         width: 536px;
         height: 330px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     #yaochi {
         width: 536px;
         height: 310px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #goodNews {
         width: 536px;
         height: 310px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     #ohhi {
         width: 536px;
         height: 340px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     .projectImages img {
@@ -953,20 +953,329 @@ html {
 
     .projectImages a {
         padding-right: 30px;
-        padding-left: 30x;
+        padding-left: 30px;
     }
 }
 
 @media only screen and (min-width: 768px) {
+    .intro {
+        height: initial;
+        margin-top: 250px;
+        margin-bottom: 200px;
+    }
 
+    h1 {
+        font-size: 60px;
+        
+        margin-right: 6vw;
+        margin-left: 6vw;
+        margin-top: initial;
+    }
+
+    h2 {
+        margin-right: 6vw;
+        margin-left: 6vw;
+    }
+    
+    /* projects styling */
+    .projects {
+        margin-left:8vw;
+        margin-right:8vw;
+    }
+
+    /* portfolio content styling */
+    .moreStuff {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .moreStuff p {
+        font-size: 18px;
+    }
+
+    .portfolio li {
+        font-size: 18px;
+    }
+
+    .portfolio a:link {
+        font-size: 18px;
+    }
+
+    .portfolio a:hover {
+        background-color: #445DC9;
+    }
+
+    /* footer styling */
+    .footer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    .leftFoot {
+        margin-right: 20vw;
+        margin-left: 0;
+    }
+    
+    .rightFoot {
+        margin-left: 20vw;
+        margin-right: 0;
+    }
 }
 
 @media only screen and (min-width: 835px) {
+    /* putting away mobile nav */
+    .mobileNav {
+        display: none;
+    }
+
+    .mobileTitle {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+
+    .open {
+        display: none;
+    }
+
+    .menuOpen {
+        display: none;
+    }
+
+    /* title styling */
+    .squareLogo {
+        width: 50px;
+        height: auto;
+    
+        padding: 10px 10px;
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        padding: 25px 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        font-size: 25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+    
+        margin-right: auto;
+    }
+
+
+    /* navigation bar styling */
+    .nav {
+        list-style-type: none;
+        font-size: 16px;
+        font-family: 'Nanum Gothic';
+        top: 0;
+        margin: 0;
+        padding: 0;
+    
+        /*flexbox*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    
+    .nav li {
+        list-style-type: none;
+        padding: 12px;
+        display: flex;            /* NEW; nested flex container */
+        justify-content: center;  /* NEW; align anchor elements horizontally */
+        align-items: center; 
+    }
+    
+    .more {
+        margin-right: 20px;
+    }
+    
+    .more a:link, .navLink a:link {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+    }
+    
+    .logo a:link {
+        padding: 0;
+        text-decoration: none;
+        color:white;
+    }
+    
+    .nav a:visited {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .more a:hover, .navLink a:hover {
+        color: white;
+        background-color: #FF655F;
+    }
+
+    /* footer styling */
+    .footer {
+        font-size: 16px;
+    }
 
 }
 
 @media only screen and (min-width: 1000px) {
+    /* intro styling */
+    .intro h2 {
+        width: 70vw;
+    }
+    
+    .projects {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+    
+    /* card styling */
+    #motherHen {
+        width: 444px;
+        height: 300px;
 
+        align-self: flex-end;
+    }
+
+    #birdApp{
+        width: 444px;
+        height: 320px;
+
+        align-self: flex-start;
+    }
+
+    #yaochi {
+        width: 444px;
+        height: 300px;
+
+        align-self: flex-end;
+    }
+
+    #goodNews {
+        width: 444px;
+        height: 260px;
+
+        align-self: flex-start;
+    }
+
+    #ohhi {
+        width: 444px;
+        height: 300px;
+
+        align-self: flex-end;
+    }
+
+    /* projects styling */
+    .card {
+        outline: 2px solid #404040;
+    }
+
+    .topbar {
+        outline: 2px solid #404040;
+        padding: 3px;
+    }
+
+    .x {
+        width: 20px;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .topbar h3 {
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottombar {
+        display: flex;
+
+        padding: 10px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .projectText h4 {
+        font-size: 30px;
+        line-height: 90%;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .type {
+        font-size: 20px;
+        line-height: 95%;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .projectText h6 {
+        font-size: 16px;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .skills {
+        font-size: 20px;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .projectText p {
+        font-size: 16px;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .projectImages {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        margin-left: 5px;
+    }
+
+    .projectImages img {
+        width: 130px;
+        height: auto;
+
+        align-self: center;
+    }
+
+    .projectImages a {
+        background-color: #FF9793;
+        outline: 2px solid #404040;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-right: 15px;
+        padding-left: 15px;
+        align-self: center;
+
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 16px;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
