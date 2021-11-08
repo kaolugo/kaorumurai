@@ -903,6 +903,60 @@ html {
     }
 }
 
+@media only screen and (min-width: 600px) {
+    /* projects styling */
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* card styling */
+    #motherHen {
+        width: 536px;
+        height: 340px;
+
+        align-self: flex-start;
+    }
+
+    #birdApp{
+        width: 536px;
+        height: 330px;
+
+        align-self: flex-end;
+    }
+
+    #yaochi {
+        width: 536px;
+        height: 310px;
+
+        align-self: flex-start;
+    }
+
+    #goodNews {
+        width: 536px;
+        height: 310px;
+
+        align-self: flex-end;
+    }
+
+    #ohhi {
+        width: 536px;
+        height: 340px;
+
+        align-self: flex-start;
+    }
+
+    .projectImages img {
+        width: 180px;
+        height: auto;
+    }
+
+    .projectImages a {
+        padding-right: 30px;
+        padding-left: 30x;
+    }
+}
+
 @media only screen and (min-width: 768px) {
 
 }
