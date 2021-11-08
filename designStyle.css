@@ -23,6 +23,25 @@ html {
 }
 
 @media only screen and (max-width: 520px) {
+    /* background image styling */
+    /* background clouds styling */
+    .cloud1, .cloud2 {
+        position: fixed;
+        z-index: -20;
+        width: 150vw;
+        height: auto;
+    }
+
+    .cloud1 {
+        right: -80vw;
+        top: 15vh;
+    }
+
+    .cloud2 {
+        right: 20vw;
+        top: 60vh;
+    }
+
     /* mobile nav styling */
     .nav {
         display: none;
@@ -367,6 +386,23 @@ html {
 }
 
 @media only screen and (min-width: 520px) {
+    .cloud1, .cloud2 {
+        position: fixed;
+        z-index: -20;
+        width: 150vw;
+        height: auto;
+    }
+
+    .cloud1 {
+        right: -80vw;
+        top: 15vh;
+    }
+
+    .cloud2 {
+        right: 20vw;
+        top: 60vh;
+    }
+
     /* mobile nav styling */
     .nav {
         display: none;
@@ -644,6 +680,7 @@ html {
         font-family: 'Overpass Mono';
         font-weight: 700;
         font-size: 40px;
+        line-height: 130%;
 
         margin-bottom: -30px;
     }
@@ -857,20 +894,218 @@ html {
     .case {
         align-items: center;
     }
+
+    .caseText {
+        width: initial;
+    }
 }
 
 @media only screen and (min-width: 835px) {
+     .case {
+        margin-right: 10vw;
+        margin-left: 10vw;
+    }
 
+    /* putting away mobile nav */
+    .mobileNav {
+        display: none;
+    }
+
+    .mobileTitle {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+
+    .open {
+        display: none;
+    }
+
+    .menuOpen {
+        display: none;
+    }
+
+    /* title styling */
+    .squareLogo {
+        width: 50px;
+        height: auto;
+    
+        padding: 10px 10px;
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        padding: 25px 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        font-size: 25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+    
+        margin-right: auto;
+    }
+
+
+    /* navigation bar styling */
+    .nav {
+        list-style-type: none;
+        font-size: 16px;
+        font-family: 'Nanum Gothic';
+        top: 0;
+        margin: 0;
+        padding: 0;
+    
+        /*flexbox*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    
+    .nav li {
+        list-style-type: none;
+        padding: 12px;
+        display: flex;            /* NEW; nested flex container */
+        justify-content: center;  /* NEW; align anchor elements horizontally */
+        align-items: center; 
+    }
+    
+    .more {
+        margin-right: 20px;
+    }
+    
+    .more a:link, .navLink a:link {
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+    }
+    
+    .logo a:link {
+        padding: 0;
+        text-decoration: none;
+        color:white;
+    }
+    
+    .nav a:visited {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .more a:hover, .navLink a:hover {
+        color: white;
+        background-color: #FF655F;
+    }
+
+    /* footer styling */
+    .footer {
+        font-size: 16px;
+    }
 }
 
+
 @media only screen and (min-width: 1000px) {
+    /* background images styling */
+    .cloud1 {
+        width: 100vw;
+        height: auto;
+        right: -60vw;
+        top: 20vh;
+    }
+
+    .cloud2 {
+        width: 100vw;
+        height: auto;
+        right: 40vw;
+        top: 50vh;
+    }
+
+
+    /* intro styling */
+    .intro h2 {
+        width: 70vw;
+    }
+
+    .case {
+        margin-right: 12vw;
+        margin-left: 12vw;
+    }
 
 }
 
 @media only screen and (min-width: 1200px) {
-    
+    /* case typography styling */
+    .caseText h3 {
+        font-size: 18px;
+        margin-bottom: -50px;
+    }
+
+    .caseText h4 {
+        font-size: 42px;
+        line-height: 130%;
+        margin-bottom: -30px;
+    }
+
+    .caseText h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .caseText a {
+        font-size:20px;
+    }
+
+    /* cases styling */
+    #lynq .caseText {
+        margin-left: 30px;
+    }
+
+    #motherHen .caseText {
+        margin-right: 30px;
+    }
+
+    #yaochi .caseText {
+        margin-left: 30px;
+    }
+
+    #indianCreek caseText {
+        margin-left: 30px;
+    }
+
+    #oo .caseText {
+        margin-left: 30px;
+    } 
+
+    .case {
+        margin-bottom: 50px;
+    }   
+
+    /* case image styling */
+    .caseImage img {
+        width: 500px;
+        height: auto;
+
+        align-self: center;
+    }
+
+    .caseText {
+        width: 500px;
+    }
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1300px) {
+    /* intro styling */
+    .intro h2 {
+        width: 60vw;
+    }
 
+    .projects {
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
 }

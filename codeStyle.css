@@ -1186,14 +1186,14 @@ html {
 @media only screen and (min-width: 1000px) {
     /* background images styling */
     .cloud1 {
-        width: 120vw;
+        width: 100vw;
         height: auto;
         right: -60vw;
         top: 20vh;
     }
 
     .cloud2 {
-        width: 120vw;
+        width: 100vw;
         height: auto;
         right: 40vw;
         top: 50vh;
