@@ -267,6 +267,188 @@ html {
         margin-right: 4vw;
     }
 
+    .projects {
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+
+    /* card styling */
+    .card {
+        background-color: rgb(255,255,255, 0.6);
+        outline: 2px solid #404040;
+
+        margin-top: 50px;
+        margin-bottom: 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        box-shadow: 10px 5px 10px #ff655f;
+    }
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        outline: 2px solid #404040;
+        padding: 3px;
+    }
+
+    .x {
+        width: 20px;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .topbar h3 {
+        color: #404040;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 16px;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .bottombar {
+        display: flex;
+
+        padding: 10px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .projectText h4 {
+        color: #404040;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 90%;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 8px;
+    }
+
+    .type {
+        color: #404040;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 95%;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .projectText h6 {
+        color: #404040;
+
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 16px;
+
+        padding: 0;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .skills {
+        color: #404040;
+
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 20px;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .projectText p {
+        color: #404040;
+
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 16px;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    .projectImages {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        margin-left: 5px;
+    }
+
+    .projectImages img {
+        width: 26vw;
+        height: auto;
+
+        align-self: center;
+    }
+
+    .projectImages a {
+        background-color: #FF9793;
+        outline: 2px solid #404040;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 3vw;
+        padding-right: 3vw;
+
+        align-self: center;
+
+        font-family: 'Nanum Gothic';
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+
+    /* portfolio link styling */
+    .portfolio {
+        list-style-type: none;
+        margin-left: -10px;
+    }
+
+    .moreStuff {
+        padding-left: 10px;
+        margin-left: 4vw;
+        margin-right: 4vw;
+    }
+    
+    .moreStuff p {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .portfolio li {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .portfolio a:link {
+        color: white;
+        font-family: 'Overpass Mono';
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .portfolio a:visited {
+        color: white;
+    }
+    
+
     /* footer styling */
     .footer {
         padding-left: 0;

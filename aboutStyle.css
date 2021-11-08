@@ -390,19 +390,21 @@ html {
 
     .moreStuff {
         padding-left: 10px;
+        margin-left: 4vw;
+        margin-right: 4vw;
     }
     
     .moreStuff p {
         color: white;
         font-family: 'Overpass Mono';
-        font-size: 13px;
+        font-size: 16px;
         font-weight: 400;
     }
 
     .portfolio li {
         color: white;
         font-family: 'Overpass Mono';
-        font-size: 13px;
+        font-size: 16px;
         font-weight: 400;
     }
 
@@ -410,7 +412,7 @@ html {
         color: white;
         font-family: 'Overpass Mono';
         font-weight: 400;
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .portfolio a:visited {
@@ -821,6 +823,8 @@ html {
 
     .moreStuff {
         padding-left: 10px;
+        margin-left: 4vw;
+        margin-right: 4vw;
     }
 
     .moreStuff p {
