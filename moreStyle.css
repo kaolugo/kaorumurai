@@ -1,122 +1,16 @@
-/* nav styling */
-.nav {
-    font-weight: 500;
-}
-
-/* intro styling */
-
-.intro {
-    margin-left: 5vw;
-    margin-right: 5vw;
-
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-}
-
-.title, .subNav {
-    list-style-type: none;
-}
-
-.blue, .red, .yellow {
-    font-family: 'Nanum Gothic', sans-serif;
-    font-weight: 700;
-    letter-spacing: 2px;
-    line-height: 60px;
-}
-
-/* subnav styling */
-.subNav, button{
-    font-family: 'Source Code Pro', monospace;
-    font-size: 25px;
-    font-weight: 500;
-
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-button, button::after {
-    background-color: #FFFFFF;
-    border: none;
-    text-decoration: none;
-    outline: none;
-}
-
-button:hover {
-    background-color: #445DC9;
-    color: white;
-}
-
-.blue {
-    color: #445DC9;
-}
-
-.red {
-    color: #FF655F;
-}
-
-.yellow {
-    background-color: #FFEE9D;
-    padding: 0;
-}
-
-h1 {
-    font-family: 'Darker Grotesque', sans-serif;
-    font-size: 35px;
-    font-weight: 300;
-    letter-spacing: 3px;
-}
-
-/* content styling */
-#analog{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    margin-top: 25px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
-#digital, #video {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    margin-top: 25px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
-#nail {
-    display: none;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    
-    margin-top: 25px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-}
-
-
-
-
-#video iframe {
-    filter: drop-shadow(10px 10px 10px grey);
-
-    align-self: center;
+/* general styling */
+html {
+    background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
 }
 
 /* footer styling */
 .footer {
-    list-style-type: none;
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 500;
+    color: white;
 
-    padding-top: 50px;
+    list-style-type: none;
+
+    font-family: 'Nanum Gothic';
+    font-weight: 400;
 }
 
 .footer li {
@@ -124,13 +18,12 @@ h1 {
 }
 
 .github {
-    color: black;
+    color: white;
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 520px) {
     /* mobile nav styling */
-
     .nav {
         display: none;
     }
@@ -140,7 +33,7 @@ h1 {
     }
       
     .open {
-        background-color: black;
+        background-color: white;
         width: 24px;
         height: 4px;
         display: block;
@@ -152,7 +45,7 @@ h1 {
       
     .open:before {
         content: "";
-        background-color: black;
+        background-color: white;
         width: 24px;
         height: 4px;
         display: block;
@@ -165,7 +58,7 @@ h1 {
       
     .open:after {
         content: "";
-        background-color: black;
+        background-color: white;
         width: 24px;
         height: 4px;
         display: block;
@@ -199,7 +92,7 @@ h1 {
         height: 100vh;
         top: 0;
         left: 0;
-        background: white;
+        background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
     }
       
     .menu label {
@@ -230,19 +123,11 @@ h1 {
       
     .menu ul li a {
         display: block;
-        color:black;
+        color:white;
         text-decoration: none;
         transition: color 0.2s;
         font-family: 'Nanum Gothic', sans-serif;
         padding: 10px 0;
-    }
-      
-    .menu ul li a:hover {
-        color: black;
-    }
-      
-    .menu ul li:hover {
-        background: #FFEE9D;
     }
     
     .menuEffects {
@@ -272,7 +157,7 @@ h1 {
     
     #menuToggle:checked ~ .menuOpen .open:before {
         content: "";
-        background-color: black;
+        background-color: white;
         transform: rotate(45deg);
         position: absolute;
         top: 0;
@@ -282,7 +167,7 @@ h1 {
     
     #menuToggle:checked ~ .menuOpen .open:after {
         content: "";
-        background-color:black;
+        background-color:white;
         transform: rotate(-45deg);
         position: relative;
         top: 0;
@@ -293,115 +178,106 @@ h1 {
     #menuToggle:not(:checked) ~ .menuEffects ul {
         transform: translateY(-30%);
     }
+
     
-    /* logo styling */
+    /* mobile title styling */
     .squareLogo {
         width: 50px;
         height: auto;
-    
-        padding: 10px 10px;
-        margin-left: 5px;
+
+        margin-left: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
-    .logo {
-        padding: 25px 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-        font-size: 30px;
-        font-family: 'Nanum Gothic', sans-serif;
-        font-weight: 700;
-    
+    .title {
         margin-right: auto;
-    }
-
-    .mobileTitle {
-        list-style-type: none;
-        font-size: 18px;
-        font-family: 'Source Code Pro', monospace;
-        top: 0;
-        margin: 0;
-        padding: 0;
+        padding: 25px 25px;
     
-        /*flexbox*/
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-    }
-    
-    .mobileTitle li {
-        list-style-type: none;
-        padding: 12px;
-        display: flex;            /* NEW; nested flex container */
-        justify-content: center;  /* NEW; align anchor elements horizontally */
-        align-items: center; 
-    }
-
-    .logo a:link {
-        padding: 0;
-        text-decoration: none;
-        color: black;
-    }
-    
-    .mobileTitle a:visited {
-        text-decoration: none;
-        color: black;
-    }
-
-    /* intro styling */
-    .intro {
-        margin-top: 0;
-        flex-direction: column;
-    }
-
-    .subTitle h1 {
         font-size: 25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
     }
 
-    .title {
-        font-size: 30px;
-        padding-left: 0;
+    .title a:link {
+        padding: 0;
+        text-decoration: none;
+        color: white;
     }
 
-    /* sub title styling */
-    .subNav {
-        padding-left: 0;
-    }
-
-    .subNav, button {
-        justify-content: center;
+    .mobileTitle {
+        list-style-type: none;
         font-size: 18px;
+        font-family: 'Source Code Pro', monospace;
+        top: 0;
+        margin: 0;
+        padding: 0;
+    
+        /*flexbox*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+    }
+    
+    .mobileTitle li {
+        list-style-type: none;
+        padding: 12px;
+        display: flex;            /* NEW; nested flex container */
+        justify-content: center;  /* NEW; align anchor elements horizontally */
+        align-items: center; 
+    }
+    
+    .mobileTitle a:visited {
+        text-decoration: none;
+        color: white;
     }
 
-    /* content styling */
-    #analog img, #digital img, #nail img{
-        max-width: 90%;
-        width: auto; 
-        height: auto;
-    
-        padding-top: 10px;
-        padding-bottom: 10px;
-    
-        /*box-shadow: 10px 10px 15px grey;*/
-        filter: drop-shadow(10px 10px 10px grey);
-        align-self: center;
+    /* intro styling */
+    .intro {
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1 {
+        color: white;
+        font-family: "Scheherazade New";
+        font-size: 70px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 90%;
+
+        margin-left: 4vw;
+        margin-right: 4vw;
+        margin-top: -20vh;
+    }
+
+    h2 {
+        color: white;
+        font-family: "Overpass Mono";
+        font-size: 16px;
+        font-weight: 400;
+        
+        margin-left: 4vw;
+        margin-right: 4vw;
     }
 
     /* footer styling */
     .footer {
         padding-left: 0;
+        margin-top: 50px;
+        
         text-align: center;
         font-size: 12px;
     }
+
 }
 
-@media only screen and (min-width: 470px) {
+@media only screen and (min-width: 520px) {
     /* mobile nav styling */
-
     .nav {
         display: none;
     }
@@ -411,7 +287,7 @@ h1 {
     }
       
     .open {
-        background-color: black;
+        background-color: white;
         width: 24px;
         height: 4px;
         display: block;
@@ -423,7 +299,7 @@ h1 {
       
     .open:before {
         content: "";
-        background-color: black;
+        background-color: white;
         width: 24px;
         height: 4px;
         display: block;
@@ -436,7 +312,7 @@ h1 {
       
     .open:after {
         content: "";
-        background-color: black;
+        background-color: white;
         width: 24px;
         height: 4px;
         display: block;
@@ -470,7 +346,7 @@ h1 {
         height: 100vh;
         top: 0;
         left: 0;
-        background: white;
+        background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
     }
       
     .menu label {
@@ -501,19 +377,11 @@ h1 {
       
     .menu ul li a {
         display: block;
-        color:black;
+        color:white;
         text-decoration: none;
         transition: color 0.2s;
         font-family: 'Nanum Gothic', sans-serif;
         padding: 10px 0;
-    }
-      
-    .menu ul li a:hover {
-        color: black;
-    }
-      
-    .menu ul li:hover {
-        background: #FFEE9D;
     }
     
     .menuEffects {
@@ -543,7 +411,7 @@ h1 {
     
     #menuToggle:checked ~ .menuOpen .open:before {
         content: "";
-        background-color: black;
+        background-color: white;
         transform: rotate(45deg);
         position: absolute;
         top: 0;
@@ -553,7 +421,7 @@ h1 {
     
     #menuToggle:checked ~ .menuOpen .open:after {
         content: "";
-        background-color:black;
+        background-color:white;
         transform: rotate(-45deg);
         position: relative;
         top: 0;
@@ -564,30 +432,32 @@ h1 {
     #menuToggle:not(:checked) ~ .menuEffects ul {
         transform: translateY(-30%);
     }
+
     
-    /* logo styling */
+    /* mobile title styling */
     .squareLogo {
         width: 50px;
         height: auto;
-    
-        padding: 10px 10px;
-        margin-left: 5px;
+
+        margin-left: 0px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
-    .logo {
+    .title {
+        margin-right: auto;
         padding: 25px 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     
-        font-size: 30px;
+        font-size: 25px;
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 700;
-    
-        margin-right: auto;
+    }
+
+    .title a:link {
+        padding: 0;
+        text-decoration: none;
+        color: white;
     }
 
     .mobileTitle {
@@ -611,90 +481,97 @@ h1 {
         justify-content: center;  /* NEW; align anchor elements horizontally */
         align-items: center; 
     }
-
-    .logo a:link {
-        padding: 0;
-        text-decoration: none;
-        color: black;
-    }
     
     .mobileTitle a:visited {
         text-decoration: none;
-        color: black;
+        color: white;
     }
 
     /* intro styling */
     .intro {
-        flex-direction: column;
-    }
+        height: 100vh;
 
-    .title {
         display: flex;
-        justify-content: space-evenly;
-        font-size: 4vw;
-        padding-left: 0;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    /* sub title styling */
-    .subNav {
-        padding-left: 0;
+    h1 {
+        color: white;
+        font-family: "Scheherazade New";
+        font-size: 70px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 90%;
+
+        margin-left: 4vw;
+        margin-right: 4vw;
+        margin-top: -20vh;
     }
 
-    .subNav, button {
-        justify-content: space-evenly;
-        font-size: 20px;
-    }
-
-    /* content styling */
-    #analog img, #digital img, #nail img{
-        width: 400px; 
-        height: auto;
-    
-        padding-top: 10px;
-        padding-bottom: 10px;
-    
-        /*box-shadow: 10px 10px 15px grey;*/
-        filter: drop-shadow(10px 10px 10px grey);
-    
-        align-self: center;
+    h2 {
+        color: white;
+        font-family: "Overpass Mono";
+        font-size: 16px;
+        font-weight: 400;
+        
+        margin-left: 4vw;
+        margin-right: 4vw;
     }
 
     /* footer styling */
     .footer {
         padding-left: 0;
+        margin-top: 50px;
+        
         text-align: center;
         font-size: 12px;
     }
+    
 }
-
 
 @media only screen and (min-width: 768px) {
-    /* logo styling */
-    .squareLogo {
-        width: 70px;
-        height: auto;
-    
-        padding: 10px 10px;
-        margin-left: 10px;
+    .intro {
+        height: initial;
+        margin-top: 250px;
+        margin-bottom: 200px;
+    }
+
+    h1 {
+        font-size: 60px;
+        
+        margin-right: 6vw;
+        margin-left: 6vw;
+        margin-top: initial;
+    }
+
+    h2 {
+        margin-right: 6vw;
+        margin-left: 6vw;
+    }
+
+    /* footer styling */
+    .footer {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+
+    .leftFoot {
+        margin-right: 20vw;
+        margin-left: 0;
     }
     
-    .logo {
-        padding: 25px 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-        font-size: 35px;
-        font-family: 'Nanum Gothic', sans-serif;
-        font-weight: 700;
-    
-        margin-right: auto;
+    .rightFoot {
+        margin-left: 20vw;
+        margin-right: 0;
     }
-    
-    /* nav bar styling */
+
+}
+
+@media only screen and (min-width: 835px) {
+    * putting away mobile nav */
     .mobileNav {
         display: none;
     }
@@ -715,11 +592,37 @@ h1 {
         display: none;
     }
 
+    /* title styling */
+    .squareLogo {
+        width: 50px;
+        height: auto;
+    
+        padding: 10px 10px;
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo {
+        padding: 25px 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        font-size: 25px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+    
+        margin-right: auto;
+    }
 
+
+    /* navigation bar styling */
     .nav {
         list-style-type: none;
-        font-size: 18px;
-        font-family: 'Source Code Pro', monospace;
+        font-size: 16px;
+        font-family: 'Nanum Gothic';
         top: 0;
         margin: 0;
         padding: 0;
@@ -742,103 +645,39 @@ h1 {
         margin-right: 20px;
     }
     
-    
-    /* nav bar links and shit */
     .more a:link, .navLink a:link {
         text-decoration: none;
-        color: black;
+        color: white;
         padding: 5px;
     }
     
     .logo a:link {
         padding: 0;
         text-decoration: none;
-        color: black;
+        color:white;
     }
     
     .nav a:visited {
         text-decoration: none;
-        color: black;
+        color: white;
     }
     
     .more a:hover, .navLink a:hover {
-        color: black;
-        background-color: #FFEE9D;
-    }
-
-    /* intro styling */
-    .intro {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-
-        margin-top: 20px;
-    }
-
-    .title {
-        flex-direction: column;
-        margin-top: 50px;
-        font-size: 32px;
-        padding-left: 40px;
-    }
-
-    /* subnav styling */
-    .subTitle {
-        margin-top: 0;
-        padding-top: 0;
-        align-self: flex-end;
-
-        padding-bottom: 20px;
-    }
-
-    .subNav {
-        margin-top: 0;
-        padding-left: 40px;
-    }
-
-    .subNav, button {
-        margin-top: 0;
-        justify-content: space-around;
-        font-size: 25px;
+        color: white;
+        background-color: #FF655F;
     }
 
     /* footer styling */
     .footer {
-        display: flex;
         font-size: 16px;
-        justify-content: space-evenly;
-        flex-wrap: nowrap;
-        text-align: left;
     }
 
-    .leftFoot {
-        margin-right: 20vw;
-        margin-left: 0;
-    }
-    
-    .rightFoot {
-        margin-left: 20vw;
-        margin-right: 0;
-    }
 }
 
+@media only screen and (min-width: 1200px) {
 
-@media only screen and (min-width: 960px) {
-    .blue, .red, .yellow {
-        font-size: 40px;
-    }
 }
 
+@media only screen and (min-width: 1500px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
+}
