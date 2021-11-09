@@ -3,6 +3,24 @@ html {
     background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
 }
 
+/* scroll button styling */
+.ctaContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.cta {
+    position: absolute;
+    top: 90vh;
+    z-index: 30;
+
+    color: white;
+    
+    font-family: 'Overpass Mono';
+    font-weight: 700;
+    font-size: 20px;
+}
+
 /* footer styling */
 .footer {
     color: white;
