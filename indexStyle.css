@@ -10,8 +10,8 @@ html {
 
 .cta {
     position: absolute;
-    top: 90vh;
-    z-index: 30;
+    top: 90%;
+    z-index: 10;
 
     color: white;
     
@@ -156,6 +156,8 @@ html {
         top: 0;
         left: 0;
         background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
+
+        z-index: 15;
     }
       
     .menu label {
@@ -573,6 +575,8 @@ html {
         top: 0;
         left: 0;
         background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
+
+        z-index: 15;
     }
       
     .menu label {
