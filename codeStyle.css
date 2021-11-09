@@ -445,8 +445,9 @@ html {
         align-self: center;
     }
 
-    .projectImages a {
+    .projectImages a:link, .projectImages a {
         background-color: #FF9793;
+        color: black;
         outline: 2px solid #404040;
         padding-top: 3px;
         padding-bottom: 3px;
@@ -458,6 +459,12 @@ html {
         font-family: 'Nanum Gothic';
         font-weight: 400;
         font-size: 16px;
+
+        text-decoration: none;
+    }
+
+    .projectImages a:visited {
+        color: black;
     }
 
 
@@ -915,9 +922,10 @@ html {
         align-self: center;
     }
 
-    .projectImages a {
+    .projectImages a:link, .projectImages a {
         background-color: #FF9793;
         outline: 2px solid #404040;
+        color: black;
         padding-top: 3px;
         padding-bottom: 3px;
         padding-left: 5vw;
@@ -928,6 +936,12 @@ html {
         font-family: 'Nanum Gothic';
         font-weight: 400;
         font-size: 18px;
+
+        text-decoration: none;
+    }
+
+    .projectImages a:visited {
+        color: black;
     }
 
 
@@ -1373,9 +1387,10 @@ html {
         align-self: center;
     }
 
-    .projectImages a {
+    .projectImages a:link, .projectImages a {
         background-color: #FF9793;
         outline: 2px solid #404040;
+        color: black;
         padding-top: 3px;
         padding-bottom: 3px;
         padding-right: 15px;
@@ -1385,6 +1400,12 @@ html {
         font-family: 'Nanum Gothic';
         font-weight: 400;
         font-size: 16px;
+
+        text-decoration: none;
+    }
+
+    .projectImages a:visited {
+        color: black;
     }
 }
 
@@ -1817,9 +1838,10 @@ html {
         align-self: center;
     }
 
-    .projectImages a {
+    .projectImages a:link, .projectImages a {
         background-color: #FF9793;
         outline: 2px solid #404040;
+        color: black;
         padding-top: 3px;
         padding-bottom: 3px;
         padding-left: 3vw;
@@ -1830,6 +1852,12 @@ html {
         font-family: 'Nanum Gothic';
         font-weight: 400;
         font-size: 16px;
+
+        text-decoration: none;
+    }
+
+    .projectImages a:visited {
+        color: black;
     }
 
 
@@ -2259,9 +2287,10 @@ html {
         align-self: center;
     }
 
-    .projectImages a {
+    .projectImages a:link, .projectImages a {
         background-color: #FF9793;
         outline: 2px solid #404040;
+        color: black;
         padding-top: 3px;
         padding-bottom: 3px;
         padding-left: 5vw;
@@ -2272,8 +2301,12 @@ html {
         font-family: 'Nanum Gothic';
         font-weight: 400;
         font-size: 18px;
+        text-decoration: none;
     }
 
+    .projectImages a:visited {
+        color: black;
+    }
 
     /* portfolio link styling */
     .portfolio {
@@ -2371,7 +2404,7 @@ html {
         height: auto;
     }
 
-    .projectImages a {
+    .projectImages a:link {
         padding-right: 30px;
         padding-left: 30px;
     }
@@ -2683,9 +2716,10 @@ html {
         align-self: center;
     }
 
-    .projectImages a {
+    .projectImages a:link, .projectImages a{
         background-color: #FF9793;
         outline: 2px solid #404040;
+        color: black;
         padding-top: 3px;
         padding-bottom: 3px;
         padding-right: 15px;
@@ -2695,6 +2729,12 @@ html {
         font-family: 'Nanum Gothic';
         font-weight: 400;
         font-size: 16px;
+
+        text-decoration: none;
+    }
+
+    .projectImages a:visited {
+        color: black;
     }
 }
 
@@ -2874,13 +2914,16 @@ html {
         align-self: center;
     }
 
-    .projectImages a {
+    .projectImages a:link, .projectImages a {
         outline: 2px solid #404040;
+        color: black;
         padding-top: 3px;
         padding-bottom: 3px;
         padding-right: 30px;
         padding-left: 30px;
         font-size: 18px;
+
+        text-decoration: none;
     }
 }
 
