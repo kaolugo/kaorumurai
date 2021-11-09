@@ -1221,35 +1221,37 @@ html {
     /* card styling */
     #motherHen {
         width: 444px;
-        height: 320px;
+        height: 300px;
+
+        padding-bottom: 10px;
 
         align-self: flex-end;
     }
 
     #birdApp{
         width: 444px;
-        height: 340px;
+        height: 320px;
 
         align-self: flex-start;
     }
 
     #yaochi {
         width: 444px;
-        height: 320px;
+        height: 300px;
 
         align-self: flex-end;
     }
 
     #goodNews {
         width: 444px;
-        height: 280px;
+        height: 260px;
 
         align-self: flex-start;
     }
 
     #ohhi {
         width: 444px;
-        height: 320px;
+        height: 300px;
 
         align-self: flex-end;
     }
