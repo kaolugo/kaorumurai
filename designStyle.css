@@ -802,6 +802,10 @@ html {
         margin-bottom: 200px;
     }
 
+    .ctaContainer {
+        display: none;
+    }
+
     h1 {
         font-size: 60px;
         
