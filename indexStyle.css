@@ -389,15 +389,15 @@ html {
 
     .places h5 {
         padding: 0;
-        margin-bottom: -20px;
+        margin-bottom: 5px;
     }
 
     .places a:link {
         color: white;
         text-decoration: none;
 
-        font-family: 'Scheherazade New';
-        font-weight: 700;
+        font-family: 'Lora';
+        font-weight: 600;
         font-size: 35px;
         letter-spacing: 1px;
     }
@@ -808,15 +808,14 @@ html {
 
     .places h5 {
         padding: 0;
-        margin-bottom: -20px;
     }
 
     .places a:link {
         color: white;
         text-decoration: none;
 
-        font-family: 'Scheherazade New';
-        font-weight: 700;
+        font-family: 'Lora';
+        font-weight: 600;
         font-size: 35px;
         letter-spacing: 1px;
     }
@@ -1201,7 +1200,7 @@ html {
     }
 
     .places h5 {
-        margin-bottom: -10px;
+        margin-bottom: 5px;
     }
 
     .places a:link {
@@ -1250,12 +1249,12 @@ html {
     }
 
     .places h5 {
-        margin-bottom: -10px;
+        margin-bottom: 5px;
     }
 
     .places a:link {
         font-size: 42px;
-        font-weight: 400;
+        font-weight: 600;
     }
 
     .places a:hover {
