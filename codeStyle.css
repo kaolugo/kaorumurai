@@ -1001,39 +1001,46 @@ html {
     }
 
     /* card styling */
-    #motherHen {
+    #helpingHand {
         width: 536px;
         height: 340px;
 
         align-self: flex-end;
+    }
+
+    #motherHen {
+        width: 536px;
+        height: 340px;
+
+        align-self: flex-start;
     }
 
     #birdApp{
         width: 536px;
         height: 330px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #yaochi {
         width: 536px;
         height: 310px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     #goodNews {
         width: 536px;
         height: 310px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #ohhi {
         width: 536px;
         height: 340px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     .projectImages img {
@@ -1257,8 +1264,25 @@ html {
         margin-left: 10vw;
         margin-right: 10vw;
     }
+
+    #helpingHand {
+        width: 444px;
+        height: 300px;
+
+        padding-bottom: 10px;
+
+        align-self: flex-end;
+    }
     
     /* card styling */
+    #helpingHand {
+        width: 444px;
+        height: 300px;
+
+        padding-bottom: 10px;
+
+        align-self: flex-start;
+    }
     #motherHen {
         width: 444px;
         height: 300px;
@@ -1424,8 +1448,12 @@ html {
     }
 
     /* cards styling */
-    #birdApp {
+    #motherHen {
         margin-top: -150px;
+    }
+
+    #birdApp {
+        margin-top: -100px;
     }
 
     #yaochi {
@@ -2367,40 +2395,47 @@ html {
         flex-direction: column;
     }
 
+    #helpingHand {
+        width: 536px;
+        height: 340px;
+
+        align-self: flex-end;
+    }
+
     /* card styling */
     #motherHen {
         width: 536px;
         height: 340px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     #birdApp{
         width: 536px;
         height: 330px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #yaochi {
         width: 536px;
         height: 310px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     #goodNews {
         width: 536px;
         height: 310px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #ohhi {
         width: 536px;
         height: 340px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     .projectImages img {
@@ -2598,39 +2633,46 @@ html {
     }
     
     /* card styling */
-    #motherHen {
+    #helpingHand {
         width: 444px;
         height: 300px;
 
         align-self: flex-end;
+    }
+
+    #motherHen {
+        width: 444px;
+        height: 300px;
+
+        align-self: flex-start;
     }
 
     #birdApp{
         width: 444px;
         height: 320px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #yaochi {
         width: 444px;
         height: 300px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     #goodNews {
         width: 444px;
         height: 260px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #ohhi {
         width: 444px;
         height: 300px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     /* projects styling */
@@ -2792,39 +2834,46 @@ html {
     }
     
     /* card styling */
-    #motherHen {
+    #helpingHand {
         width: 536px;
         height: 340px;
 
         align-self: flex-end;
+    }
+
+    #motherHen {
+        width: 536px;
+        height: 340px;
+
+        align-self: flex-start;
     }
 
     #birdApp{
         width: 536px;
         height: 330px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #yaochi {
         width: 536px;
         height: 310px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     #goodNews {
         width: 536px;
         height: 310px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #ohhi {
         width: 536px;
         height: 340px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     /* card styling */
