@@ -1264,15 +1264,6 @@ html {
         margin-left: 10vw;
         margin-right: 10vw;
     }
-
-    #helpingHand {
-        width: 444px;
-        height: 300px;
-
-        padding-bottom: 10px;
-
-        align-self: flex-end;
-    }
     
     /* card styling */
     #helpingHand {
@@ -1281,15 +1272,16 @@ html {
 
         padding-bottom: 10px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
+
     #motherHen {
         width: 444px;
         height: 300px;
 
         padding-bottom: 10px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     #birdApp{
@@ -1298,7 +1290,7 @@ html {
 
         padding-bottom: 10px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #yaochi {
@@ -1307,7 +1299,7 @@ html {
 
         padding-bottom: 10px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     #goodNews {
@@ -1316,7 +1308,7 @@ html {
 
         padding-bottom: 10px;
 
-        align-self: flex-start;
+        align-self: flex-end;
     }
 
     #ohhi {
@@ -1325,7 +1317,7 @@ html {
 
         padding-bottom: 10px;
 
-        align-self: flex-end;
+        align-self: flex-start;
     }
 
     /* projects styling */
@@ -2635,7 +2627,7 @@ html {
     /* card styling */
     #helpingHand {
         width: 444px;
-        height: 300px;
+        height: 320px;
 
         align-self: flex-end;
     }
