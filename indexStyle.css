@@ -1,4 +1,23 @@
 /* general styling */
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('./font/AvenirNextLTPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
 html {
     background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
 }
