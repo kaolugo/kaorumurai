@@ -16,11 +16,20 @@
 }
 
 
-
-
 html {
-    background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
+    /* height: 100%;
+    margin: 0;
+    padding: 0; */
 }
+
+body {
+    background: linear-gradient(to bottom, #0057FF 0%, #0085FF 8%, #BCE3F8 60%); /* looks good on mobile*/
+    background-size: 100% 300%;
+    min-height: 200vh;
+    background-repeat: no-repeat;
+}
+
+
 
 .ctaContainer {
     display: flex;
@@ -158,6 +167,7 @@ html {
         padding: 15px;
         cursor: pointer;
         float: right;
+        z-index: 30;
     }
       
     .menuOpen:hover .open:before {
