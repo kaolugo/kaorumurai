@@ -29,22 +29,42 @@ body {
     margin: 0;
 }
 
-.ctaContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.cta {
-    position: absolute;
-    top: 90%;
-    z-index: 10;
-
+/* font styling */
+h1 {
+    font-family: 'Avenir';
+    font-weight: 400;
     color: white;
-    
-    font-family: 'Overpass Mono';
-    font-weight: 700;
-    font-size: 20px;
 }
+
+h2 {
+    font-family: 'Avenir Next LT Pro';
+    color: white;
+    font-weight: 300;
+}
+
+h3 {
+    font-family: 'Nanum Gothic';
+    font-weight: 700;
+    color: white;
+    text-align: right;
+    letter-spacing: 3px;
+}
+
+.aboutMe {
+    font-family: 'Avenir Next LT Pro';
+    color: #001364;
+}
+
+.secondaryBlue {
+    font-family: "Avenir";
+    color: #445DC9;
+}
+
+.tertiaryBlue {
+    font-family: "Avenir";
+    color: #6380FF;
+}
+
 
 /* footer styling */
 .footer {
@@ -68,17 +88,34 @@ body {
 /* end footer styling */
 
 /* writing animation styling */
-.svg-container {
-    width: 50%;
-    height: auto;
+.writing-animation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    margin-top: 50px;
+    margin-bottom: 20vh;
 }
 
-.cls-1 {
-    fill: none;
-    stroke: #000;
-    stroke-linecap: round;
-    stroke-miterlimit: 10;
-    stroke-width: 10px;
+#engineer {
+    width: 80%;
+    height: auto;
+    padding-top: 45px;
+}
+
+#designer {
+    width: 90%;
+    height: auto;
+    padding-top: 50px;
+}
+
+#artist {
+    width: 55%;
+    height: auto;
+    padding-top: 45px;
 }
 
 .stroke {
@@ -236,6 +273,19 @@ body {
 }
 
 /* End writing animation styling */
+
+/* aboutMe styling */
+.aboutMe a:link {
+    text-decoration: none;
+    
+}
+
+.aboutMe a:visited {
+    text-decoration: none;
+    font-weight: 800;
+}
+
+
 
 
 @media only screen and (max-width: 480px) {
@@ -458,30 +508,44 @@ body {
         text-decoration: none;
         color: white;
     }
+    
+    /* svg styling */
+    .container {
+        height: 40vw;
+        width: 60vw;
+    }
 
 
     /* introduction styling */
+
+    #introText {
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
     h1 {
-        font-family: 'Overpass Mono';
-        font-size: 18px;
-        font-weight: 400;
-        color: white;
+        font-size: 16px;
     }
 
     h2 {
-        font-family: 'Scheherazade New';
-        font-size: 38px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: white;
+        font-size: 18px;
     }
 
     h3 {
-        font-family: 'Overpass Mono';
+        
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .aboutMe {
         font-size: 15px;
-        font-weight: 400;
-        color: white;
-        margin: 0;
+        margin-bottom: 50px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
 
@@ -543,115 +607,11 @@ body {
         margin-bottom: -20px;
     }
 
-    .places {
-        list-style-type: none;
-        margin-bottom: 80px;
-    }
-
-    .places h5 {
-        padding: 0;
-        margin-bottom: 5px;
-    }
-
-    .places a:link {
-        color: white;
-        text-decoration: none;
-
-        font-family: 'Lora';
-        font-weight: 600;
-        font-size: 35px;
-        letter-spacing: 1px;
-    }
-
-    .places a:visited {
-        color: white;
-        text-decoration: none;
-    }
-
-    .places h6 {
-        color: white;
-
-        font-family: 'Overpass Mono';
-        font-weight: 400;
-        font-size: 13px;
-
-        padding-top: 0;
-        padding-bottom: -10px;
-        margin: 0;
-    }
 
 
-    /* work art styling */
-    .workArt {
-        display: none;
-    }
 
 
-    /* portfolio link styling */
-    .portfolio {
-        list-style-type: none;
-        margin-left: -10px;
-    }
 
-    .moreStuff {
-        padding-left: 10px;
-        margin-left: 4vw;
-        margin-right: 4vw;
-    }
-    
-    .moreStuff p {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .portfolio li {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .portfolio a:link {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-weight: 400;
-        font-size: 16px;
-    }
-
-    .portfolio a:visited {
-        color: white;
-    }
-
-
-    /* background clouds styling */
-    .cloud1, .cloud2 {
-        position: fixed;
-        z-index: -20;
-        width: 150vw;
-        height: auto;
-    }
-
-    .cloud1 {
-        right: -80vw;
-        top: 15vh;
-    }
-
-    .cloud2 {
-        right: 20vw;
-        top: 50vh;
-    }
-
-    .grid {
-        position: absolute;
-        z-index: -25;
-        width: 60vw;
-        height: auto;
-
-        right: 0vw;
-        top: 60vh;
-    }
 
     /* footer styling */
     .footer {
@@ -883,7 +843,6 @@ body {
     /* introduction styling */
     h1 {
         font-family: 'Overpass Mono';
-        font-size: 18px;
         font-weight: 400;
         color: white;
     }
@@ -948,129 +907,6 @@ body {
     }
 
 
-    /* work experience styling */
-    h4 {
-        color: white;
-
-        font-family: 'Scheherazade New';
-        font-size: 25px;
-        font-weight: 100;
-        font-style: italic;
-        letter-spacing: 1px;
-
-        
-        margin-left: 10px;
-        margin-bottom: -20px;
-    }
-
-    .places {
-        list-style-type: none;
-        margin-bottom: 80px;
-    }
-
-    .places h5 {
-        padding: 0;
-    }
-
-    .places a:link {
-        color: white;
-        text-decoration: none;
-
-        font-family: 'Lora';
-        font-weight: 600;
-        font-size: 35px;
-        letter-spacing: 1px;
-    }
-
-    .places a:visited {
-        color: white;
-        text-decoration: none;
-    }
-
-    .places h6 {
-        color: white;
-
-        font-family: 'Overpass Mono';
-        font-weight: 400;
-        font-size: 16px;
-
-        padding-top: 0;
-        padding-bottom: -10px;
-        margin: 0;
-    }
-
-
-    /* portfolio link styling */
-    .portfolio {
-        list-style-type: none;
-        margin-left: -10px;
-    }
-
-    .moreStuff {
-        padding-left: 10px;
-        margin-left: 4vw;
-        margin-right: 4vw;
-    }
-
-    .moreStuff p {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .portfolio li {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .portfolio a:link {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-weight: 400;
-        font-size: 16px;
-    }
-
-    .portfolio a:visited {
-        color: white;
-    }
-
-
-    /* work art styling */
-    .workArt {
-        display: none;
-    }
-
-
-    /* background clouds styling */
-    .cloud1, .cloud2 {
-        position: fixed;
-        z-index: -20;
-        width: 120vw;
-        height: auto;
-    }
-
-    .cloud1 {
-        right: -60vw;
-        top: 5vh;
-    }
-
-    .cloud2 {
-        right: 20vw;
-        top: 50vh;
-    }
-
-    .grid {
-        position: absolute;
-        z-index: -25;
-        width: 60vw;
-        height: auto;
-
-        right: 0vw;
-        top: 60vh;
-    }
 
     /* footer styling */
     .footer {
@@ -1084,23 +920,10 @@ body {
 
 @media only screen and (min-width: 768px) {
     /* intro styling */
-    #text {
+    #introText {
         margin-left: 5vw;
     }
     
-    /* the wave styling */
-    #hokusai {
-        width: 100vw;
-        margin-left: -50vw;
-        position: absolute;
-        left: 50%;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        bottom: -10vh;
-        z-index: -15;
-    }
 
     #intro {
         height: 100vh;
@@ -1108,78 +931,6 @@ body {
         padding-bottom: 0;
     }
 
-
-    /* work art styling */
-    #work {
-        display: flex;
-    }
-
-    .workArt {
-        display: block;
-    } 
-
-    .grid2 {
-        position: absolute;
-        z-index: -25;
-        width: 60vw;
-        height: auto;
-
-        right:70vw;
-        top: 120vh;
-    }
-
-    .gifaoru2 {
-        display: none;
-    }
-
-    .gifaoru {
-        width: 50vw;
-        height: auto;
-
-        padding-right: 0;
-        margin-right: -10vw;
-    }
-
-    .workContent {
-        padding-right: 4vw;
-    }
-
-
-    /* portfolio content styling */
-    .moreStuff {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .moreStuff p {
-        font-size: 16px;
-    }
-
-    .portfolio li {
-        font-size: 16px;
-    }
-
-    .portfolio a:link {
-        font-size: 16px;
-    }
-
-    .portfolio a:hover {
-        background-color: #445DC9;
-    }
-
-
-    /* background image styling */
-
-    .grid {
-        position: absolute;
-        z-index: -25;
-        width: 40vw;
-        height: auto;
-
-        right: 0vw;
-        top: 60vh;
-    }
 
 
     /* footer styling */
@@ -1273,16 +1024,6 @@ body {
         align-items: center; 
     }
     
-    .more {
-        margin-right: 20px;
-    }
-    
-    .more a:link, .navLink a:link {
-        text-decoration: none;
-        color: white;
-        padding: 5px;
-    }
-    
     .logo a:link {
         padding: 0;
         text-decoration: none;
@@ -1294,14 +1035,9 @@ body {
         color: white;
     }
     
-    .more a:hover, .navLink a:hover {
-        color: white;
-        background-color: #FF655F;
-    }
-
 
     /* intro styling */
-    #text {
+    #introText {
         margin-left: 5vw;
         margin-right: 5vw;
     }
@@ -1326,67 +1062,12 @@ body {
         margin-bottom: 50px;
     }
 
-    /* the wave styling */
-    #hokusai {
-        position: absolute;
-        bottom: -20vh;
-    }
-
-    
-    /* background images styling */
-    .cloud1 {
-        width: 100vw;
-        height: auto;
-        right: -20vw;
-        top: 20vh;
-    }
-
-    .cloud2 {
-        width: 100vw;
-        height: auto;
-        right: 50vw;
-        top: 60vh;
-    }
-
-    .grid {
-        z-index: -15;
-        right: 5vw;
-        top: 20vh;
-    }
 
 
     /* work experience styling */
     h4 {
         font-size: 30px;
         margin-bottom: -30px;
-    }
-
-    .places h5 {
-        margin-bottom: 5px;
-    }
-
-    .places a:link {
-        font-size: 38px;
-        font-weight: 400;
-    }
-
-    .places a:hover {
-        color: #FFEE9D;
-    }
-
-    .places h6 {
-        font-size: 16px;
-    }
-
-
-    /* work art styling */
-    .grid2 {
-        top: 130vh;
-    }
-
-    .gifaoru {
-        width: 55vw;
-        margin-right: -20vw;
     }
 
     /* footer styling */
@@ -1400,9 +1081,6 @@ body {
         font-size: 60px;
     }
     
-    .workContent {
-        margin-top: 50px;
-    }
 
     /* work experience styling */
     h4 {
@@ -1410,37 +1088,8 @@ body {
         margin-bottom: -30px;
     }
 
-    .places h5 {
-        margin-bottom: 5px;
-    }
 
-    .places a:link {
-        font-size: 42px;
-        font-weight: 600;
-    }
 
-    .places a:hover {
-        color: #FFEE9D;
-    }
-
-    .places h6 {
-        font-size: 18px;
-    }
-
-    /* work art styling */
-
-    .gifaoru {
-        margin-right: -10vw;
-    }
-
-    /* portfolio links styling */
-    .moreStuff p {
-        font-size: 20px;
-    }
-    
-    .portfolio a:link {
-        font-size: 20px;
-    }
 }
 
 
@@ -1467,39 +1116,12 @@ body {
         font-size:20px;
     }
 
-    #text {
+    #introText {
         margin-right: 40vw;
     }
 
     /* work experience styling */
-    #work {
-        margin-top: 100px;
-    }
 
-    .workContent {
-        margin-top: 0;
-        margin-right: 5vw;
-    }
-
-    /* work art styling */
-    .grid2 {
-        width: 40vw;
-
-        right: 55vw;
-        top: 130vh;
-    }
-
-    .gifaoru {
-        display: none;
-    }
-
-    .gifaoru2 {
-        display: block;
-        width: 55vw;
-        height: auto;
-        padding: 0;
-        margin-top: 100px;
-    }
 }
 
 
@@ -1517,18 +1139,9 @@ body {
         font-size:22px;
     }
 
-    #text {
+    #introText {
         margin-right: 40vw;
     }
 
-    /* work experience styling */
-    #work {
-        margin-top: 150px;
-    }
 
-    /* work art styling */
-    .gifaoru2 {
-        width: 50vw;
-        height: auto;
-    }
 }
