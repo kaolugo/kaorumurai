@@ -29,8 +29,6 @@ body {
     margin: 0;
 }
 
-
-
 .ctaContainer {
     display: flex;
     justify-content: center;
@@ -67,49 +65,177 @@ body {
     text-decoration: underline;
 }
 
-/* typewriter effect */
-#changeText {
-    z-index: -10;
+/* end footer styling */
+
+/* writing animation styling */
+.svg-container {
+    width: 50%;
+    height: auto;
 }
 
-@keyframes typewriter {
-    0%, 100% {
-        width: 0;
-    }
-    20%, 80% {
-        width: 7.8em;
+.cls-1 {
+    fill: none;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-miterlimit: 10;
+    stroke-width: 10px;
+}
+
+.stroke {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: draw 0.8s forwards;
+}
+
+.stroke1point2 {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: draw 1.2s forwards;
+}
+
+.stroke1point8 {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: draw 1.8s forwards;
+}
+
+
+.backstroke {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: drawBackwards 0.8s forwards;
+}
+
+.eng1 {
+    animation-delay: 0s;
+}
+
+.eng2 {
+    animation-delay: 0s;
+}
+
+.eng3 {
+    animation-delay: 0.4s;
+}
+
+.eng4 {
+    animation-delay: 0.8s;
+}
+
+.eng5 {
+    animation-delay: 1.4s;
+}
+
+.eng6 {
+    animation-delay: 1.8s;
+}
+
+.eng7 {
+    animation-delay: 2.6s;
+}
+
+.eng8 {
+    animation-delay: 3s;
+}
+
+.eng9 {
+    animation-delay: 3.2s;
+}
+
+
+.des1 {
+    animation-delay: 0s;
+}
+
+.des2 {
+    animation-delay: 0.2s;
+}
+
+.des3 {
+    animation-delay: 0.8s;
+}
+
+.des4 {
+    animation-delay: 1.2s;
+}
+
+.des5 {
+    animation-delay: 1.6s;
+}
+
+.des6 {
+    animation-delay: 1.8s;
+}
+
+.des7 {
+    animation-delay: 2s;
+}
+
+.des8 {
+    animation-delay: 2.5s;
+}
+
+.des9 {
+    animation-delay: 3s;
+}
+
+
+.art1 {
+    animation-delay: 0s;
+}
+
+.art2 {
+    animation-delay: 0.2s;
+}
+
+.art3 {
+    animation-delay: 0.6s;
+}
+
+.art4 {
+    animation-delay: 0.8s;
+}
+
+.art5 {
+    animation-delay: 1.2s;
+}
+
+.art6 {
+    animation-delay: 1.2s;
+}
+
+.art7 {
+    animation-delay: 2s;
+}
+
+.art8 {
+    animation-delay: 2.2s;
+}
+
+.art9 {
+    animation-delay: 2.6s;
+}
+
+.art10 {
+    animation-delay: 3s;
+}
+
+.art11 {
+    animation-delay: 3.2s;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
     }
 }
-    
-@keyframes caret {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
+@keyframes drawBackwards {
+    to {
+        stroke-dashoffset: 900;
     }
 }
 
-.typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typewriter;
-    display: inline-block;
-    position: relative;
-    animation-duration: 5s;
-    animation-timing-function: steps(25, end);
-    animation-iteration-count: infinite;
-}
-    
-    
-.typewriter::after {
-    content: "|";
-    position: absolute;
-    right: 0;
-    animation: caret infinite;
-    animation-duration: 1s;
-    animation-timing-function: steps(1, end);
-}
+/* End writing animation styling */
 
 
 @media only screen and (max-width: 480px) {
