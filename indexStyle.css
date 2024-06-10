@@ -547,6 +547,50 @@ h3 {
         margin-left: 30px;
         margin-right: 30px;
     }
+    /* end about me stylining */
+
+    /* ryusui styling */
+    .ryusuiCanvas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ryusuiBox2 {
+        width: 100vw;
+        height: 90vw;
+        /* border:1px solid black; */
+        overflow: hidden;
+
+        align-self: flex-end;
+        position: relative;
+
+        margin-top: -22vw;
+    }
+
+    #ryusui2 {
+        width: 140vw;
+        height: auto;
+
+        position: absolute;
+        left: -12vw;
+    }
+
+    .ryusuiBox5 {
+        width: 100vw;
+        height: 45vw;
+        overflow: hidden;
+
+        align-self: flex-start;
+        position: relative;
+    }
+
+    #ryusui5 {
+        width: 290vw;
+        height: auto;
+
+        position: absolute;
+        left: -165vw;
+    }
 
 
     /* for the wave */
