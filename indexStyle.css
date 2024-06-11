@@ -16,15 +16,13 @@
 }
 
 html {
-    /* background: linear-gradient(#0057FF 0%, #0085FF 8%, #BCE3F8 80%,#0085FF 99.99%) fixed; looks good on mobile */
-
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: linear-gradient(to bottom, #0085FF 0%, #BCE3F8 20%,#5EB4FB 30%,#BCE3F8 50%, #0085FF 99%);
+    background: linear-gradient(to bottom, #0085FF 0%, #BCE3F8 20%,#5EB4FB 30%,#BCE3F8 50%, #0085FF 98%);
     
     background-size: 100% 300%;
     min-height: 200vh;
