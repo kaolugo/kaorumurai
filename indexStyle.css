@@ -582,6 +582,10 @@ h3 {
         display: none;
     }
 
+    .landscapeRyusuiCanvas {
+        display: none;
+    }
+
     .ryusuiBox2 {
         width: 100vw;
         height: 90vw;
@@ -769,6 +773,10 @@ h3 {
         margin-top: -80px;
     }
 
+    .landscapeRyusuiCanvas {
+        display: none;
+    }
+
     .tabletRyusuiBox2 {
         width: 100vw;
         height: 90vw;
@@ -856,6 +864,38 @@ h3 {
         width: 55%;
         height: auto;
     }
+
+    /* end writing animation style */
+
+    /* ryusui animation */
+
+    .tabletRyusuiCanvas {
+        display: none;
+    }
+
+    .landscapeRyusuiCanvas {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lanscapeRyusuiBox3 {
+        width: 45vw;
+        height: 200vw;
+        /* border:1px solid black; */
+        overflow: hidden;
+
+        align-self: flex-end;
+        position: relative;
+    }
+
+    #landscapeRyusui3 {
+        width: 45vw;
+        height: auto;
+
+        position: absolute;
+
+    }
+
 
 
 
