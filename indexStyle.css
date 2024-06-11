@@ -580,9 +580,7 @@ h3 {
     }
 
     .tabletRyusuiCanvas {
-        display: flex;
-        flex-direction: column;
-
+        display: none;
     }
 
     .ryusuiBox2 {
@@ -768,12 +766,7 @@ h3 {
 
     .tabletRyusuiCanvas {
         display: flex;
-        flex-direction: column;
-    }
-
-    #test{
-        display: flex;
-        flex-direction: column;
+        flex-direction: column; 
     }
 
     .tabletRyusuiBox2 {
@@ -811,6 +804,8 @@ h3 {
 
         position: absolute;
         left: -165vw;
+
+        outline: none;
     }
 
 
@@ -864,11 +859,7 @@ h3 {
 
 
 @media only screen and (min-width: 835px) {
-    .mobileRyusuiCanvas {
-        /* display: none; */
-        display: flex;
-        flex-direction: column;
-    }
+
     /* putting away mobile nav */
     .mobileNav {
         display: none;
