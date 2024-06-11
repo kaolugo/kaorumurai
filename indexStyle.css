@@ -25,7 +25,6 @@ body {
     background: linear-gradient(to bottom, #0085FF 0%, #BCE3F8 20%,#5EB4FB 30%,#BCE3F8 50%, #0085FF 98%);
     
     background-size: 100% 300%;
-    min-height: 200vh;
     background-repeat: no-repeat;
     margin: 0;
 }
@@ -767,6 +766,7 @@ h3 {
     .tabletRyusuiCanvas {
         display: flex;
         flex-direction: column; 
+        margin-top: -80px;
     }
 
     .tabletRyusuiBox2 {
