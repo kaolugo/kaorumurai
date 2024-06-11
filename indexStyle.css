@@ -16,13 +16,16 @@
 }
 
 html {
+    /* background: linear-gradient(#0057FF 0%, #0085FF 8%, #BCE3F8 80%,#0085FF 99.99%) fixed; looks good on mobile */
+
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background: linear-gradient(to bottom, #0057FF 0%, #0085FF 8%, #BCE3F8 60%); /* looks good on mobile*/
+    background: linear-gradient(to bottom, #0085FF 0%, #BCE3F8 20%,#5EB4FB 30%,#BCE3F8 50%, #0085FF 99%);
+    
     background-size: 100% 300%;
     min-height: 200vh;
     background-repeat: no-repeat;
@@ -81,22 +84,33 @@ h3 {
 
 /* footer styling */
 .footer {
-    color: white;
+    color: black;
 
     list-style-type: none;
+    padding-left: 0;
+    margin-top: -10px;
+    padding-bottom: 40px;
 
     font-family: 'Nanum Gothic';
-    font-weight: 400;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.footer li {
-    padding: 0;
+.leftFoot {
+    display: flex;
+    gap: 20px;
 }
 
 .github {
-    color: white;
+    color: black;
     text-decoration: underline;
 }
+
+.resumeLink, .mediumLink, .linkedinLink {
+    color: black;
+    text-decoration: none;
+}
+
 
 /* end footer styling */
 
@@ -550,7 +564,7 @@ h3 {
 
     .aboutMe {
         font-size: 15px;
-        margin-bottom: 50px;
+        margin-top: 60px;
         margin-left: 30px;
         margin-right: 30px;
     }
@@ -617,18 +631,14 @@ h3 {
     }
 
 
-
-
-
-
-
     /* footer styling */
     .footer {
-        padding-left: 0;
-        margin-top: 50px;
-        
-        text-align: center;
-        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        font-size: 14px;
     }
 }
 
