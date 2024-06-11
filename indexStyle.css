@@ -824,12 +824,37 @@ h3 {
 
 @media only screen and (min-width: 769px) {
     /* intro styling */
-    
+    .nav {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .squareLogo {
+        width: 50px;
+        height: auto;
+    }
 
     #intro {
-        height: 100vh;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        width: calc(100vw - 140px);
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    /* svg writing animation styling */
+    #engineer {
+        width: 75%;
+        height: auto;
+        padding-top: 15%;
+    }
+    
+    #designer {
+        width: 90;
+        height: auto;
+        padding-top: 15%;
+    }
+    
+    #artist {
+        width: 55%;
+        height: auto;
     }
 
 
@@ -855,7 +880,7 @@ h3 {
 
 
 
-@media only screen and (min-width: 835px) {
+@media only screen and (min-width: 1025px) {
 
     /* putting away mobile nav */
     .mobileNav {
@@ -968,13 +993,6 @@ h3 {
     .footer {
         font-size: 16px;
     }
-}
-
-@media only screen and (min-width: 1000px) {
-    h2 {
-        font-size: 60px;
-    }
-    
 }
 
 
