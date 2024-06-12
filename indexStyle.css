@@ -849,20 +849,21 @@ h3 {
 
     /* svg writing animation styling */
     #engineer {
-        width: 75%;
+        width: 30vw;
         height: auto;
-        padding-top: 15%;
+        padding-top: 23%;
     }
     
     #designer {
-        width: 90;
+        width: 40vw;
         height: auto;
-        padding-top: 15%;
+        padding-top: 23%;
     }
     
     #artist {
-        width: 55%;
+        width: 25vw;
         height: auto;
+        padding-top: 23%;
     }
 
     /* end writing animation style */
