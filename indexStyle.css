@@ -880,6 +880,7 @@ h3 {
     }
 
     .landscapeRyusuiCanvas {
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
     }
@@ -981,19 +982,13 @@ h3 {
     /* footer styling */
     .footer {
         display: flex;
-        justify-content: space-evenly;
-        flex-wrap: nowrap;
-        text-align: left;
-    }
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-left: 70px;
+        margin-right: 70px;
 
-    .leftFoot {
-        margin-right: 20vw;
-        margin-left: 0;
-    }
-    
-    .rightFoot {
-        margin-left: 20vw;
-        margin-right: 0;
+        font-size: 14px;
     }
 }
 
@@ -1115,50 +1110,4 @@ h3 {
 }
 
 
-@media only screen and (min-width: 1200px) {
-    /* title styling */
-    .logo {
-        font-size: 30px;
-    }
 
-    .squareLogo {
-        width: 50px;
-    }
-
-    /* intro styling */
-    h1 {
-        font-size: 22px;
-    }
-
-    h2 {
-        font-size: 70px;
-    }
-
-    h3 {
-        font-size:20px;
-    }
-
-
-    /* work experience styling */
-
-}
-
-
-@media only screen and (min-width: 1500px) {
-    /* intro styling */
-    h1 {
-        font-size: 25px;
-    }
-
-    h2 {
-        font-size: 80px;
-    }
-
-    h3 {
-        font-size:22px;
-    }
-
-
-
-
-}
