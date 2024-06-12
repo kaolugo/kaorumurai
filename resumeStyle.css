@@ -393,13 +393,15 @@ h3, .role {
     }
 
     summary::after {
-        content: '   ►';
+        content: ' ►';
         color: white;
+        font-size: 12px;
     }
 
     details[open] summary:after {
-        content: "   ▼";
+        content: " ▼";
         color: white;
+        font-size: 12px;
     }
       
      /* footer styling */
