@@ -920,7 +920,7 @@ h3 {
 
     .landscapeRyusuiBox1 {
         width: 45vw;
-        height: 50vw;
+        height: 40vw;
 
         overflow: hidden;
         position: relative;
@@ -935,6 +935,25 @@ h3 {
 
         position: absolute;
         left: 8vw;
+    }
+
+
+    .landscapeRyusuiBox4 {
+        width: 55vw;
+        height: 15vw;
+
+        overflow: hidden;
+        position: relative;
+        margin-top: -28vw;
+        align-self: center;
+    }
+
+    #landscapeRyusui4 {
+        width: 50vw;
+        height: auto;
+
+        position: absolute;
+        left: 6vw;
     }
 
 
