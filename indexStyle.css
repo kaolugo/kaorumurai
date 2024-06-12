@@ -67,7 +67,8 @@ h3 {
 
 .aboutMe {
     font-family: 'Avenir Next LT Pro';
-    color: #001364;
+    /* color: #001364; */
+    color: black;
 }
 
 .secondaryBlue {
