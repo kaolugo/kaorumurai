@@ -867,6 +867,11 @@ h3 {
 
     /* end writing animation style */
 
+    /* about me style */
+    .aboutMe {
+        width: 75vw;
+    }
+
     /* ryusui animation */
 
     .tabletRyusuiCanvas {
@@ -878,22 +883,58 @@ h3 {
         flex-direction: column;
     }
 
-    .lanscapeRyusuiBox3 {
+    .landscapeRyusuiBox3 {
         width: 45vw;
-        height: 200vw;
+        height: 40vw;
         /* border:1px solid black; */
         overflow: hidden;
 
         align-self: flex-end;
         position: relative;
+        margin-top: -15vw;
     }
 
     #landscapeRyusui3 {
-        width: 45vw;
+        width: 55vw;
         height: auto;
 
         position: absolute;
+        
+    }
 
+    .landscapeRyusuiBox5 {
+        width: 70vw;
+        height: 20vw;
+        overflow: hidden;
+        position: relative;
+        margin-top: -14vw;
+    }
+
+    #landscapeRyusui5 {
+        width: 85vw;
+        height: auto;
+
+        position: absolute;
+        left: -16vw;
+    }
+
+    .landscapeRyusuiBox1 {
+        width: 45vw;
+        height: 50vw;
+
+        overflow: hidden;
+        position: relative;
+        align-self: flex-end;
+
+        margin-top: -26vw;
+    }
+
+    #landscapeRyusui1 {
+        width: 60vw;
+        height: auto;
+
+        position: absolute;
+        left: 8vw;
     }
 
 
