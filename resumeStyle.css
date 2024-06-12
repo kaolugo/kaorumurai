@@ -22,7 +22,7 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #0085FF 0%, #BCE3F8 80%, #0085FF 100%);
+    background: linear-gradient(to bottom, #0085FF 0%,#5EB4FB 35%, #0085FF 70%,#5EB4FB 85%, #BCE3F8 95%, #0085FF 100%);
     
     background-size: 100% 400%;
     background-repeat: no-repeat;
@@ -42,7 +42,13 @@ h1 {
     gap: 50px;
 }
 
-h2 {
+#mobileResume {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+h2, .company {
     font-family: "IBM Plex Mono";
     color: white;
     font-weight: 400;
@@ -51,7 +57,7 @@ h2 {
     padding: 0;
 }
 
-h3, h4 {
+h3, h4, .role, .duration {
     font-family: "Nanum Gothic";
     color: white;
     font-weight: 400;
@@ -60,7 +66,7 @@ h3, h4 {
     padding: 0;
 }
 
-h3 {
+h3, .role {
     text-transform: uppercase;
 }
 
@@ -68,6 +74,39 @@ h3 {
     font-family: 'Avenir Next LT Pro';
     color: white;
 }
+
+/* footer styling */
+.footer {
+    color: black;
+
+    list-style-type: none;
+    padding-left: 0;
+    padding-bottom: 40px;
+
+    font-family: 'Nanum Gothic';
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.leftFoot {
+    display: flex;
+    gap: 20px;
+}
+
+.github {
+    color: black;
+    text-decoration: underline;
+}
+
+.resumeLink, .mediumLink, .linkedinLink {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* end footer styling */
+
+
 
 @media only screen and (max-width: 480px) {
     /* mobile nav styling */
@@ -308,24 +347,36 @@ h3 {
 
     /* resume styling */
     #resume {
-        margin-left: 30px;
+        display: none;
+        /* margin-left: 30px;
         margin-right: 30px;
+
+        padding-bottom: 100px; */
     }
 
-    h2 { 
+    #mobileResume {
+        margin-left: 30px;
+        margin-right: 30px;
+
+        padding-bottom: 100px;
+    }
+
+    h2, .company{ 
         font-size: 18px;
         margin-bottom: 5px;
     }
 
-    h3, h4 {
+
+    h3, h4, .role, .duration {
         font-size: 16px;
     }
 
-    h3 {
-        margin-bottom: 2px;
+    h3, .role {
+        margin-bottom: 1px;
     }
 
-    h4 {
+
+    h4, .duration {
         margin-bottom: 25px;
     }
 
@@ -333,5 +384,32 @@ h3 {
         font-size: 16px;
         line-height: 20px;
         font-weight: 300;
+    }
+
+    /* drop down styling */
+
+    details>summary {
+        list-style: none;
+    }
+
+    summary::after {
+        content: '   ►';
+        color: white;
+    }
+
+    details[open] summary:after {
+        content: "   ▼";
+        color: white;
+    }
+      
+     /* footer styling */
+     .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 100px;
+
+        font-size: 14px;
     }
 }
