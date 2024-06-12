@@ -939,21 +939,39 @@ h3 {
 
 
     .landscapeRyusuiBox4 {
-        width: 55vw;
-        height: 15vw;
+        width: 70vw;
+        height: 20vw;
 
         overflow: hidden;
         position: relative;
-        margin-top: -28vw;
+        margin-top: -29vw;
         align-self: center;
     }
 
     #landscapeRyusui4 {
-        width: 50vw;
+        width: 60vw;
         height: auto;
 
         position: absolute;
-        left: 6vw;
+        left: 10vw;
+    }
+
+
+    .landscapeRyusuiBox2 {
+        width: 45vw;
+        height: 30vw;
+
+        overflow: hidden;
+        position: relative;
+        margin-top: -14vw;
+    }
+
+    #landscapeRyusui2 {
+        width: 45vw;
+        height: auto;
+
+        position: absolute;
+        left: -8vw;
     }
 
 
