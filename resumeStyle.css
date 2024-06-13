@@ -24,7 +24,7 @@ html {
 body {
     background: linear-gradient(to bottom, #0085FF 0%,#5EB4FB 35%, #0085FF 70%,#5EB4FB 85%, #BCE3F8 95%, #0085FF 100%);
     
-    background-size: 100% 400%;
+    background-size: 100% 300%;
     background-repeat: no-repeat;
     margin: 0;
 }
@@ -348,10 +348,6 @@ h3, .role {
     /* resume styling */
     #resume {
         display: none;
-        /* margin-left: 30px;
-        margin-right: 30px;
-
-        padding-bottom: 100px; */
     }
 
     #mobileResume {
@@ -410,6 +406,236 @@ h3, .role {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        margin-top: 100px;
+
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    /* putting away mobile nav */
+    .mobileNav {
+        display: none;
+    }
+
+    .mobileLogo {
+        display: none;
+    }
+
+    .mobileTitle {
+        display: none;
+    }
+
+    input {
+        display: none;
+    }
+
+    .open {
+        display: none;
+    }
+
+    .menuOpen {
+        display: none;
+    }
+
+    .mobileHeader {
+        display: none;
+    }
+    
+    /* end putting away mobile nav */
+
+    /* navigation bar styling */
+    .nav {
+        list-style-type: none;
+        font-size: 16px;
+        font-family: 'Nanum Gothic';
+    
+        /*flexbox*/
+        display: flex;
+        justify-content: space-between;;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-top: 30px;
+    }
+
+    .navLink {
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+    }
+    /* end navigation styling */
+
+    /* site logo styling */
+    .squareLogo {
+        width: 40px;
+        height: auto;
+    }
+    
+    .logo {
+        font-size: 20px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+
+        margin-right: auto;
+    }
+
+    .squareLogo, .logo, .navLink {
+        display: flex;            /* NEW; nested flex container */
+        justify-content: center;  /* NEW; align anchor elements horizontally */
+        align-items: center; 
+    }
+
+    /* end site logo styling */
+
+    /* introduction styling */
+    #intro {
+        margin-left: 50px;
+        margin-right: 50px;
+
+        margin-top: 20vw;
+        margin-bottom: 30vw;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .titleSVG {
+        width: 60vw;
+        height: auto;
+    }
+    /* end intro styling */
+
+     /* resume styling */
+     #resume {
+        display: none;
+    }
+
+    #mobileResume {
+        margin-left: 50px;
+        margin-right: 50px;
+
+        padding-bottom: 100px;
+    }
+
+    h2, .company{ 
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+
+    h3, h4, .role, .duration {
+        font-size: 16px;
+    }
+
+    h3, .role {
+        margin-bottom: 1px;
+    }
+
+    h4, .duration {
+        margin-bottom: 20px;
+    }
+
+    .description {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 300;
+    }
+
+    /* drop down styling */
+
+    details>summary {
+        list-style: none;
+    }
+
+    summary::after {
+        content: ' ►';
+        color: white;
+        font-size: 12px;
+    }
+
+    details[open] summary:after {
+        content: " ▼";
+        color: white;
+        font-size: 12px;
+    }
+
+    /* footer styling */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 100px;
+
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    body {
+        background-size: 100% 500%;
+    }
+
+     /* intro styling */
+     .nav {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .squareLogo {
+        width: 50px;
+        height: auto;
+    }
+
+    /* introduction styling */
+    #intro {
+        margin-left: 70px;
+        margin-right: 70px;
+
+        margin-top: 15vw;
+        margin-bottom: 20vw;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .titleSVG {
+        width: 45vw;
+        height: auto;
+    }
+
+     /* end intro styling */
+
+    /* resume styling */
+    #resume {
+        display: flex;
+        margin-left: 70px;
+        margin-right: 70px;
+        width: 70vw;
+
+        padding-bottom: 100px;
+    }
+
+    #mobileResume {
+        display: none;
+    }
+
+    /* footer styling */
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-left: 70px;
+        margin-right: 70px;
         margin-top: 100px;
 
         font-size: 14px;
