@@ -98,6 +98,7 @@ button:hover {
 #work {
     display: flex;
     flex-direction: column;
+    gap: 50px;
 }
 
 h2 {
@@ -109,7 +110,8 @@ h2 {
 }
 
 h3 {
-    font-family: "Avenir Next LT Pro";
+    font-family: "Avenir";
+    font-weight: 300;
     color: white;
     margin: 0;
 }
@@ -413,14 +415,32 @@ img {
         margin-left: 30px;
         margin-right: 30px;
     }
+    
+    .project img, .thumbnail {
+        max-width: 100%;
+        margin-bottom: 5px;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .thumbnail img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .thumbnail img:hover {
+        transform: scale(1.2);
+    }
 
     h2 {
         font-size: 16px;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
     }
 
     h3 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
 }
