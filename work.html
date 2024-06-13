@@ -13,9 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
 
-        <link rel="preload" href="./font/Avenir-Medium.woff2" as="font" type="font/woff">
-        <link rel="preload" href="./font/AvenirNextLTPro-Regular.woff2" as="font" type="font/woff2">
-        
+        <link rel="preload" href="./font/Avenir-Medium.woff2" as="font" type="font/woff">        
         <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
 
         <title>Kaoru Murai</title>
@@ -109,7 +107,7 @@
                     name="categories"
                     value="All Work"
                     checked
-                    onchange="onDifficultyChange(this)"
+                    onchange="showAllWork()"
                 />
                 <span>All Work</span>
             </label>
@@ -118,7 +116,7 @@
                     type="radio"
                     name="categories"
                     value="Engineering"
-                    onchange="onDifficultyChange(this)"
+                    onchange="showEngineeringWork()"
                 />
                 <span>Engineering</span>
             </label>
@@ -127,7 +125,7 @@
                     type="radio"
                     name="categories"
                     value="Design"
-                    onchange="onDifficultyChange(this)"
+                    onchange="showDesignWork()"
                 />
                 <span>Design</span>
             </label>
@@ -136,71 +134,127 @@
 
         
         <div id="work">
-            <div class="project" id="both">
+            <div class="project both" id="both">
                 <div class="thumbnail"><img src = "img/Watari.png" alt = "Watari Project Thumbnail"></div>
                 <h2>Watari</h2>
                 <h3>Mobile flight tracker built with Swift, SwiftUI, Figma & Java backend.</h3>
             </div>
 
-            <div class="project" id="design">
+            <div class="project design" id="design">
                 <div class="thumbnail"><img src = "img/Matcha.png" alt = "Matcha Infographic Thumbnail"></div>
                 <h2>All about matcha</h2>
                 <h3>Infographic on the cultural significance of matcha. Branding, icon design and print typography done on Adobe Illustrator.</h3>
             </div>
 
-            <div class="project" id="design">
+            <div class="project design" id="design">
                 <div class="thumbnail"><img src = "img/Lynq.png" alt = "Lynq UX Case Study Thumbnail"></div>
                 <h2>lynq</h2>
                 <h3>UX case study for a mobile app aiming to facilitate conversations surrounding mental health and work life balance.</h3>
             </div>
 
-            <div class="project" id="eng">
+            <div class="project eng" id="eng">
                 <div class="thumbnail"><img src = "img/Mother Hen.png" alt = "Mother Hen Recipe App Thumbnail"></div>
                 <h2>Mother hen</h2>
                 <h3>iOS recipe helper designed to output recipe ideas based on available ingredients. Designed on Adobe XD, built with Swift & Swift UI.</h3>
             </div>
 
-            <div class="project" id="eng">
+            <div class="project eng" id="eng">
                 <div class="thumbnail"><img src = "img/The Helping Hand.png" alt = "The Helping Hand Web App Thumbnail"></div>
                 <h2>the helping hand</h2>
                 <h3>Developer for a web platform aiming to connect helpers with elders in need. Built with React, Firebase & Python backend.</h3>
             </div>
 
-            <div class="project" id="eng">
+            <div class="project eng" id="eng">
                 <div class="thumbnail"><img src = "img/The Bird App.png" alt = "The Bird App Thumbnail"></div>
                 <h2>The bird app</h2>
                 <h3>Practicing full stack web development by creating a Twitter (X) copycat. Built with GoLang, JavaScript, Redis DB, Docker & AWS.</h3>
             </div>
 
-            <div class="project" id="design">
+            <div class="project design" id="design">
                 <div class="thumbnail"><img src = "img/Indian Creek.png" alt = "Indian Creek CBD Product Design Thumbnail"></div>
                 <h2>Indian Creek cbd</h2>
                 <h3>Designed a series of marketing materials from package design to multimedia ad campaigns with Adobe Creative Suite.</h3>
             </div>
 
-            <div class="project" id="design">
+            <div class="project design" id="design">
                 <div class="thumbnail"><img src = "img/OO Rows.png" alt = "OO&CO Social Media Campaign Thumbnail"></div>
                 <h2>OO & CO ROws</h2>
                 <h3>Exercise in branding & graphic design through a series of three panel “rows.” </h3>
             </div>
 
-            <div class="project" id="both">
+            <div class="project both" class="both">
                 <div class="thumbnail"><img src = "img/Yaochi.png" alt = "Yaochi Restaurant Thumbnail"></div>
                 <h2>Yaochi</h2>
                 <h3>Built out a digital brand identity and homepage for mom + pop okonomiyaki restaurant based in Takarazuka, Japan.</h3>
             </div>
 
-            <div class="project" id="eng">
+            <div class="project eng">
                 <div class="thumbnail"><img src = "img/0hh1.png" alt = "0hh1 Game Thumbnail"></div>
                 <h2>0hh1</h2>
                 <h3>Practicing animation and mobile app development with a puzzle game inspired by my first CS course at the University of Michigan.</h3>
             </div>
 
-            <div class="project" id="eng">
+            <div class="project eng">
                 <div class="thumbnail"><img src = "img/The Good News.png" alt = "The Good News Thumbnail"></div>
                 <h2>the good news</h2>
                 <h3>Practicing frontend development and web scraping with Python by building a wholesome website that exclusively curates positive news stories.</h3>
             </div>
         </div>
+
+
+        <script>
+            // const eng = document.getElementById("eng");
+            // const both = document.getElementById("both");
+            // const design = document.getElementById("design");
+
+            const eng = document.getElementsByClassName("project eng");
+            const both = document.getElementsByClassName("project both");
+            const design = document.getElementsByClassName("project design");
+
+            const engArray = Array.from(eng);
+            const desArray = Array.from(design);
+
+
+            function showAllWork() {
+                console.log('all work')
+
+                engArray.forEach((card) => {
+                    card.style.display = "inline";
+                });
+                desArray.forEach((card) => {
+                    card.style.display = "inline";
+                });
+                // both.forEach((card) )
+                // eng.style.display = "inline";
+                // design.style.display = "inline";
+                // both.style.display = "inline";
+            }
+
+            function showEngineeringWork() {
+                // console.log("eng work")
+                // eng.style.display = "inline";
+                // both.style.display = "inline";
+                // design.style.display = "none";
+                engArray.forEach((card) => {
+                    card.style.display = "inline";
+                });
+                desArray.forEach((card) => {
+                    card.style.display = "none";
+                });
+            }
+
+            function showDesignWork() {
+                console.log("design")
+                // eng.style.display = "none";
+                // both.style.display = "inline";
+                // design.style.display = "inline";
+                engArray.forEach((card) => {
+                    card.style.display = "none";
+                });
+                desArray.forEach((card) => {
+                    card.style.display = "inline";
+                });
+            }
+        </script>
     </body>
 </html>
