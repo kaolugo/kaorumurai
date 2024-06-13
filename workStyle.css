@@ -42,11 +42,11 @@ html {
 }
 
 body {
-    background: linear-gradient(to bottom, #0085FF 0%,#5EB4FB 35%, #0085FF 70%,#5EB4FB 85%, #BCE3F8 95%, #0085FF 100%);
+    background: linear-gradient(#0085FF 0%,#5EB4FB 35%, #0085FF 70%,#5EB4FB 85%, #BCE3F8 95%, #0085FF 100%);
     
-    background-size: 100% 300%;
+    /* background-size: 100% 300%;
     background-repeat: no-repeat;
-    margin: 0;
+    margin: 0; */
 }
 
 h1 {
@@ -378,7 +378,7 @@ img {
         margin-right: 30px;
 
         margin-top: 30vw;
-        margin-bottom: 40vw;
+        margin-bottom: 30vw;
     }
 
     h1 {
