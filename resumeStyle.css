@@ -39,14 +39,9 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-}
 
-body {
-    background: linear-gradient(to bottom, #0085FF 0%,#5EB4FB 35%, #0085FF 70%,#5EB4FB 85%, #BCE3F8 95%, #0085FF 100%);
-    
-    background-size: 100% 300%;
-    background-repeat: no-repeat;
-    margin: 0;
+    background: linear-gradient(#0085FF 0%,#5EB4FB 35%, #0085FF 70%,#5EB4FB 85%, #BCE3F8 100%) fixed;
+
 }
 
 h1 {
@@ -385,7 +380,7 @@ h3, .role {
 
 
     h3, h4, .role, .duration {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     h3, .role {
@@ -398,7 +393,7 @@ h3, .role {
     }
 
     .description {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 20px;
         font-weight: 300;
     }
