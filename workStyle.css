@@ -82,6 +82,18 @@ h1 {
     gap: 40px;
 }
 
+#work a {
+
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    background: none; /* Remove any background */
+    border: none; /* Remove any border */
+    padding: 0; /* Remove padding */
+    font: inherit; /* Inherit font styles */
+    cursor: inherit; /* Inherit cursor style */
+
+}
+
 h2 {
     font-family: "Nanum Gothic";
     color: white;
