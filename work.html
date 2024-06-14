@@ -195,6 +195,12 @@
                 <h2>the good news</h2>
                 <h3>Practicing frontend development and web scraping with Python by building a wholesome website that exclusively curates positive news stories.</h3>
             </div>
+
+            <div class="project lastItem" id="lastItem">
+                <div class="thumbnail"><img src = "img/The Good News.png" alt = "The Good News Thumbnail"></div>
+                <h2>the good news</h2>
+                <h3>Practicing frontend development and web scraping with Python by building a wholesome website that exclusively curates positive news stories.</h3>
+            </div>
         </div>
 
         
@@ -218,6 +224,8 @@
             const eng = document.getElementsByClassName("project eng");
             const both = document.getElementsByClassName("project both");
             const design = document.getElementsByClassName("project design");
+            const last = document.getElementById("lastItem");
+
 
             const engArray = Array.from(eng);
             const desArray = Array.from(design);
@@ -232,6 +240,8 @@
                 desArray.forEach((card) => {
                     card.style.display = "inline";
                 });
+
+                last.style.display = "inline";
                 // both.forEach((card) )
                 // eng.style.display = "inline";
                 // design.style.display = "inline";
@@ -249,6 +259,8 @@
                 desArray.forEach((card) => {
                     card.style.display = "none";
                 });
+
+                last.style.display = "none";
             }
 
             function showDesignWork() {
@@ -262,6 +274,8 @@
                 desArray.forEach((card) => {
                     card.style.display = "inline";
                 });
+
+                last.style.display = "none";
             }
         </script>
     </body>

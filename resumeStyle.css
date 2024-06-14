@@ -597,9 +597,6 @@ h3, .role {
 }
 
 @media only screen and (min-width: 769px) {
-    body {
-        background-size: 100% 500%;
-    }
 
      /* intro styling */
      .nav {
