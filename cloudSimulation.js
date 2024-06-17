@@ -49,7 +49,7 @@ class Particle {
 }
 
 class ParticleSystem {
-    constructor(numParticles, minSize, maxSize, path, context, canvas) {
+    constructor(numParticles, minSize, maxSize, path, initialPos, context, canvas) {
         this.particles = [];
 
         this.particleBounds = path;
@@ -61,8 +61,9 @@ class ParticleSystem {
 
         for (let i = 0; i < numParticles; i++) {
             const generatedPoint = this.generatePointWithinBounds();
-            const x = generatedPoint.x - offscreenOffset;
-            const y = generatedPoint.y + 300;
+            // TODO: adjust start point here 
+            const x = generatedPoint.x + initialPos.x;
+            const y = generatedPoint.y + initialPos.y;
             const size = Math.floor(Math.random() * (maxSize - minSize) + minSize);
             const opacity = Math.random() * 0.25 + 0.1;
             this.particles.push(new Particle(x, y, size, opacity, context));
@@ -102,21 +103,20 @@ class ParticleSystem {
 }
 
 class Cloud {
-    constructor(canvas, context, cloudPath) {
+    constructor(canvas, context, cloudPath, horizontalSpeed, initialPos) {
         this.canvas = canvas;
         this.ctx = context;
 
         this.cloudOutline = new Path2D(cloudPath);
 
-        this.cloud = new ParticleSystem(600, 50, 20, this.cloudOutline, this.ctx, this.canvas);
+        this.cloud = new ParticleSystem(600, 50, 20, this.cloudOutline, initialPos, this.ctx, this.canvas);
 
         this.animate = this.animate.bind(this);
         this.isMoving = false;
 
-        // calculate where this is
         this.cloudX = 0;
         this.cloudY = 0;
-        this.speedX = 0.1;
+        this.speedX = horizontalSpeed;
         this.speedY = 0;
     }
 
@@ -138,8 +138,10 @@ class Cloud {
         this.cloudX += this.speedX;
         this.cloudY += this.speedY;
 
-        if (this.cloudX > this.canvas.width) this.cloudX = -500;
-        if (this.cloudY > this.canvas.height) this.cloudY = -150;
+        // TODO: adjust restart position here
+        if (this.cloudX > this.canvas.width) this.cloudX = 0;
+        if (this.cloudY > this.canvas.height) this.cloudY = 0;
+        // TODO: add operations here if removing clouds
 
         requestAnimationFrame(this.animate);
     }
@@ -169,7 +171,7 @@ class ResponsiveCanvas {
         this.offscreenCanvas.height = this.canvas.height;
 
         const sampleCloudPath = "m134.52,149.82s2.05-103.64,80.04-103.64,90.52,35.92,91.44,82.09c0,0,148.9-63.44,169.42,50.46,0,0,64.43-5.31,65.46,38.81s-77.99,53.36-77.99,53.36c0,0-54.39,72.86-151.87,33.86,0,0-75.93,102.61-137.5-16.42,0,0-139.56,18.47-147.77-44.12s32.84-87.22,108.77-94.41Z"
-        this.newCloud = new Cloud(this.canvas, this.ctx, sampleCloudPath);
+        this.newCloud = new Cloud(this.canvas, this.ctx, sampleCloudPath, 2, {x: -500, y: 100});
 
         window.addEventListener('resize', () => this.resizeCanvas());
     }
@@ -194,3 +196,9 @@ class ResponsiveCanvas {
 
 const responsiveCanvas = new ResponsiveCanvas('cloudCanvas');
 responsiveCanvas.newCloud.startAnimation();
+
+
+// refactor to make customize points customizable
+// todo: add other types of clouds
+
+// todo: make clouds come from other side
