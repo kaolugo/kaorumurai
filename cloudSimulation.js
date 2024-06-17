@@ -38,6 +38,7 @@ class Particle {
     }
 
     draw(ctx) {
+        console.log("Y", this.y);
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
         gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
@@ -55,8 +56,6 @@ class ParticleSystem {
         this.particleBounds = path;
         this.ctx = context;
         this.canvas = canvas;
-
-        let offscreenOffset = 500;
 
         let maxSize = size + 10;
         let minSize = size - 10;
@@ -133,6 +132,11 @@ class Cloud {
             this.initialPos.x = this.canvas.width;
         }
 
+        console.log("kaoru 1", this.initialPos)
+        console.log(Math.round(window.innerHeight / 100))
+        this.initialPos.y = this.initialPos.y * Math.round(window.innerHeight / 100);
+
+        console.log("Kaoru", this.initialPos);
         this.cloud = new ParticleSystem(cloudData.numParticles, cloudData.size, this.cloudOutline, this.initialPos, this.ctx, this.canvas);
 
         
@@ -200,7 +204,7 @@ const xsCloudPaths = [
         numParticles: 250,
         initialPos: {
             x: 500,
-            y: 0
+            y: 70
         },
         direction: "backward",
         path: "m174.25,76.86s-47.2-1.45-46.48,23.24c0,0-41.39-11.29-43.57,25.95s45.03,32.15,45.03,32.15c0,0-125.64-22.51-127.81,38.49s-18.88,99.49,155.41,96.59c174.29-2.9,215.69.15,215.69.15,0,0,108.93,20.91,107.48-68.42s-97.31-93.68-140.16-92.23c0,0,22.51-130.72-58.1-130.72s-106.03,2.18-107.48,74.8Z"
@@ -286,7 +290,7 @@ class ResponsiveCanvas {
         this.newCloud = new Cloud(
             this.canvas,
             this.ctx,
-            2,
+            0.5,
             this.clouds[cloudId]
         );
 
@@ -310,12 +314,6 @@ class ResponsiveCanvas {
         }
     }
 
-    // startAnimation() {
-    //     console.log("animation started");
-    //     this.canvasClouds.forEach((canvasCloud) => {
-    //         canvasCloud.startAnimation();
-    //     })
-    // }
 
     resizeCanvas() {
         // save current canvas content to offscreen context
