@@ -56,15 +56,26 @@ class ParticleSystem {
         this.ctx = context;
         this.canvas = canvas;
 
+        let offscreenOffset = 500;
+
+
         for (let i = 0; i < numParticles; i++) {
             const generatedPoint = this.generatePointWithinBounds();
-            const x = generatedPoint.x;
-            const y = generatedPoint.y;
+            const x = generatedPoint.x - offscreenOffset;
+            const y = generatedPoint.y + 300;
             const size = Math.floor(Math.random() * (maxSize - minSize) + minSize);
             const opacity = Math.random() * 0.25 + 0.1;
             this.particles.push(new Particle(x, y, size, opacity, context));
         }
 
+    }
+
+    vw() {
+        return window.innerWidth / 100;
+      }
+      
+    vh() {
+        return window.innerHeight / 100;
     }
 
     update() {
