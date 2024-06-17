@@ -53,7 +53,7 @@ body {
     overflow:hidden;
 }
 
-#cloudCanvas {
+#cloudCanvas, #canvas2{
     z-index: -1;
     position: absolute;
 
