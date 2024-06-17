@@ -38,7 +38,6 @@ class Particle {
     }
 
     draw(ctx) {
-        console.log("Y", this.y);
         const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
         gradient.addColorStop(0, `rgba(255, 255, 255, ${this.opacity})`);
         gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
@@ -133,7 +132,7 @@ class Cloud {
         }
 
         console.log("kaoru 1", this.initialPos)
-        console.log(Math.round(window.innerHeight / 100))
+        console.log(Math.round(document.documentElement.clientWidth / 100))
         this.initialPos.y = this.initialPos.y * Math.round(window.innerHeight / 100);
 
         console.log("Kaoru", this.initialPos);
@@ -166,9 +165,8 @@ class Cloud {
         if (this.direction === "forward") {
             if (this.cloudX + this.initialPos.x > this.canvas.width) this.cloudX = 0;
         } else {
-            console.log("backward direction");
             if (this.cloudX < -(this.canvas.width + this.initialPos.x)) {
-                this.cloudX = 0 ;
+                this.cloudX = 0 + this.initialPos.x;
             }
         }
         
@@ -204,7 +202,7 @@ const xsCloudPaths = [
         numParticles: 250,
         initialPos: {
             x: 500,
-            y: 70
+            y: 50
         },
         direction: "backward",
         path: "m174.25,76.86s-47.2-1.45-46.48,23.24c0,0-41.39-11.29-43.57,25.95s45.03,32.15,45.03,32.15c0,0-125.64-22.51-127.81,38.49s-18.88,99.49,155.41,96.59c174.29-2.9,215.69.15,215.69.15,0,0,108.93,20.91,107.48-68.42s-97.31-93.68-140.16-92.23c0,0,22.51-130.72-58.1-130.72s-106.03,2.18-107.48,74.8Z"
