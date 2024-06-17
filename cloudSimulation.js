@@ -106,7 +106,7 @@ class ParticleSystem {
 }
 
 class Cloud {
-    constructor(canvas, context, horizontalSpeed, direction, cloudData) {
+    constructor(canvas, context, horizontalSpeed, cloudData) {
         this.canvas = canvas;
         this.ctx = context;
 
@@ -123,9 +123,9 @@ class Cloud {
         this.speedY = 0;
         this.speedX = horizontalSpeed;
 
-        this.direction = direction;
+        this.direction = cloudData.direction;
 
-        if (direction === "forward") {
+        if (this.direction === "forward") {
             this.speedX = horizontalSpeed;
             this.initialPos.x = -this.initialPos.x;
         } else {
@@ -282,15 +282,12 @@ class ResponsiveCanvas {
         this.offscreenCanvas.width = this.canvas.width;
         this.offscreenCanvas.height = this.canvas.height;
 
-        this.canvasClouds = [];
-        //his.initializeClouds();
 
         this.newCloud = new Cloud(
             this.canvas,
             this.ctx,
             2,
-            "forward",
-            this.clouds[test]
+            this.clouds[cloudId]
         );
 
         window.addEventListener('resize', () => this.resizeCanvas());
@@ -313,12 +310,12 @@ class ResponsiveCanvas {
         }
     }
 
-    startAnimation() {
-        console.log("animation started");
-        this.canvasClouds.forEach((canvasCloud) => {
-            canvasCloud.startAnimation();
-        })
-    }
+    // startAnimation() {
+    //     console.log("animation started");
+    //     this.canvasClouds.forEach((canvasCloud) => {
+    //         canvasCloud.startAnimation();
+    //     })
+    // }
 
     resizeCanvas() {
         // save current canvas content to offscreen context
@@ -335,10 +332,25 @@ class ResponsiveCanvas {
 
 
 
-const responsiveCanvas = new ResponsiveCanvas('cloudCanvas', 0);
-const responsiveCanvas2 = new ResponsiveCanvas('canvas2', 1)
-responsiveCanvas.newCloud.startAnimation();
-responsiveCanvas2.newCloud.startAnimation();
+// const responsiveCanvas = new ResponsiveCanvas('cloudCanvas', 0);
+// const responsiveCanvas2 = new ResponsiveCanvas('canvas2', 1)
+
+const responsiveCanvas = [];
+for (let i = 0; i < 6; i++) {
+    let canvasName = "canvas".concat(i.toString());
+    responsiveCanvas.push(new ResponsiveCanvas(canvasName, i));
+}
+
+// responsiveCanvas.forEach((canvas) => {
+//     canvas.newCloud.startAnimation();
+// })
+
+responsiveCanvas[0].newCloud.startAnimation();
+
+
+
+// responsiveCanvas.newCloud.startAnimation();
+// responsiveCanvas2.newCloud.startAnimation();
 
 
 
