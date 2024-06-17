@@ -20,6 +20,9 @@
     </head>
     
     <body>
+        <canvas id="cloudCanvas"></canvas>
+        <script src="./cloudSimulation.js"></script>
+
         <!-- mobile only navigation burger-->
         <div id="menuArea">
             <input type="checkbox" id="menuToggle"></input>
@@ -141,8 +144,6 @@
             </div>
 
             <script>
-                // draw
-                // drawBackwards
                 let svgs = [
                     "engineer",
                     "designer",
@@ -159,7 +160,6 @@
                 let svgIndex = 0;
                 
                 function triggerAnimation() {
-                    console.log("animation trigger");
                     let currentSVG = svgs[svgIndex];
 
                     
@@ -183,7 +183,6 @@
                 }
 
                 function removeSVG(element) {
-                    console.log("removing svg");
                     element.style.display = "none";
                     strokes.forEach((stroke) => {
                         element.classList.remove(stroke);
@@ -548,7 +547,7 @@
                 </li>
                 <li class = "rightFoot">Handcrafted with &lt3 on <a class = "github" href = "https://github.com/kaolugo/kaorumurai">kaolugo</a>.</li>
             </ul>
-        </div>
+          </div>
         
     </body>
 </html>
