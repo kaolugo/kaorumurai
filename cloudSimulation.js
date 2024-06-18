@@ -231,11 +231,11 @@ const xsCloudPaths = [
     }, 
     {
         id: 3,
-        size: 60,
-        numParticles: 80,
+        size: 50,
+        numParticles: 250,
         initialPos: {
             x: 500,
-            y: 0
+            y: 5
         },
         direction: "forward",
         path: "m106.06,103.31s1.85-93.62,72.3-93.62,81.77,32.45,82.6,74.15c0,0,134.5-57.31,153.04,45.58,0,0,58.2-4.8,59.13,35.06s-70.45,48.2-70.45,48.2c0,0-49.13,65.81-137.18,30.59,0,0-68.59,92.69-124.2-14.83,0,0-126.06,16.68-133.48-39.85C.39,132.04,37.47,109.8,106.06,103.3h0Z"
@@ -341,7 +341,8 @@ for (let i = 0; i < 6; i++) {
 //     canvas.newCloud.startAnimation();
 // })
 
-responsiveCanvas[2].newCloud.startAnimation();
+responsiveCanvas[3].newCloud.startAnimation();
+responsiveCanvas[0].newCloud.startAnimation();
 
 
 
