@@ -84,6 +84,9 @@ h1 {
     font-weight: 500;
     color: white;
     z-index: 1;
+
+    /* text-shadow: 0px 0px 10px #0085FF; */
+    text-shadow: 0 0 1em #0085FF, 1px 1px 4px #0085FF;
 }
 
 h2 {
@@ -91,6 +94,8 @@ h2 {
     color: white;
     font-weight: 300;
     z-index: 1;
+
+    text-shadow: 0 0 1em #51A3FE, 1px 1px 5px #51A3FE;
 }
 
 h3 {
@@ -103,7 +108,19 @@ h3 {
     width: 60vw;
     align-self: flex-end;
     z-index: 1;
+
+    /* text-shadow: #0085FF 2px 0 5px; */
+    text-shadow: 0 0 1em #0085FF, 1px 1px 5px #0085FF;
+    /* text-shadow: 0px 0px 12px #0085FF; */
 }
+
+/* .h3bg {
+    align-self: flex-end;
+
+    padding: 10px;
+
+    background-image: radial-gradient(rgba(0,133,255, 0.5) 0, rgba(0,0,0,0) 100%);
+} */
 
 .aboutMe {
     font-family: 'Avenir';

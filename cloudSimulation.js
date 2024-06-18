@@ -65,6 +65,7 @@ class ParticleSystem {
             // TODO: adjust start point here 
             const x = generatedPoint.x + initialPos.x;
             const y = generatedPoint.y + initialPos.y;
+
             const size = Math.floor(Math.random() * (maxSize - minSize) + minSize);
             const opacity = Math.random() * 0.25 + 0.1;
             this.particles.push(new Particle(x, y, size, opacity, context));
@@ -96,7 +97,7 @@ class ParticleSystem {
 }
 
 class Cloud {
-    constructor(canvas, context, horizontalSpeed, cloudData) {
+    constructor(canvas, context, cloudData) {
         this.canvas = canvas;
         this.ctx = context;
 
@@ -111,15 +112,15 @@ class Cloud {
         this.cloudX = 0;
         this.cloudY = 0;
         this.speedY = 0;
-        this.speedX = horizontalSpeed;
+        this.speedX = cloudData.speed;
 
         this.direction = cloudData.direction;
 
         if (this.direction === "forward") {
-            this.speedX = horizontalSpeed;
+            this.speedX = cloudData.speed;
             this.initialPos.x = -this.initialPos.x;
         } else {
-            this.speedX = -horizontalSpeed;
+            this.speedX = -cloudData.speed;
             this.initialPos.x = this.canvas.width;
         }
 
@@ -185,7 +186,7 @@ const xsCloudPaths = [
         speed: 0.5,
         numParticles: 250,
         initialPos: {
-            x: 10000, // 500
+            x: 500,
             y: 50
         },
         direction: "backward",
@@ -233,8 +234,8 @@ const xsCloudPaths = [
         speed: 0.5,
         numParticles: 80,
         initialPos: {
-            x: 620,
-            y: 0
+            x: 400,
+            y: 30
         },
         direction: "forward",
         path: "m169.3,86.6c42.94,17.54,78.37,82.14,172.84,56.3,94.47-25.84,281.27-4.61,283.42-33.23s-135.27-24.92-223.3-35.99c-88.03-11.08-211.49-47.99-299.52-47.99S8.26,48.76,8.26,61.69s118.09,7.38,161.03,24.92Z"
@@ -277,7 +278,6 @@ class ResponsiveCanvas {
         this.newCloud = new Cloud(
             this.canvas,
             this.ctx,
-            0.5,
             this.clouds[cloudId]
         );
 
@@ -326,15 +326,11 @@ for (let i = 0; i < 6; i++) {
     responsiveCanvas.push(new ResponsiveCanvas(canvasName, i));
 }
 
-// responsiveCanvas.forEach((canvas) => {
-//     canvas.newCloud.startAnimation();
-// })
-
-responsiveCanvas[3].newCloud.startAnimation();
+// responsiveCanvas[3].newCloud.startAnimation();
 responsiveCanvas[0].newCloud.startAnimation();
-responsiveCanvas[1].newCloud.startAnimation();
+// responsiveCanvas[1].newCloud.startAnimation();
 
-
+responsiveCanvas[4].newCloud.startAnimation();
 
 // DONE: refactor to make customize points customizable
 // todo: add other types of clouds - make clouds for every breakpoint
