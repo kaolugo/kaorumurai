@@ -315,28 +315,16 @@ class ResponsiveCanvas {
 }
 
 
-
-
-// const responsiveCanvas = new ResponsiveCanvas('cloudCanvas', 0);
-// const responsiveCanvas2 = new ResponsiveCanvas('canvas2', 1)
-
 const responsiveCanvas = [];
 for (let i = 0; i < 6; i++) {
     let canvasName = "canvas".concat(i.toString());
     responsiveCanvas.push(new ResponsiveCanvas(canvasName, i));
 }
 
+
+// xs
 responsiveCanvas[3].newCloud.startAnimation();
 responsiveCanvas[1].newCloud.startAnimation();
 responsiveCanvas[0].newCloud.startAnimation();
 responsiveCanvas[4].newCloud.startAnimation();
 
-// setInterval(responsiveCanvas[4].newCloud.startAnimation(), 5000)
-
-// DONE: refactor to make customize points customizable
-// todo: add other types of clouds - make clouds for every breakpoint
-// phone, tablet portrait, tablet landscape, laptop, desktop
-
-// DONE: make clouds come from other side
-
-// todo: create a way to swap clouds based on certain conditions
