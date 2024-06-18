@@ -61,7 +61,7 @@ body {
     top: 0;
     left: -5vw;
 
-    width: 110vw;
+    width: 105vw;
     height: 120vh;
 }
 
@@ -142,6 +142,9 @@ h3 {
     z-index: 1;
 }
 
+.svg-container {
+    filter: drop-shadow(2px 2px 4px rgba(81, 163, 254, 0.5));
+}
 
 /* footer styling */
 .footer {
