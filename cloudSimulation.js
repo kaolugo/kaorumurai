@@ -185,6 +185,7 @@ const xsCloudPaths = [
         size: 50,
         speed: 1.5,
         numParticles: 250,
+        screen: "xs",
         initialPos: {
             x: 500,
             y: 50
@@ -197,6 +198,7 @@ const xsCloudPaths = [
         size: 50,
         speed: 0.5,
         numParticles: 100,
+        screen: "xs",
         initialPos: {
             x: 620,
             y: 50,
@@ -209,6 +211,7 @@ const xsCloudPaths = [
         size: 40,
         speed: 0.5,
         numParticles: 300,
+        screen: "xs",
         initialPos: {
             x: 580,
             y: 30
@@ -221,6 +224,7 @@ const xsCloudPaths = [
         size: 50,
         speed: 1,
         numParticles: 250,
+        screen: "xs",
         initialPos: {
             x: 1000, // 500 
             y: 5
@@ -233,6 +237,7 @@ const xsCloudPaths = [
         size: 45,
         speed: 1.5,
         numParticles: 80,
+        screen: "xs",
         initialPos: {
             x: 400,
             y: 10
@@ -245,6 +250,7 @@ const xsCloudPaths = [
         size: 30,
         speed: 0.5,
         numParticles: 400,
+        screen: "xs",
         initialPos: {
             x: 570,
             y: 0
@@ -327,4 +333,6 @@ responsiveCanvas[3].newCloud.startAnimation();
 responsiveCanvas[1].newCloud.startAnimation();
 responsiveCanvas[0].newCloud.startAnimation();
 responsiveCanvas[4].newCloud.startAnimation();
+
+// s
 
