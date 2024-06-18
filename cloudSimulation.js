@@ -72,14 +72,6 @@ class ParticleSystem {
 
     }
 
-    vw() {
-        return window.innerWidth / 100;
-      }
-      
-    vh() {
-        return window.innerHeight / 100;
-    }
-
     update() {
         this.particles.forEach(particle => particle.update());
     }
@@ -131,11 +123,8 @@ class Cloud {
             this.initialPos.x = this.canvas.width;
         }
 
-        console.log("kaoru 1", this.initialPos)
-        console.log(Math.round(document.documentElement.clientWidth / 100))
         this.initialPos.y = this.initialPos.y * Math.round(window.innerHeight / 100);
 
-        console.log("Kaoru", this.initialPos);
         this.cloud = new ParticleSystem(cloudData.numParticles, cloudData.size, this.cloudOutline, this.initialPos, this.ctx, this.canvas);
 
         
@@ -169,17 +158,11 @@ class Cloud {
                 this.cloudX = 0 + this.initialPos.x;
             }
         }
-        
-
-
-
-        // TODO: add operations here if removing clouds
 
         requestAnimationFrame(this.animate);
     }
 
     startAnimation() {
-        console.log("animation started");
         this.isMoving = true;
         this.animate();
     }
@@ -199,9 +182,10 @@ const xsCloudPaths = [
     {
         id: 0,
         size: 50,
+        speed: 0.5,
         numParticles: 250,
         initialPos: {
-            x: 500,
+            x: 10000, // 500
             y: 50
         },
         direction: "backward",
@@ -210,10 +194,11 @@ const xsCloudPaths = [
     {
         id: 1,
         size: 50,
+        speed: 0.5,
         numParticles: 100,
         initialPos: {
             x: 620,
-            y: 0
+            y: 30,
         },
         direction: "backward",
         path: "m464.31,72.33c-42.94-17.54-78.37-82.14-172.84-56.3S10.19,20.64,8.05,49.25c-2.15,28.61,135.27,24.92,223.3,35.99,88.03,11.08,211.49,47.99,299.52,47.99s94.47-23.07,94.47-35.99-118.09-7.38-161.03-24.92Z"
@@ -221,6 +206,7 @@ const xsCloudPaths = [
     {
         id: 2,
         size: 40,
+        speed: 0.5,
         numParticles: 300,
         initialPos: {
             x: 580,
@@ -232,6 +218,7 @@ const xsCloudPaths = [
     {
         id: 3,
         size: 50,
+        speed: 0.5,
         numParticles: 250,
         initialPos: {
             x: 500,
@@ -243,6 +230,7 @@ const xsCloudPaths = [
     {
         id: 4,
         size: 45,
+        speed: 0.5,
         numParticles: 80,
         initialPos: {
             x: 620,
@@ -254,6 +242,7 @@ const xsCloudPaths = [
     {
         id: 5,
         size: 30,
+        speed: 0.5,
         numParticles: 400,
         initialPos: {
             x: 570,
@@ -343,11 +332,7 @@ for (let i = 0; i < 6; i++) {
 
 responsiveCanvas[3].newCloud.startAnimation();
 responsiveCanvas[0].newCloud.startAnimation();
-
-
-
-// responsiveCanvas.newCloud.startAnimation();
-// responsiveCanvas2.newCloud.startAnimation();
+responsiveCanvas[1].newCloud.startAnimation();
 
 
 
