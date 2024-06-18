@@ -87,7 +87,7 @@ const xsCloudPaths = [
         screen: "s",
         initialPos: {
             x: 750,
-            y: 50
+            y: 0
         },
         direction: "backward",
         path: "m282.27,139.07s-73.22-2.25-72.09,36.05c0,0-64.21-17.51-67.58,40.24-3.38,57.76,69.84,49.87,69.84,49.87,0,0-194.87-34.92-198.25,59.7-3.38,94.62-29.29,154.32,241.05,149.81,270.34-4.51,334.54.24,334.54.24,0,0,168.96,32.43,166.71-106.12-2.25-138.55-150.94-145.31-217.4-143.05,0,0,34.92-202.75-90.11-202.75s-164.46,3.38-166.71,116.02Z"
@@ -95,12 +95,12 @@ const xsCloudPaths = [
     {
         id: 7, // 1
         size: 50,
-        speed: 0.5,
+        speed: 1.2,
         numParticles: 150,
         screen: "s",
         initialPos: {
             x: 930,
-            y: 50,
+            y: 60,
         },
         direction: "backward",
         path: "m569.97,114.94c-51.62-21.08-94.21-98.74-207.77-67.68C248.63,78.33,24.07,52.81,21.49,87.21c-2.58,34.39,162.61,29.96,268.43,43.27,105.82,13.31,254.23,57.69,360.06,57.69s113.57-27.74,113.57-43.27-141.96-8.88-193.58-29.96Z"
@@ -108,8 +108,8 @@ const xsCloudPaths = [
     {
         id: 8, // 2
         size: 40,
-        speed: 0.5,
-        numParticles: 450,
+        speed: 0.2,
+        numParticles: 600,
         screen: "s",
         initialPos: {
             x: 860,
@@ -120,12 +120,12 @@ const xsCloudPaths = [
     }, 
     {
         id: 9, // 3
-        size: 50,
-        speed: 0.5,
-        numParticles: 375,
+        size: 70,
+        speed: 1.2,
+        numParticles: 300,
         screen: "s",
         initialPos: {
-            x: 2000, // 500 
+            x: 750, // 500 
             y: 5
         },
         direction: "forward",
@@ -147,12 +147,12 @@ const xsCloudPaths = [
     {
         id: 11, // 5
         size: 30,
-        speed: 0.5,
+        speed: 1,
         numParticles: 600,
         screen: "s",
         initialPos: {
-            x: 800,
-            y: 0
+            x: 600,
+            y: 50
         },
         direction: "forward",
         path: "m569.02,55.6c-52.44-27.87-106.31,0-107.97,31.56s-83.05-51.49-118.77-36.54c-35.71,14.95-69.76,78.9-125.41,63.12-55.65-15.78-70.6-73.92-100.49-56.48-29.9,17.44-91.36,34.05-88.87,63.95,2.49,29.9,57.31-2.49,125.41,18.27,68.1,20.76,129.46-15.78,198.03-4.98,68.57,10.8,234.68,117.11,229.69,39.04-4.98-78.07,151.36-78.07,152.92-107.97,1.56-29.9-112.11,17.9-164.55-9.97Z"
@@ -619,7 +619,7 @@ class ResponsiveCanvas {
             console.log("new breakpoint");
             this.responsiveScale = newScale;
 
-            
+            // prep new canvases
         }
 
 
@@ -644,18 +644,21 @@ class ResponsiveCanvas {
 
 const responsiveCanvas = [];
 for (let i = 0; i < 6; i++) {
+    let index = i + 6;
     let canvasName = "canvas".concat(i.toString());
-    responsiveCanvas.push(new ResponsiveCanvas(canvasName, i));
+    responsiveCanvas.push(new ResponsiveCanvas(canvasName, index));
 }
 
 
 // xs
-responsiveCanvas[3].newCloud.startAnimation();
-responsiveCanvas[1].newCloud.startAnimation();
-responsiveCanvas[0].newCloud.startAnimation();
-responsiveCanvas[4].newCloud.startAnimation();
+// responsiveCanvas[3].newCloud.startAnimation();
+// responsiveCanvas[1].newCloud.startAnimation();
+// responsiveCanvas[0].newCloud.startAnimation();
+// responsiveCanvas[4].newCloud.startAnimation();
 
 // s
-// responsiveCanvas[6].newCloud.startAnimation();
-
+responsiveCanvas[1].newCloud.startAnimation();
+responsiveCanvas[2].newCloud.startAnimation();
+responsiveCanvas[3].newCloud.startAnimation();
+// responsiveCanvas[5].newCloud.startAnimation();
 
