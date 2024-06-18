@@ -577,7 +577,7 @@ class ResponsiveCanvas {
         this.ctx = this.canvas.getContext('2d');
         
 
-        this.responsiveScale;
+        this.responsiveScale = this.determineBreakpoint();
 
         this.clouds = xsCloudPaths;
 
@@ -601,18 +601,6 @@ class ResponsiveCanvas {
     initializeCanvas() {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-
-        if (this.canvas.width < 480) {
-            this.responsiveScale = "xs";
-        } else if (this.canvas.width < 769) {
-            this.responsiveScale = "s";
-        } else if (this.canvas.width < 1025) {
-            this.responsiveScale = "m";
-        } else if (this.canvas.width < 1201) {
-            this.responsiveScale = "l";
-        } else {
-            this.responsiveScale = "xl";
-        }
     }
 
 
@@ -625,7 +613,31 @@ class ResponsiveCanvas {
 
         this.initializeCanvas();
 
+        // TODO: add here
+        let newScale = this.determineBreakpoint();
+        if (newScale !== this.responsiveScale) {
+            console.log("new breakpoint");
+            this.responsiveScale = newScale;
+
+            
+        }
+
+
         this.ctx.drawImage(this.offscreenCanvas, 0, 0);
+    }
+
+    determineBreakpoint() {
+        if (this.canvas.width < 480) {
+            return "xs";
+        } else if (this.canvas.width < 769) {
+            return "s";
+        } else if (this.canvas.width < 1025) {
+            return "m";
+        } else if (this.canvas.width < 1201) {
+            return "l";
+        } else {
+            return "xl";
+        }
     }
 }
 
@@ -638,10 +650,10 @@ for (let i = 0; i < 6; i++) {
 
 
 // xs
-// responsiveCanvas[3].newCloud.startAnimation();
-// responsiveCanvas[1].newCloud.startAnimation();
-// responsiveCanvas[0].newCloud.startAnimation();
-// responsiveCanvas[4].newCloud.startAnimation();
+responsiveCanvas[3].newCloud.startAnimation();
+responsiveCanvas[1].newCloud.startAnimation();
+responsiveCanvas[0].newCloud.startAnimation();
+responsiveCanvas[4].newCloud.startAnimation();
 
 // s
 // responsiveCanvas[6].newCloud.startAnimation();
