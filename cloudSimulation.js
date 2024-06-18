@@ -195,11 +195,11 @@ const xsCloudPaths = [
     {
         id: 1,
         size: 50,
-        speed: 0.5,
+        speed: 0.1,
         numParticles: 100,
         initialPos: {
             x: 620,
-            y: 30,
+            y: 50,
         },
         direction: "backward",
         path: "m464.31,72.33c-42.94-17.54-78.37-82.14-172.84-56.3S10.19,20.64,8.05,49.25c-2.15,28.61,135.27,24.92,223.3,35.99,88.03,11.08,211.49,47.99,299.52,47.99s94.47-23.07,94.47-35.99-118.09-7.38-161.03-24.92Z"
@@ -219,10 +219,10 @@ const xsCloudPaths = [
     {
         id: 3,
         size: 50,
-        speed: 0.5,
+        speed: 0.2,
         numParticles: 250,
         initialPos: {
-            x: 500,
+            x: 1000, // 500 
             y: 5
         },
         direction: "forward",
@@ -235,7 +235,7 @@ const xsCloudPaths = [
         numParticles: 80,
         initialPos: {
             x: 400,
-            y: 30
+            y: 10
         },
         direction: "forward",
         path: "m169.3,86.6c42.94,17.54,78.37,82.14,172.84,56.3,94.47-25.84,281.27-4.61,283.42-33.23s-135.27-24.92-223.3-35.99c-88.03-11.08-211.49-47.99-299.52-47.99S8.26,48.76,8.26,61.69s118.09,7.38,161.03,24.92Z"
@@ -326,11 +326,14 @@ for (let i = 0; i < 6; i++) {
     responsiveCanvas.push(new ResponsiveCanvas(canvasName, i));
 }
 
-// responsiveCanvas[3].newCloud.startAnimation();
-responsiveCanvas[0].newCloud.startAnimation();
-// responsiveCanvas[1].newCloud.startAnimation();
+responsiveCanvas[3].newCloud.startAnimation();
 
+responsiveCanvas[1].newCloud.startAnimation();
+
+responsiveCanvas[0].newCloud.startAnimation();
 responsiveCanvas[4].newCloud.startAnimation();
+
+// setInterval(responsiveCanvas[4].newCloud.startAnimation(), 5000)
 
 // DONE: refactor to make customize points customizable
 // todo: add other types of clouds - make clouds for every breakpoint
