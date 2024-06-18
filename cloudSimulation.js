@@ -4,7 +4,7 @@ const xsCloudPaths = [
     {
         id: 0, // 0
         size: 50,
-        speed: 1.5,
+        speed: 0.5,
         numParticles: 250,
         screen: "xs",
         initialPos: {
@@ -17,7 +17,7 @@ const xsCloudPaths = [
     {
         id: 1, // 1
         size: 50,
-        speed: 0.5,
+        speed: 0.1,
         numParticles: 100,
         screen: "xs",
         initialPos: {
@@ -43,11 +43,11 @@ const xsCloudPaths = [
     {
         id: 3, // 3
         size: 50,
-        speed: 1,
+        speed: 0.2,
         numParticles: 250,
         screen: "xs",
         initialPos: {
-            x: 1000, // 500 
+            x: 700, // 500 
             y: 5
         },
         direction: "forward",
@@ -56,7 +56,7 @@ const xsCloudPaths = [
     {
         id: 4, // 4
         size: 45,
-        speed: 1.5,
+        speed: 0.5,
         numParticles: 80,
         screen: "xs",
         initialPos: {
