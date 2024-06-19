@@ -95,7 +95,7 @@ const xsCloudPaths = [
     {
         id: 7, // 1
         size: 50,
-        speed: 1.2,
+        speed: 0.5,
         numParticles: 150,
         screen: "s",
         initialPos: {
@@ -121,7 +121,7 @@ const xsCloudPaths = [
     {
         id: 9, // 3
         size: 70,
-        speed: 1.2,
+        speed: 0.5,
         numParticles: 300,
         screen: "s",
         initialPos: {
@@ -660,5 +660,5 @@ for (let i = 0; i < 6; i++) {
 responsiveCanvas[1].newCloud.startAnimation();
 responsiveCanvas[2].newCloud.startAnimation();
 responsiveCanvas[3].newCloud.startAnimation();
-// responsiveCanvas[5].newCloud.startAnimation();
+
 
