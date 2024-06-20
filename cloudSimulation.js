@@ -629,9 +629,9 @@ class ResponsiveCanvas {
             // prep new canvases
             this.clearCanvas();
             this.addCloudByScale();
+            this.newCloud.startAnimation();
         }
     }
-
 
     addCloudByScale() {
         let id = this.cloudId + 6 * this.responsiveScale;
