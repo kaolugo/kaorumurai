@@ -590,13 +590,14 @@ class ResponsiveCanvas {
         // init responsive clouds
         this.clouds = cloudPaths;
         this.cloudId = cloudId;
-        this.responsiveScale = this.determineBreakpoint();
+        this.responsiveScale = this.determineScale();
+        this.currentId = this.cloudId + 6 * this.responsiveScale;
 
 
         this.newCloud = new Cloud(
             this.canvas,
             this.ctx,
-            this.clouds[cloudId]
+            this.clouds[this.currentId]
         );
 
         window.addEventListener('resize', () => this.resizeCanvas());
@@ -617,8 +618,10 @@ class ResponsiveCanvas {
 
         this.initializeCanvas();
 
+        this.ctx.drawImage(this.offscreenCanvas, 0, 0);
+
         // TODO: add here
-        let newScale = this.determineBreakpoint();
+        let newScale = this.determineScale();
         if (newScale !== this.responsiveScale) {
             console.log("new breakpoint");
             this.responsiveScale = newScale;
@@ -627,9 +630,6 @@ class ResponsiveCanvas {
             this.clearCanvas();
             this.addCloudByScale();
         }
-
-
-        this.ctx.drawImage(this.offscreenCanvas, 0, 0);
     }
 
 
@@ -648,7 +648,7 @@ class ResponsiveCanvas {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 
-    determineBreakpoint() {
+    determineScale() {
         // xs
         if (this.canvas.width < 480) {
             return 0;
@@ -701,13 +701,13 @@ responsiveCanvas[2].newCloud.startAnimation();
 responsiveCanvas[3].newCloud.startAnimation();
 responsiveCanvas[4].newCloud.startAnimation();
 
-setTimeout(() => {
-    for (let i = 0; i < 6; i++) {
-        // let index = i + 12;
-        // let canvasName = "canvas".concat(i.toString());
-        // responsiveCanvas.push(new ResponsiveCanvas(canvasName, index));
-        responsiveCanvas[i].clearCanvas();
-    }
-}, 10000);
+// setTimeout(() => {
+//     for (let i = 0; i < 6; i++) {
+//         // let index = i + 12;
+//         // let canvasName = "canvas".concat(i.toString());
+//         // responsiveCanvas.push(new ResponsiveCanvas(canvasName, index));
+//         responsiveCanvas[i].clearCanvas();
+//     }
+// }, 10000);
 
 
