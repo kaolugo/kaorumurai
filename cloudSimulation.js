@@ -657,8 +657,10 @@ for (let i = 0; i < 6; i++) {
 // responsiveCanvas[4].newCloud.startAnimation();
 
 // s
-responsiveCanvas[1].newCloud.startAnimation();
-responsiveCanvas[2].newCloud.startAnimation();
-responsiveCanvas[3].newCloud.startAnimation();
+// responsiveCanvas[1].newCloud.startAnimation();
+// responsiveCanvas[2].newCloud.startAnimation();
+// responsiveCanvas[3].newCloud.startAnimation();
+
+// m
 
 
