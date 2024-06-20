@@ -1,6 +1,6 @@
 // cloudSimulation.js
 
-const xsCloudPaths = [
+const cloudPaths = [
     {
         id: 0, // 0
         size: 50,
@@ -531,6 +531,7 @@ class Cloud {
     }
 
     animate() {
+        console.log("animate");
         if (!this.isMoving) {
             return;
         }
@@ -575,22 +576,21 @@ class Cloud {
 
 class ResponsiveCanvas {
     constructor(canvasId, cloudId) {
+        // init canvas
         this.canvas = document.getElementById(canvasId);
-        
-
         this.ctx = this.canvas.getContext('2d');
-        
+        this.initializeCanvas();
 
-        this.responsiveScale = this.determineBreakpoint();
-
-        this.clouds = xsCloudPaths;
-
+        // init off screen canvas
         this.offscreenCanvas = document.createElement('canvas');
         this.offscreenCtx = this.offscreenCanvas.getContext('2d');
-
-        this.initializeCanvas();
         this.offscreenCanvas.width = this.canvas.width;
         this.offscreenCanvas.height = this.canvas.height;
+
+        // init responsive clouds
+        this.clouds = cloudPaths;
+        this.cloudId = cloudId;
+        this.responsiveScale = this.determineBreakpoint();
 
 
         this.newCloud = new Cloud(
@@ -624,23 +624,43 @@ class ResponsiveCanvas {
             this.responsiveScale = newScale;
 
             // prep new canvases
+            this.clearCanvas();
+            this.addCloudByScale();
         }
 
 
         this.ctx.drawImage(this.offscreenCanvas, 0, 0);
     }
 
+
+    addCloudByScale() {
+        let id = this.cloudId + 6 * this.responsiveScale;
+        this.newCloud = new Cloud(
+            this.canvas,
+            this.ctx,
+            this.clouds[id]
+        );
+    }
+
+    clearCanvas() {
+        console.log("clear canvas fired");
+        this.newCloud.pauseAnimation();
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+
     determineBreakpoint() {
+        // xs
         if (this.canvas.width < 480) {
-            return "xs";
+            return 0;
+        // s
         } else if (this.canvas.width < 769) {
-            return "s";
-        } else if (this.canvas.width < 1025) {
-            return "m";
+            return 1;
+        // m, l
         } else if (this.canvas.width < 1201) {
-            return "l";
+            return 1;
+        // xl
         } else {
-            return "xl";
+            return 2;
         }
     }
 }
@@ -674,10 +694,20 @@ for (let i = 0; i < 6; i++) {
 // responsiveCanvas[5].newCloud.startAnimation();
 
 // xl
+// + 12
 setTimeout(() => {responsiveCanvas[0].newCloud.startAnimation()}, 40000);
 responsiveCanvas[1].newCloud.startAnimation(); // delay starts
 responsiveCanvas[2].newCloud.startAnimation();
 responsiveCanvas[3].newCloud.startAnimation();
 responsiveCanvas[4].newCloud.startAnimation();
+
+setTimeout(() => {
+    for (let i = 0; i < 6; i++) {
+        // let index = i + 12;
+        // let canvasName = "canvas".concat(i.toString());
+        // responsiveCanvas.push(new ResponsiveCanvas(canvasName, index));
+        responsiveCanvas[i].clearCanvas();
+    }
+}, 10000);
 
 
