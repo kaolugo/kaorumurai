@@ -388,6 +388,10 @@ class Cloud {
 
 class ResponsiveCanvas {
     constructor(canvasId, cloudId) {
+        this.clouds = cloudPaths;
+        this.cloudId = cloudId;
+        this.cloudData = this.clouds[cloudId];
+
         // init canvas
         this.canvas = document.getElementById(canvasId);
         this.ctx = this.canvas.getContext('2d');
@@ -400,9 +404,6 @@ class ResponsiveCanvas {
         this.offscreenCanvas.height = this.canvas.height;
 
         // init responsive clouds
-        this.clouds = cloudPaths;
-        this.cloudId = cloudId;
-
         this.newCloud = new Cloud(
             this.canvas,
             this.ctx,
@@ -413,7 +414,18 @@ class ResponsiveCanvas {
     }
 
     initializeCanvas() {
-        this.canvas.width = window.innerWidth;
+        if (this.cloudData.screen === "xs" && window.innerWidth > 480) {
+            this.canvas.width = 480;
+        } else if (this.cloudData.screen === "s" && (window.innerWidth < 481 || window.innerWidth > 768)) {
+            this.canvas.width = 768;
+        } else if (this.cloudData.screen === "m & l" && (window.innerWidth < 769 || window.innerWidth > 1024)) {
+            this.canvas.width = 1024;
+        } else if (this.cloudData.screen === "xl" && (window.innerWidth < 1201)) {
+            this.canvas.width = 1201;
+        } else {
+            this.canvas.width = window.innerWidth;
+        }
+        
         this.canvas.height = window.innerHeight;
     }
 

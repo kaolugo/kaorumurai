@@ -144,15 +144,15 @@ h1 {
 }
 
 h1 span {
-    background: linear-gradient(rgba(81,163,253, 0), rgba(81,163,253, 1), rgba(81,163,253, 0));
+    background: linear-gradient(rgba(81,163,253, 0), rgba(81,163,253, 0.5), rgba(81,163,253, 0));
 }
 
 h2 span {
-    background: linear-gradient(rgba(158,207,249, 0), rgba(158,207,249, 1), rgb(158,207,249, 0));
+    background: linear-gradient(rgba(158,207,249, 0), rgba(158,207,249, 0.5), rgb(158,207,249, 0));
 }
 
 h3 span {
-    background: linear-gradient(rgba(94,180,251, 0), rgba(94,180,251, 1),rgba(94,180,251, 0))
+    background: linear-gradient(rgba(94,180,251, 0), rgba(94,180,251, 0.5),rgba(94,180,251, 0))
 }
 
 h2 {
