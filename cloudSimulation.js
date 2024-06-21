@@ -437,6 +437,9 @@ class ResponsiveCanvas {
 
 
 const responsiveCanvas = [];
+
+// cloudPaths.forEach(())
+
 for (let i = 0; i < 6; i++) {
     let index = i + 12;
     let canvasName = "canvas".concat(i.toString());
