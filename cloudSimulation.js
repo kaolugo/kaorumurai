@@ -321,6 +321,8 @@ class Cloud {
         this.isMoving = false;
 
         this.initialPos = cloudData.initialPos;
+        console.log("this.initialPos", this.initialPos);
+        console.log("cloudData", cloudData);
 
         this.cloudX = 0;
         this.cloudY = 0;
@@ -404,7 +406,7 @@ class ResponsiveCanvas {
         this.newCloud = new Cloud(
             this.canvas,
             this.ctx,
-            this.cloudId
+            this.clouds[this.cloudId]
         );
 
         window.addEventListener('resize', () => this.resizeCanvas());
@@ -436,6 +438,8 @@ class ResponsiveCanvas {
 }
 
 
+/* runner code */
+
 const responsiveCanvas = [];
 let i = 0;
 
@@ -451,6 +455,7 @@ function startXSClouds() {
 }
 
 function startSClouds() {
+    // starting clouds
     for (let i = 4; i < 7; i++) {
         responsiveCanvas[i].newCloud.startAnimation();
     }
@@ -494,6 +499,7 @@ function pauseXLClouds() {
 }
 
 function toggleClouds() {
+    console.log("toggling clouds");
     if (window.innerWidth < 481) {
         pauseSClouds();
         pauseMLClouds();
@@ -518,8 +524,20 @@ function toggleClouds() {
 }
 
 
-window.addEventListener('resize', () => toggleClouds());
+// window.addEventListener('resize', () => toggleClouds());
 
+// addEventListener("DOMContentLoaded", () => {
+//     console.log("Content loaded");
+//     // toggleClouds();
+//     startSClouds();
+//     startXSClouds();
+//     startMLClouds();
+//     startXLClouds();
+// });
+
+responsiveCanvas.forEach((x) => {
+    x.newCloud.startAnimation();
+})
 
 // xs DONE
 // responsiveCanvas[0].newCloud.startAnimation();
@@ -542,11 +560,11 @@ window.addEventListener('resize', () => toggleClouds());
 
 // xl　DONE
 // + 12
-setTimeout(() => {responsiveCanvas[11].newCloud.startAnimation()}, 40000);
-responsiveCanvas[12].newCloud.startAnimation(); // delay starts
-responsiveCanvas[13].newCloud.startAnimation();
-responsiveCanvas[14].newCloud.startAnimation();
-responsiveCanvas[15].newCloud.startAnimation();
+// setTimeout(() => {responsiveCanvas[11].newCloud.startAnimation()}, 40000);
+// responsiveCanvas[12].newCloud.startAnimation(); // delay starts
+// responsiveCanvas[13].newCloud.startAnimation();
+// responsiveCanvas[14].newCloud.startAnimation();
+// responsiveCanvas[15].newCloud.startAnimation();
 
 
 

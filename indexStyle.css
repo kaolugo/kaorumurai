@@ -396,10 +396,11 @@ h3 {
     /* cloud canvas styling */
     .xs {
         display: inline;
+        visibility: visible;
     }
 
     .s, .ml, .xl {
-        display: none;
+        visibility: hidden;
     }
     /* end cloud canvas styling */
 
@@ -731,11 +732,11 @@ h3 {
 @media only screen and (min-width: 481px) {
     /* cloud canvas styling */
     .s {
-        display: inline;
+        visibility: visible;
     }
 
     .xs, .ml, .xl {
-        display: none;
+        visibility: hidden;
     }
     /* end cloud canvas styling */
 
@@ -935,11 +936,11 @@ h3 {
 @media only screen and (min-width: 769px) {
     /* cloud canvas styling */
     .ml {
-        display: inline;
+        visibility: visible;
     }
 
     .xs, .s, .xl {
-        display: none;
+        visibility: hidden;
     }
     /* end cloud canvas styling */
 
@@ -1151,11 +1152,11 @@ h3 {
 @media only screen and (min-width: 1201px) {
     * cloud canvas styling */
     .xl {
-        display: inline;
+        visibility: visible;
     }
 
     .xs, .s, .ml {
-        display: none;
+        visibility: hidden;
     }
     /* end cloud canvas styling */
 
