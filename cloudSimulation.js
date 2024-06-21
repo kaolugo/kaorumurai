@@ -437,14 +437,88 @@ class ResponsiveCanvas {
 
 
 const responsiveCanvas = [];
+let i = 0;
 
-// cloudPaths.forEach(())
-
-for (let i = 0; i < 6; i++) {
-    let index = i + 12;
+for (let i = 0; i < cloudPaths.length; i++) {
     let canvasName = "canvas".concat(i.toString());
-    responsiveCanvas.push(new ResponsiveCanvas(canvasName, index));
+    responsiveCanvas.push(new ResponsiveCanvas(canvasName, i));
 }
+
+function startXSClouds() {
+    for (let i = 0; i < 4; i++) {
+        responsiveCanvas[i].newCloud.startAnimation();
+    }
+}
+
+function startSClouds() {
+    for (let i = 4; i < 7; i++) {
+        responsiveCanvas[i].newCloud.startAnimation();
+    }
+}
+
+function startMLClouds() {
+    for (let i = 7; i < 11; i++) {
+        responsiveCanvas[i].newCloud.startAnimation();
+    }
+}
+
+function startXLClouds() {
+    for (let i = 11; i < 16; i++) {
+        responsiveCanvas[i].newCloud.startAnimation();
+    }
+}
+
+function pauseXSClouds() {
+    for (let i = 0; i < 4; i++) {
+        responsiveCanvas[i].newCloud.pauseAnimation();
+    }
+}
+
+function pauseSClouds() {
+    for (let i = 4; i < 7; i++) {
+        responsiveCanvas[i].newCloud.pauseAnimation();
+    }
+}
+
+function pauseMLClouds() {
+    for (let i = 7; i < 11; i++) {
+        responsiveCanvas[i].newCloud.pauseAnimation();
+    }
+}
+
+function pauseXLClouds() {
+    setTimeout(() => {responsiveCanvas[11].newCloud.startAnimation()}, 40000);
+    for (let i = 12; i < 16; i++) {
+        responsiveCanvas[i].newCloud.pauseAnimation();
+    }
+}
+
+function toggleClouds() {
+    if (window.innerWidth < 481) {
+        pauseSClouds();
+        pauseMLClouds();
+        pauseXLClouds();
+        startXSClouds();
+    } else if (window.innerWidth < 769) {
+        pauseXSClouds();
+        pauseMLClouds();
+        pauseXLClouds();
+        startSClouds();
+    } else if (window.innerWidth < 1201) {
+        pauseXSClouds();
+        pauseSClouds();
+        pauseXLClouds();
+        startMLClouds();
+    } else {
+        pauseXSClouds();
+        pauseSClouds();
+        pauseMLClouds();
+        startXLClouds();
+    }
+}
+
+
+window.addEventListener('resize', () => toggleClouds());
 
 
 // xs DONE
