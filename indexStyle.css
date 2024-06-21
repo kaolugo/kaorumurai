@@ -54,7 +54,22 @@ body {
 }
 
 
-#canvas0, #canvas1, #canvas2, #canvas3, #canvas4, #canvas5{
+#canvas0,
+#canvas1,
+#canvas2,
+#canvas3,
+#canvas4, 
+#canvas5,
+#canvas6,
+#canvas7,
+#canvas8,
+#canvas9,
+#canvas10, 
+#canvas11,
+#canvas12, 
+#canvas13,
+#canvas14, 
+#canvas15 {
     z-index: -1;
     position: absolute;
 
