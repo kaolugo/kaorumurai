@@ -4,7 +4,7 @@ const cloudPaths = [
     {
         id: 0, // 0
         size: 50,
-        speed: 0.5,
+        speed: 0.3,
         numParticles: 250,
         screen: "xs",
         initialPos: {
@@ -43,7 +43,7 @@ const cloudPaths = [
     {
         id: 3, // 4
         size: 45,
-        speed: 0.5,
+        speed: 0.4,
         numParticles: 80,
         screen: "xs",
         initialPos: {

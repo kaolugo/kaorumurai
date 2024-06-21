@@ -140,7 +140,19 @@ h1 {
     z-index: 1;
 
     /* text-shadow: 0px 0px 10px #0085FF; */
-    text-shadow: 0 0 1em #0085FF, 1px 1px 4px #0085FF;
+
+}
+
+h1 span {
+    background: linear-gradient(rgba(81,163,253, 0), rgba(81,163,253, 1), rgba(81,163,253, 0));
+}
+
+h2 span {
+    background: linear-gradient(rgba(158,207,249, 0), rgba(158,207,249, 1), rgb(158,207,249, 0));
+}
+
+h3 span {
+    background: linear-gradient(rgba(94,180,251, 0), rgba(94,180,251, 1),rgba(94,180,251, 0))
 }
 
 h2 {
@@ -168,13 +180,6 @@ h3 {
     /* text-shadow: 0px 0px 12px #0085FF; */
 }
 
-/* .h3bg {
-    align-self: flex-end;
-
-    padding: 10px;
-
-    background-image: radial-gradient(rgba(0,133,255, 0.5) 0, rgba(0,0,0,0) 100%);
-} */
 
 .aboutMe {
     font-family: 'Avenir';
@@ -197,7 +202,7 @@ h3 {
 }
 
 .svg-container {
-    filter: drop-shadow(2px 2px 4px rgba(81, 163, 254, 0.5));
+    filter: drop-shadow(2px 2px 4px rgba(81, 163, 254, 0.8));
 }
 
 /* footer styling */
@@ -530,6 +535,7 @@ h3 {
         height: 100vh;
         top: 0;
         left: 0;
+        z-index: 5;
         background: linear-gradient(to bottom, #0057FF 0%, #0085FF 8%, #BCE3F8 60%); /* looks good on mobile*/
     }
       
