@@ -444,9 +444,14 @@ const responsiveCanvas = [];
 let i = 0;
 
 for (let i = 0; i < cloudPaths.length; i++) {
+// for (let i = 0; i < 4; i++) {
     let canvasName = "canvas".concat(i.toString());
     responsiveCanvas.push(new ResponsiveCanvas(canvasName, i));
 }
+
+responsiveCanvas.forEach((x) => {
+    x.newCloud.startAnimation();
+})
 
 function startXSClouds() {
     for (let i = 0; i < 4; i++) {
@@ -535,9 +540,7 @@ function toggleClouds() {
 //     startXLClouds();
 // });
 
-responsiveCanvas.forEach((x) => {
-    x.newCloud.startAnimation();
-})
+
 
 // xs DONE
 // responsiveCanvas[0].newCloud.startAnimation();
