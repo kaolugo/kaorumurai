@@ -457,6 +457,6 @@ for (let i = 0; i < cloudPaths.length; i++) {
     responsiveCanvas.push(new ResponsiveCanvas(canvasName, i));
 }
 
-responsiveCanvas.forEach((x) => {
-    x.newCloud.startAnimation();
-});
+// responsiveCanvas.forEach((x) => {
+//     x.newCloud.startAnimation();
+// });
