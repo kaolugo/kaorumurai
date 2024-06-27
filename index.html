@@ -3,21 +3,45 @@
     <head>
         <meta charset="utf-8">
         <meta name = "viewport" content = "width=device-width, initial-scale = 1">
-        <meta name="description" content="The portfolio site for Kaoru Murai, including CS projects, case studies and art.">
-        <link rel="stylesheet" type="text/css" href="indexStyle.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+        <meta name="description" content="Kaoru Murai's portfolio site featuring her previous and current work.">
         <link rel="apple-touch-icon" href="img/siteLogo.png">
         <link rel="icon" type="image/x-icon" href="icon.ico"/>
+
+        <link rel="stylesheet" type="text/css" href="indexStyle.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="preload" href="./font/Avenir-Medium.woff2" as="font" type="font/woff">        
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
+
         <title>Kaoru Murai</title>
     </head>
     
     <body>
+      <div class="canvasContainer">
+        <canvas id="canvas0" class="xs"></canvas>
+        <canvas id="canvas1" class="xs"></canvas>
+        <canvas id="canvas2" ckass="xs"></canvas>
+        <canvas id="canvas3" class="xs"></canvas>
+        <canvas id="canvas4" class="s"></canvas>
+        <canvas id="canvas5" class="s"></canvas>
+        <canvas id="canvas6" class="s"></canvas>
+        <canvas id="canvas7" class="ml"></canvas>
+        <canvas id="canvas8" class="ml"></canvas>
+        <canvas id="canvas9" class="ml"></canvas>
+        <canvas id="canvas10" class="ml"></canvas>
+        <canvas id="canvas11" class="xl"></canvas>
+        <canvas id="canvas12" class="xl"></canvas>
+        <canvas id="canvas13" class="xl"></canvas>
+        <canvas id="canvas14" class="xl"></canvas>
+        <canvas id="canvas15" class="xl"></canvas>
+      </div>
+        
+        <script src="./cloudSimulation.js"></script>
+
+        <!-- mobile only navigation burger-->
         <div id="menuArea">
             <input type="checkbox" id="menuToggle"></input>
           
@@ -29,138 +53,519 @@
                 <label for="menuToggle"></label>
                 <div class="menuContent">
                     <ul class = "mobileNav">
-                        <li class = "navLink"><a href = "about.html">about</a></li>
-                        <li class = "navLink"><a href = "code.html">code</a></li>
-                        <li class = "navLink"><a href = "design.html">design</a></li>
-                        <li class = "more"><a href = "more.html">more+</a></li>
+                        <li class = "navLink"><a href = "work.html">Work</a></li>
+                        <li class = "navLink"><a href = "resume.html">Resume</a></li>
+
                     </ul>
                 </div>
             </div>
         </div>
+        <!-- mobile only navigation burger-->
 
-        <ul class = "mobileTitle">
-            <li><img src = "img/siteLogo.png" alt = "Kaoru Logo" class = "squareLogo"></li>
-            <li class = "title"><a href = "index.html">Kaoru Murai</a></li>
+        <!-- mobile header -->
+        <ul class = "mobileHeader">
+            <li><img src = "img/siteLogo.png" alt = "Kaoru Logo" class = "mobileLogo"></li>
+            <li class = "mobileTitle"><a href = "index.html">Kaoru Murai</a></li>
         </ul>
-
-        <ul class = "nav">
-            <li><img src = "img/siteLogo.png" alt = "Kaoru Logo" class = "squareLogo"></li>
-            <li class = "logo"><a href = "index.html">Kaoru Murai</a></li>
-            <li class = "navLink"><a href = "about.html">about</a></li>
-            <li class = "navLink"><a href = "code.html">code</a></li>
-            <li class = "navLink"><a href = "design.html">design</a></li>
-            <li class = "more"><a href = "more.html">more+</a></li>
-        </ul>
+        <!-- mobile header -->
+        <div class = "nav">
+            <img src = "img/siteLogo.png" alt = "Kaoru Logo" class = "squareLogo">
+            <a class = "logo" href = "index.html">Kaoru Murai</a>
+            <a class = "navLink" href = "work.html">Work</a>
+            <a class = "navLink" href = "resume.html">Resume</a>
+        </div>
 
         <div id = "intro">
-            <img src="img/cloud.png" class="cloud1">
-            <img src="img/cloud2.png" class="cloud2">
-            <img src="img/yellow grid.png" class="grid">
-            <br>
-            <br>
-            <div id = "text">
-                <h1>Hello & Welcome.<br>
-                My name is <span>Kaoru Murai.</span></h1>
+            <h1><span>Hello and welcome.<br>
+                My name is Kaoru Murai.</span></h1>
 
-                <h2><span class="typewriter" id="changeText">I am an Engineer.</span></h2>
+            <div class="writing-animation">
+                <h2><span>I am a </span></h2>
+                <div class="container">
+                    <svg class="svg-container" id="engineer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 868.43 448.14">
+                        <defs>
+                            <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: white;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 10;
+                                stroke-width: 15px;
+                            }
+                            </style>
+                        </defs>
+                        <line class="cls-1 eng1 stroke" x1="32.49" y1="67.04" x2="32.14" y2="247.95"/>
+                    
+                        <path class="cls-1 eng2 backstroke" d="m115.96,13.91s-45.23,35.62-57.25,39.01"/>
+                        <path class="cls-1 eng3 backstroke" d="m122.98,86.54s-67.71,50.23-85.74,51.64"/>
+                        <path class="cls-1 eng4 backstroke" d="m163.98,152.17c-15.71,16.77-92.99,70.39-123.53,81.04"/>
+                        <path class="cls-1 eng5 stroke1point2" d="m181.86,147.48c3.62,32.39.14,76.39,6.08,79.46,4.7,2.43-.12-98.98,20.58-105.89,32.11-10.72,29.54,63.12,52.33,135.89"/>
+                        <path class="cls-1 eng6 stroke1point2" d="m325.58,127.35s-11.16-11.25-15.58-8.38c-14.19,9.22-40.46,75.86-12.73,102.31,4.22,4.02,14.34,3.64,20.53-4.47,18.41-24.12,12.85-95.93,12.7-91.3s64.08,316.81-17.73,311.74"/>
+                        <line class="cls-1 eng7 stroke1point2" x1="388.62" y1="157.5" x2="394.1" y2="220.54"/>
+                        <line class="cls-1 eng8 stroke" x1="388.62" y1="101.27" x2="388.62" y2="104.46"/>
+                        <path class="cls-1 eng9 stroke1point8" d="m448.01,169.46l-.62,67.1c0,.12.19.13.19,0,.69-13.9,5.57-89.99,33.3-98.26,26.08-7.78-3.28,93.6,41.38,98.97,50.12,6.02,94.08-95.85,58.81-116.34-21.86-12.7-50.52,128.12,12.57,126.33,51.47-1.45,83.49-75.79,59.48-111.7-4.55-6.8-11.76-3.78-14.18-1.83-21.27,17.15-23.41,111.68,27.41,111.79,48.68.1,62.01-74.84,65.21-97.62.14-.96,1.53-.94,1.64.03l9.35,97.02c.11,1,1.56,1.03,1.69.03,3.08-23.01,13.37-96.11,105.32-96.33"/>
+                    </svg>
 
-                <script>
-                    var text = ["I am a Designer.",
-                                "I am a Creative.",
-                                "I am an Artist.",
-                                "I am an Engineer."];
-                    var counter = 0;
-                    var elem = document.getElementById("changeText");
-                    var inst = setInterval(change, 5000);
+                    <svg class="svg-container" style="display:none;" id="designer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 981.73 434.63">
+                        <defs>
+                            <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: white;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 10;
+                                stroke-width: 15px;
+                            }
+                            </style>
+                        </defs>
+                        <path class="cls-1 des1 stroke" d="m140.81,31.23c-2.3,33.17,9.13,146.88,14.36,170.23"/>
+                        <path class="cls-1 des2 stroke1point2" d="m91.93,21.35c41.89,12.57,174.47,73.4,155.85,136.29-20.81,70.3-187.32,14.26-221.31-12.67"/>
+                        <path class="cls-1 des3 stroke1point2" d="m277.24,136.86s26.05-9.37,33.84-26.53-4.79-13.41-9.19-9.81c-16.43,13.44-20.65,65.72,12.21,87.6,14.22,9.47,23.88-4.26,23.88-4.26"/>
+                        <path class="cls-1 des4 stroke1point2" d="m401.1,90.78s-21.05,14.65-19.18,22.07c1.07,4.22-3.4,6.46,15.08,10.53,27,5.95,48.49,44.37,41.02,55.67-15.69,23.74-39.15-2.89-45.58-7.64"/>
+                        <path class="cls-1 des5 stroke" d="m489.03,143.7s2.39,34.58,8.16,44.51"/>
+                        <line class="cls-1 des6 stroke" x1="483.37" y1="82.69" x2="483.37" y2="84.74"/>
+                        <path class="cls-1 des7 stroke1point8" d="m589.09,142.25s-10.45-12.85-21.55-10.82-23.64,11.72-21.6,33.57,5.74,29.78,11.56,29.78,26.87-16.02,31.34-57.5c.05-.5.75-.57.9-.09,8.38,27.52,91.6,305.35-22.91,270.62"/>
+                        <path class="cls-1 des8 stroke1point8" d="m653.8,155.37l2.88,40.01c.03.26.45.29.45.03-.5-28.62,18.25-77.12,31.78-74.79,17.23,2.97,9.34,65.45,43.96,72.44s36.63-1.52,50.58-16.8c16.92-18.54,14.43-53.22-2.81-53.22-21.96,0-35.5,59.55,15.37,75.1,20.32,6.21,35.65-2.1,39.29-5.34"/>
+                        <path class="cls-1 des9 stroke" d="m878.61,136.77l13.12,64.24c.23.54,1.05.3.95-.28-3.1-16.78-13.32-76.68,60.34-67.91"/>
+                    </svg>
 
-                    function change() {
-                        elem.innerHTML = text[counter];
-                        elem.title = text[counter];
-                        counter++;
-                        if (counter >= text.length) {
-                            counter = 0;
-                        }
-                    }
-                </script>
+                    <svg class="svg-container" style="display:none;" id="artist" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 543.22 250.99">
+                        <defs>
+                            <style>
+                            .cls-2 {
+                                fill: none;
+                                stroke: white;
+                                stroke-linecap: round;
+                                stroke-miterlimit: 10;
+                                stroke-width: 12px;
+                            }
+                            </style>
+                        </defs>
+                        <line class="cls-2 art1 stroke" x1="61.57" y1="63.02" x2="41.17" y2="175.79" />
+                        <path class="cls-2 art2 stroke1point2"
+                            d="m12.54,96.78C38.52,69.11,70.73,15.08,80.2,14.76c1.85-.06,4.28.39,5.32,2.34,9.94,18.58,14.28,116.09,63.28,209.5" />
+                        <path class="cls-2 art3 stroke" d="m54.8,119.49s21.83-10.98,47.88-5.69" />
+                        <path class="cls-2 art4 stroke" d="m147.37,111.23l9.36,50.89c.06.2.38.14.34-.06-3.01-13.36-5.43-56.69,35.38-67.2" />
+                        <line class="cls-2 art5 stroke" x1="225.19" y1="106.89" x2="256.4" y2="99.5" />
+                        <path class="cls-2 art6 backstroke" d="m287.48,178.88c-49.77,30.81-48.58-107.39-48.98-140.27" />
+                        <path class="cls-2 art7 stroke" d="m310.05,108.55s-.78,30.82,8.74,57.13" />
+                
+                        <line class="cls-2 art8 stroke" x1="315.36" y1="67.86" x2="315.36" y2="69.86" />
+                        <path class="cls-2 art9 stroke"
+                            d="m378,92.29s-13.52-7.38-21.07,16.26c-5.01,15.69,26.26,3.46,46.51,30.3,16.46,21.81,18.03,44.57-.33,53.98-15.34,7.87-23.4-3.23-24.81-10.37" />
+                        <line class="cls-2 art10 stroke" x1="428.01" y1="108.55" x2="481.65" y2="105.23" />
+                        <path class="cls-2 art11 stroke" d="m453.62,44.03c13.45,97.29-2.78,214.43,72.54,183.88" />
+                    </svg>
 
-                <h3>My passion is connecting with others through the experiences I create.</h3>
+                </div>
+                
             </div>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
-            <div id="hokusai"></div>
             <script>
-                var animation = bodymovin.loadAnimation({
-                container: document.getElementById('hokusai'), // required
-                path: 'https://assets10.lottiefiles.com/packages/lf20_biqqehly.json', // required
-                renderer: 'svg', // required
-                loop: true, // optional
-                autoplay: true, // optional
-                name: "Demo Animation", // optional
-            });
+                let svgs = [
+                    "engineer",
+                    "designer",
+                    "artist"
+                ];
+
+                let strokes = [
+                    "stroke",
+                    "stroke1point2",
+                    "stroke1point8",
+                    "backstroke"
+                ];
+
+                let svgIndex = 0;
+                
+                function triggerAnimation() {
+                    let currentSVG = svgs[svgIndex];
+
+                    
+                    let element = document.getElementById(currentSVG);
+
+                    removeSVG(element);
+
+                    svgIndex++;
+                    if (svgIndex === svgs.length) {
+                        svgIndex = 0;
+                    }
+
+                    currentSVG = svgs[svgIndex];
+                    element = document.getElementById(currentSVG);
+
+                    // add current svg
+                    element.style.display = "inline";
+                    strokes.forEach((stroke) => {
+                        element.classList.add(stroke);
+                    });    
+                }
+
+                function removeSVG(element) {
+                    element.style.display = "none";
+                    strokes.forEach((stroke) => {
+                        element.classList.remove(stroke);
+                    });
+                }
+
+                setInterval(function() { triggerAnimation(); }, 5000);
             </script>
 
-            <div class = "ctaContainer">
-                <a class = "cta" href="#work">SCROLL↓</a>
-            </div>
-            
+            <h3><span>My passion is forming meaningful connections through the experiences I create.</span></h3>
+
         </div>
 
-        <div id="work">
-            <div class = "workArt">
-                <img src="img/yellow grid.png" class="grid2">
-                <img src="img/sitting.gif" class="gifaoru2">
-                <img src="img/standing.gif" class="gifaoru">
+        <div class="aboutMe">
+            Hey ! This is Kaoru <span class="secondaryBlue">(kuh-roo, she/her/hers)</span>.<br>
+            <br>
+            It is my belief that good technology cannot be borne 
+            without an emphasis in good design. I create software 
+            with the human experience at the top of my mind — 
+            I care a lot about the quality of my work, whether 
+            demonstrated through beautiful code or interactions that bring joy.<br>
+            <br>
+            I love incorporating artistic elements to my work, 
+            rapid prototyping, and building from the ground up 
+            with a variety of tools.<br>
+            <br>
+            I graduated from the <span class="secondaryBlue">University of Michigan</span>, 
+            where I was a student in Computer Science and Art + Design.<br>
+            <br>
+            Here are all the <a class="tertiaryBlue" href="resume.html"><b>places I’ve been</b></a> and the <a class="secondaryBlue" href="work.html"><b>things I’ve created.</b></a><br>
+            <br>
+            If you’d like to say hello, please reach me through my 
+            email at kaolugo@umich.edu<br>
+            <br>
+            Thanks. And once again, welcome to my digital home.<br>
+        </div>
+
+        <div class="mobileRyusuiCanvas">
+            <div class="ryusuiBox5">
+                <svg id="ryusui5" viewBox="0 0 1088.72 222.45">
+                    <defs>
+                        <linearGradient id="mobileGradient1" x1="100%" y1="100%">
+                          <stop offset="0%" stop-color="#A2C9ED">
+                            <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                
+                          <stop offset="25%" stop-color="#B9D9F6">
+                            <animate attributeName="stop-color" values="#B9D9F6;#D0E9FF;#D0E9FF;#B9D9F6" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                
+                          <stop offset="50%" stop-color="#D0E9FF">
+                            <animate attributeName="stop-color" values="#D0E9FF;#A2C9ED;#A2C9ED;#D0E9FF" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                
+                          <stop offset="75%" stop-color="#B9D9F6">
+                            <animate attributeName="stop-color" values="#B9D9F6;#D0E9FF;#D0E9FF;#B9D9F6" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                
+                          <stop offset="100%" stop-color="#A2C9ED">
+                            <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                        </linearGradient>
+                    </defs>
+
+
+                <path
+                    d="m1042.18,80.4c-83.51-1.41-116.36-4.55-116.36,18.02s-51.01-25.44-98.88-25.44c-8.37,0-100.9-1.98-100.9,14.62,0,7.2,32.63,4.05,46.58,4.05,42.94,0,52.32,6.31,52.32,11.56,0,7.7-6.45,15.59-67.99,15.59-10.21,0-53.13-2-53.13,2.69,0,4.17,31.71,2.88,52.9,2.88,15.01,0,55.89,1.36,56.82,13.56,1.36,17.83-23.39,29.55-63.74,29.55-50.83,0-98.66-20.1-188.99-20.1-49.32,0-148.03,32.18-148.03-27.09,0-35.09-34.67-43.57-77.97-43.57-95.37,0-118.37,35.56-190.84,35.56-60.46,0-86.61-25.8-111.91-25.8,25.31,0,46.4,21.43,106.85,21.43,76.5,0,102.38-36.97,197.75-36.97,50.33,0,91.85,18.12,91.85,52.16s77.85,22.28,127.86,22.28c90.33,0,141.88,20.15,192.71,20.15,16.78,0,53.21-4.75,53.21-26.53,0-11.5-33.22-13.86-45.69-13.86-28.99,0-59.91,2.36-59.91-3.57,0-6.63,48.97-4.89,60.07-4.89,51.2,0,60.63-8.43,60.63-13.37,0-4.64-14.81-10.6-46.3-10.6-27.61,0-52.49,2.91-52.49-5.33,0-18.07,94.84-16.41,103.91-16.41,47.87,0,98.57,45.79,97.79,22.68-.66-19.68,39.46-14.92,121.89-13.25Z"
+                    fill="url(#mobileGradient1)" />
+                <path
+                    d="m32.03,79.07c18.57,0,27.73,3.12,48.12,9.77s49.54,9.45,74.05,9.45c41.45,0,90.87-34.8,170.27-34.8s121.48,24.09,121.48,52.8c0,26.03,35.65,22.8,137.59,22.8,44.83,0,198.53,44.3,198.53,1.56,0-11.61-28.06-11.94-38.09-11.94-54.35,0-62.04-.93-62.04-7.05,0-9.56,42.94-10.01,57.2-10.01,19.82,0,54.25,3.91,54.25-6.68,0-8.72-31.76-7.87-36.01-7.87-28.83,0-52.75,4.69-52.75-9.53,0-7.96,9-20.72,114.95-20.72,51.01,0,53.21,13.95,94.39,27.48-45.23-10.76-48.95-26.13-99.96-25.83-61.21.36-101.45,4.47-101.45,19.12,0,8.77,17.83,7.74,56.66,7.74,25.74,0,31.41,5.78,31.41,9.47,0,10.48-18.94,9.31-63.71,9.31-24.47,0-45.59,2.59-45.59,7.88s18.22,4.82,52.73,4.82c7.6,0,50.79-1.97,50.79,13.1,0,47.78-165.6,3.05-211.11,3.05-89.67,0-147.71,5.96-147.71-24.19,0-26.03-35.51-53.63-111.56-53.63s-129.89,38.42-171.33,38.42c-34.61,0-56.82-5.45-76.85-13.08s-25.7-11.45-44.27-11.45Z"
+                    fill="url(#mobileGradient1)" />
+                </svg>
             </div>
-            <div class = "workContent">
-                <h4>Places I've been</h4>
-                <ul class = "places">
-                    <li>
-                        <h5><a href="https://www.apple.com/">Apple</a></h5>
-                        <h6>Software Engineer + Design Internship Vancouver, WA</h6>
-                    </li>
-                    <li>
-                        <h5><a href="https://www.frog.co/">frog Design</a></h5>
-                        <h6>Design Technologist Internship Austin, TX</h6>
-                    </li>
-                    <li>
-                        <h5><a href="https://www.microsoft.com/en-us/about">Microsoft</a></h5>
-                        <h6>Software Engineer Internship Redmond, WA</h6>
-                    </li>
 
-                    <li>
-                        <h5><a href="https://hennge.com/global/">HENNGE</a></h5>
-                        <h6>Software Engineer Internship Tokyo, Japan</h6>
-                    </li>
+            <div class="ryusuiBox2">
+                <svg id="ryusui2" viewBox="0 0 552.96 325.53">
+                    <defs>
+                        <linearGradient id="mobileGradient2" x1="100%" x2="0%" y1="0%" y2="0%">
+                        <stop offset="0%" stop-color="#A2C9ED">
+                            <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+                
+                        <stop offset="100%" stop-color="#D0E9FF">
+                            <animate attributeName="stop-color" values="#D0E9FF;#A2C9ED;#A2C9ED;#D0E9FF" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+                        </linearGradient>
+                    </defs>
 
-                    <li>
-                        <h5><a href="https://www.ooandco.com/">OO&CO</a></h5>
-                        <h6>Graphic Design Internship Miami, FL</h6>
-                    </li>
-
-                    <li>
-                        <h5><a href="https://www.rookieroad.com/">Rookie Road</a></h5>
-                        <h6>UX Design & Software Engineer Internship Portland, OR</h6>
-                    </li>
-                </ul>
+              
+              
+              
+                    <path
+                      d="m78.97,305.84c-35.55-.38-57.25-1.58-46.34-18.43,10.91-16.85,36.81-15.48,82.94-15.48s123.63,8.51,123.63-8.54-33.96-3.65-49.62-3.65c-39.04,0-46.87-6.72-46.87-20.81s16.14-18.81,57.7-18.81,91.13,11.14,91.13-11.03c0-12.81-25.57-9.85-104.97-9.89-73.81-.04-77.22-14.3-77.22-29.42,0-28.23,116.39-20.33,166.29-20.33,2.54,0,249.15,10.57,249.15-15.12,0-18.98-80.17-15.91-111.5-15.91s-100.39-10.85-100.39-44.61c0-42.23,133.64-42.14,133.64-42.14,0,0-117.07.21-117.07,41.46,0,31.9,61.71,42.67,82.8,43.64,35.73,1.64,118.74-7.27,118.74,15.8,0,28.57-168.09,18.11-248.94,18.11-49.9,0-161.18-6.13-161.18,19.08,0,13.98,7.91,27.32,65.63,28.01,84.64,0,112.96-6.4,112.96,11.08,0,23.01-49.33,13.19-99.04,13.19-12.73,0-49.58-.04-49.58,19.41,0,14.09,12.88,16.88,39.39,16.88,14.33,0,51.16-11.04,51.16,4.63,0,17.05-68.33,9.49-114.46,9.49s-71.86-1.9-82.78,14.95c-10.91,16.85-.31,17.13,34.78,18.43Z"
+                      fill="url(#mobileGradient2)" />
+                    <path
+                      d="m131,308.08c-37.19,1.87-87.73,1.33-76.82-15.52s60.53-12.19,106.66-12.19c25.26,0,68.17-4.78,68.17-14,0-14.41-8.41-10.84-35.56-10.84-31.87,0-37.28-4.07-37.28-15.1,0-20.94,46.2-14.82,91.56-14.82,41.56,0,55.66-1.27,55.66-17.67,0-19.3-18.75-14.65-61.55-14.65-57.84,0-103.8,8.39-103.8-18.65s81.74-22.62,131.65-22.62,270.53,16.74,270.53-22.02c0-7.84-21.75-19.42-67.78-19.42-51.72,0-80.94-17.06-80.94-42.87,0-24.09,40.28-30.99,40.28-30.99,0,0-29.25,3.74-29.25,32.02,0,13.23,16.72,40.43,70.01,40.43,50.17,0,77.55,7.49,77.55,23.2,0,43.39-216.4,21.63-279.96,21.63-49.9,0-120.54-7.39-120.54,20.65s45.62,16.65,92.24,16.65c40.76,0,73.11-3.7,73.11,16.65,0,24.01-39.29,18.49-67.82,18.49-48.98,0-83.32-2.29-83.32,14,0,14.09,6.76,12.59,33.27,12.59,19.33,0,37.15-.06,37.15,13.1,0,11.43-33.97,14.79-61.43,14.79-46.13,0-101.56-4.38-112.47,12.47-10.91,16.85,34.03,15.44,70.67,14.7Z"
+                      fill="url(#mobileGradient2)" />
+                    <path
+                      d="m147.44,267.68s-47.99,7.82-47.99-23.95c0-28.58,43.33-29.26,85.77-29.26,50.31,0,67.61,6.78,67.61-2.69,0-6.39-22.88-5.81-75.76-5.81-92.39,0-139.37-5.63-139.37-33.2,0-40.17,110.14-43.32,180.89-43.32s257.45,24.83,257.45,6.64c0-11.81-57.28-7.51-83.85-7.51-72.33,0-126.44-15.85-126.44-53.34s97.69-42.69,97.69-42.69c0,0-72.83,5.69-72.83,43.66s67.09,48.08,100.03,48.08c26.57,0,108.2-7.38,108.2,10.74,0,22.46-229.2-.07-268.99-.07-93.32,0-157.32,7.06-157.32,37.81,0,12.99,47.82,30.2,116.76,30.2,52.88,0,81.76,2.42,81.76,8.81,0,10.83-24.52,4.69-73.61,4.69-23.31,0-85.77,3.79-85.77,27.26,0,28.68,35.77,23.95,35.77,23.95Z"
+                      fill="url(#mobileGradient2)" />
+                </svg>
             </div>
-            
+        </div>
+
+
+        <div class="tabletRyusuiCanvas">
+            <div class="tabletRyusuiBox5">
+                <svg id="tabletRyusui5" viewBox="0 0 1088.72 222.45">
+
+                    <defs>
+                        <linearGradient id="tabletGradient1" x1="100%" x2="0%" y1="0%" y2="0%">
+                        <stop offset="0%" stop-color="#A2C9ED">
+                            <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#A2C9ED;#D0E9FF;#A2C9ED" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+                
+                        <stop offset="100%" stop-color="#D0E9FF">
+                            <animate attributeName="stop-color" values="#D0E9FF;#A2C9ED;#D0E9FF;#A2C9ED;#D0E9FF" dur="5s"
+                            repeatCount="indefinite" />
+                        </stop>
+                        </linearGradient>
+                    </defs>
+                <path
+                    d="m1042.18,80.4c-83.51-1.41-116.36-4.55-116.36,18.02s-51.01-25.44-98.88-25.44c-8.37,0-100.9-1.98-100.9,14.62,0,7.2,32.63,4.05,46.58,4.05,42.94,0,52.32,6.31,52.32,11.56,0,7.7-6.45,15.59-67.99,15.59-10.21,0-53.13-2-53.13,2.69,0,4.17,31.71,2.88,52.9,2.88,15.01,0,55.89,1.36,56.82,13.56,1.36,17.83-23.39,29.55-63.74,29.55-50.83,0-98.66-20.1-188.99-20.1-49.32,0-148.03,32.18-148.03-27.09,0-35.09-34.67-43.57-77.97-43.57-95.37,0-118.37,35.56-190.84,35.56-60.46,0-86.61-25.8-111.91-25.8,25.31,0,46.4,21.43,106.85,21.43,76.5,0,102.38-36.97,197.75-36.97,50.33,0,91.85,18.12,91.85,52.16s77.85,22.28,127.86,22.28c90.33,0,141.88,20.15,192.71,20.15,16.78,0,53.21-4.75,53.21-26.53,0-11.5-33.22-13.86-45.69-13.86-28.99,0-59.91,2.36-59.91-3.57,0-6.63,48.97-4.89,60.07-4.89,51.2,0,60.63-8.43,60.63-13.37,0-4.64-14.81-10.6-46.3-10.6-27.61,0-52.49,2.91-52.49-5.33,0-18.07,94.84-16.41,103.91-16.41,47.87,0,98.57,45.79,97.79,22.68-.66-19.68,39.46-14.92,121.89-13.25Z"
+                    fill="url(#tabletGradient1)" />
+                <path
+                    d="m32.03,79.07c18.57,0,27.73,3.12,48.12,9.77s49.54,9.45,74.05,9.45c41.45,0,90.87-34.8,170.27-34.8s121.48,24.09,121.48,52.8c0,26.03,35.65,22.8,137.59,22.8,44.83,0,198.53,44.3,198.53,1.56,0-11.61-28.06-11.94-38.09-11.94-54.35,0-62.04-.93-62.04-7.05,0-9.56,42.94-10.01,57.2-10.01,19.82,0,54.25,3.91,54.25-6.68,0-8.72-31.76-7.87-36.01-7.87-28.83,0-52.75,4.69-52.75-9.53,0-7.96,9-20.72,114.95-20.72,51.01,0,53.21,13.95,94.39,27.48-45.23-10.76-48.95-26.13-99.96-25.83-61.21.36-101.45,4.47-101.45,19.12,0,8.77,17.83,7.74,56.66,7.74,25.74,0,31.41,5.78,31.41,9.47,0,10.48-18.94,9.31-63.71,9.31-24.47,0-45.59,2.59-45.59,7.88s18.22,4.82,52.73,4.82c7.6,0,50.79-1.97,50.79,13.1,0,47.78-165.6,3.05-211.11,3.05-89.67,0-147.71,5.96-147.71-24.19,0-26.03-35.51-53.63-111.56-53.63s-129.89,38.42-171.33,38.42c-34.61,0-56.82-5.45-76.85-13.08s-25.7-11.45-44.27-11.45Z"
+                    fill="url(#tabletGradient1)" />
+                </svg>
+            </div>
+
+            <div class="tabletRyusuiBox2">
+                <svg id="tabletRyusui2" viewBox="0 0 552.96 325.53">
+                    
+
+                    <defs>
+                        <linearGradient id="tabletGradient2" x1="100%" y1="100%">
+                          <stop offset="0%" stop-color="#A2C9ED">
+                            <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED;#A2C9ED" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                
+                          <stop offset="25%" stop-color="#B9D9F6">
+                            <animate attributeName="stop-color" values="#B9D9F6;#D0E9FF;#D0E9FF;#B9D9F6" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                
+                          <stop offset="50%" stop-color="#D0E9FF">
+                            <animate attributeName="stop-color" values="#D0E9FF;#A2C9ED;#A2C9ED;#D0E9FF" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                
+                          <stop offset="75%" stop-color="#B9D9F6">
+                            <animate attributeName="stop-color" values="#B9D9F6;#D0E9FF;#D0E9FF;#B9D9F6" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                
+                          <stop offset="100%" stop-color="#A2C9ED">
+                            <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED;#A2C9ED" dur="10s"
+                              repeatCount="indefinite" />
+                          </stop>
+                        </linearGradient>
+                    </defs>
+
+              
+              
+              
+                    <path
+                      d="m78.97,305.84c-35.55-.38-57.25-1.58-46.34-18.43,10.91-16.85,36.81-15.48,82.94-15.48s123.63,8.51,123.63-8.54-33.96-3.65-49.62-3.65c-39.04,0-46.87-6.72-46.87-20.81s16.14-18.81,57.7-18.81,91.13,11.14,91.13-11.03c0-12.81-25.57-9.85-104.97-9.89-73.81-.04-77.22-14.3-77.22-29.42,0-28.23,116.39-20.33,166.29-20.33,2.54,0,249.15,10.57,249.15-15.12,0-18.98-80.17-15.91-111.5-15.91s-100.39-10.85-100.39-44.61c0-42.23,133.64-42.14,133.64-42.14,0,0-117.07.21-117.07,41.46,0,31.9,61.71,42.67,82.8,43.64,35.73,1.64,118.74-7.27,118.74,15.8,0,28.57-168.09,18.11-248.94,18.11-49.9,0-161.18-6.13-161.18,19.08,0,13.98,7.91,27.32,65.63,28.01,84.64,0,112.96-6.4,112.96,11.08,0,23.01-49.33,13.19-99.04,13.19-12.73,0-49.58-.04-49.58,19.41,0,14.09,12.88,16.88,39.39,16.88,14.33,0,51.16-11.04,51.16,4.63,0,17.05-68.33,9.49-114.46,9.49s-71.86-1.9-82.78,14.95c-10.91,16.85-.31,17.13,34.78,18.43Z"
+                      fill="url(#tabletGradient2)" />
+                    <path
+                      d="m131,308.08c-37.19,1.87-87.73,1.33-76.82-15.52s60.53-12.19,106.66-12.19c25.26,0,68.17-4.78,68.17-14,0-14.41-8.41-10.84-35.56-10.84-31.87,0-37.28-4.07-37.28-15.1,0-20.94,46.2-14.82,91.56-14.82,41.56,0,55.66-1.27,55.66-17.67,0-19.3-18.75-14.65-61.55-14.65-57.84,0-103.8,8.39-103.8-18.65s81.74-22.62,131.65-22.62,270.53,16.74,270.53-22.02c0-7.84-21.75-19.42-67.78-19.42-51.72,0-80.94-17.06-80.94-42.87,0-24.09,40.28-30.99,40.28-30.99,0,0-29.25,3.74-29.25,32.02,0,13.23,16.72,40.43,70.01,40.43,50.17,0,77.55,7.49,77.55,23.2,0,43.39-216.4,21.63-279.96,21.63-49.9,0-120.54-7.39-120.54,20.65s45.62,16.65,92.24,16.65c40.76,0,73.11-3.7,73.11,16.65,0,24.01-39.29,18.49-67.82,18.49-48.98,0-83.32-2.29-83.32,14,0,14.09,6.76,12.59,33.27,12.59,19.33,0,37.15-.06,37.15,13.1,0,11.43-33.97,14.79-61.43,14.79-46.13,0-101.56-4.38-112.47,12.47-10.91,16.85,34.03,15.44,70.67,14.7Z"
+                      fill="url(#tabletGradient2)" />
+                    <path
+                      d="m147.44,267.68s-47.99,7.82-47.99-23.95c0-28.58,43.33-29.26,85.77-29.26,50.31,0,67.61,6.78,67.61-2.69,0-6.39-22.88-5.81-75.76-5.81-92.39,0-139.37-5.63-139.37-33.2,0-40.17,110.14-43.32,180.89-43.32s257.45,24.83,257.45,6.64c0-11.81-57.28-7.51-83.85-7.51-72.33,0-126.44-15.85-126.44-53.34s97.69-42.69,97.69-42.69c0,0-72.83,5.69-72.83,43.66s67.09,48.08,100.03,48.08c26.57,0,108.2-7.38,108.2,10.74,0,22.46-229.2-.07-268.99-.07-93.32,0-157.32,7.06-157.32,37.81,0,12.99,47.82,30.2,116.76,30.2,52.88,0,81.76,2.42,81.76,8.81,0,10.83-24.52,4.69-73.61,4.69-23.31,0-85.77,3.79-85.77,27.26,0,28.68,35.77,23.95,35.77,23.95Z"
+                      fill="url(#tabletGradient2)" />
+                </svg>
+            </div>
         </div>
         
-        <div class = "moreStuff">
-            <p>...would you like to see my work ?</p>
-            <ul class = "portfolio">
-                <li>> <a href = "code.html">engineering work</a></li>
-                <li>> <a href = "design.html">design work</a></li>
-                <li>> <a href = "more.html">more+</a></li>
-            </ul>
+
+        <div class="landscapeRyusuiCanvas">
+            <div class="landscapeRyusuiBox3">
+                <svg id="landscapeRyusui3" viewBox="0 0 576.4 345.45">
+                  <defs>
+                    <linearGradient id="landscapeGradient1" x1="100%" x2="0%" y1="0%" y2="0%">
+                        <stop offset="0%" stop-color="#A2C9ED">
+                          <animate attributeName="stop-color" values="#A2C9ED;#B9D9F6;#B9D9F6;#A2C9ED" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+              
+                        <stop offset="100%" stop-color="#B9D9F6">
+                          <animate attributeName="stop-color" values="#B9D9F6;#A2C9ED;#A2C9ED;#B9D9F6" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+                      </linearGradient>
+                </defs>
+            
+            
+            
+                  <path
+                    d="m40.54,325.24c17.38-21.55,37.5-16.32,76.27-14.79,38.77,1.53,58.05,6.9,72.82-11.4,14.76-18.31-15.54-14.29-37.81-15.17-22.27-.88-38.03-4.58-25.83-19.71,12.2-15.13,32.29-17.14,67.21-15.76,34.92,1.37,69.5,5.99,92.42-22.44,22.92-28.43-25.5-28.91-64.67-30.45-39.18-1.54-114.33-.31-90.91-29.34,23.41-29.03,113.63-25.46,155.57-23.81,41.93,1.65,138.81,16.67,163.69-14.17,24.88-30.85-20.77-25.78-58.21-27.25-37.44-1.47-94.18-1.21-77.6-21.78,16.58-20.56,138.92-36.8,138.92-36.8,0,0-112.62,16.61-129.2,37.18-16.58,20.56,40.85,19.52,78.29,20.99,37.44,1.47,82.39-2.81,57.51,28.04-24.88,30.85-126.66,17.27-168.6,15.62-41.93-1.65-127.25-6.68-150.66,22.36-23.41,29.03,51.12,26.97,90.29,28.52s88.22,2.85,65.29,31.28c-22.92,28.43-57.75,24.38-92.67,23.01-34.92-1.37-54.76.06-66.96,15.19-12.2,15.13,1.46,17.95,23.73,18.82,22.27.88,54.67-2.26,39.9,16.05-14.76,18.31-34.45,13.62-73.22,12.09-38.77-1.53-68.2-7.83-85.58,13.72Z"
+                    fill="url(#landscapeGradient1)" />
+                  <path 
+                    d="m59.79,327.75c17.38-21.55,56.8-13.85,95.57-12.32,21.22.84,42.02,5.54,56.78-12.77,14.76-18.31-.34-20.28-23.15-21.17-22.27-.88-49.02-3.37-36.82-18.5,12.2-15.13,46.02-9.21,80.94-7.84,34.92,1.37,63.12-11.59,77.33-29.2,17.15-21.26-1.82-32.19-41-33.73-39.18-1.54-142.33,3.25-118.92-25.78,23.41-29.03,129.31-18.22,171.25-16.56,41.93,1.65,123.9,6.72,148.77-24.12,22.18-27.51-15.55-27.86-40.87-28.86-37.44-1.47-90.94.06-77.42-16.7,16.58-20.56,115.4-31.52,115.4-31.52,0,0-100.07,19.32-110.08,31.73-10.84,13.45,54.02,14.11,91.46,15.58s48.31,11.73,31.75,32.25c-25.03,31.04-97.4,25.04-150.81,22.94-41.93-1.65-146.33-13.39-169.74,15.64-23.41,29.03,80.86,22.85,120.04,24.39,39.18,1.54,54.44,17.07,39.88,35.12-18.71,23.2-44.08,31.53-79,30.16s-67.07-8.25-79.27,6.88c-12.2,15.13,14.98,16.82,37.25,17.7,16.25.64,33.25,2.69,18.48,21-14.76,18.31-29.41,15.37-52.48,14.47-38.77-1.53-87.97-10.34-105.35,11.22Z"
+                    fill="url(#landscapeGradient1)" />
+                  <path 
+                    d="m184.79,321.94c21.22.84,61.99-1.07,69.63-21.44,4.39-11.71-5.81-19.41-17.94-19.89-22.27-.88-56.5,3.44-50.19-13.4,5.93-15.82,42.97-9.42,77.89-8.05,34.92,1.37,59.89-16.78,67.11-36.04,2.85-7.61,14.93-33.43-24.24-34.97-39.18-1.54-156.22,9.19-132.81-19.84s140.63-12.64,182.57-10.99c41.93,1.65,148.56-2.94,160.07-33.65,7.03-18.76-28-30.99-53.32-31.99-37.44-1.47-88.23,3.99-74.7-12.77,12.63-15.65,94.08-23.96,94.08-23.96,0,0-79.51,13.86-88.76,24.16-11.6,12.92,51.31,10.17,88.74,11.65,39.57,1.56,55.7,21.98,51.82,32.33-12.67,33.82-116.32,37.62-169.73,35.52-41.93-1.65-157.65-18.96-181.06,10.07-23.41,29.03,94.75,16.91,133.93,18.45,39.18,1.54,21.24,39.01,21.24,39.01-7.22,19.26-31.97,35.72-66.89,34.34-34.92-1.37-75.49-7.23-81.11,7.79-6.31,16.84,25.37,9.49,47.64,10.37,15.16.6,27.07,6.18,21.65,20.65-7.64,20.38-52.54,23.54-75.61,22.63Z"
+                    fill="url(#landscapeGradient1)" />
+                </svg>
+            </div>
+
+            <div class="landscapeRyusuiBox5">
+                <svg id="landscapeRyusui5" viewBox="0 0 1088.72 222.45">
+                    <linearGradient id="landscapeGradient2" x1="100%" x2="0%" y1="0%" y2="0%">
+                        <stop offset="0%" stop-color="#D0E9FF">
+                            <animate attributeName="stop-color" values="#D0E9FF;#A2C9ED;#A2C9ED;#D0E9FF" dur="5s"
+                            repeatCount="indefinite" />
+                        </stop>
+                        <stop offset="100%" stop-color="#A2C9ED">
+                            <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+                    </linearGradient>
+            
+            
+            
+                  <path 
+                    d="m1042.18,80.4c-83.51-1.41-116.36-4.55-116.36,18.02s-51.01-25.44-98.88-25.44c-8.37,0-100.9-1.98-100.9,14.62,0,7.2,32.63,4.05,46.58,4.05,42.94,0,52.32,6.31,52.32,11.56,0,7.7-6.45,15.59-67.99,15.59-10.21,0-53.13-2-53.13,2.69,0,4.17,31.71,2.88,52.9,2.88,15.01,0,55.89,1.36,56.82,13.56,1.36,17.83-23.39,29.55-63.74,29.55-50.83,0-98.66-20.1-188.99-20.1-49.32,0-148.03,32.18-148.03-27.09,0-35.09-34.67-43.57-77.97-43.57-95.37,0-118.37,35.56-190.84,35.56-60.46,0-86.61-25.8-111.91-25.8,25.31,0,46.4,21.43,106.85,21.43,76.5,0,102.38-36.97,197.75-36.97,50.33,0,91.85,18.12,91.85,52.16s77.85,22.28,127.86,22.28c90.33,0,141.88,20.15,192.71,20.15,16.78,0,53.21-4.75,53.21-26.53,0-11.5-33.22-13.86-45.69-13.86-28.99,0-59.91,2.36-59.91-3.57,0-6.63,48.97-4.89,60.07-4.89,51.2,0,60.63-8.43,60.63-13.37,0-4.64-14.81-10.6-46.3-10.6-27.61,0-52.49,2.91-52.49-5.33,0-18.07,94.84-16.41,103.91-16.41,47.87,0,98.57,45.79,97.79,22.68-.66-19.68,39.46-14.92,121.89-13.25Z"
+                    fill="url(#landscapeGradient2)" />
+                  <path 
+                    d="m32.03,79.07c18.57,0,27.73,3.12,48.12,9.77s49.54,9.45,74.05,9.45c41.45,0,90.87-34.8,170.27-34.8s121.48,24.09,121.48,52.8c0,26.03,35.65,22.8,137.59,22.8,44.83,0,198.53,44.3,198.53,1.56,0-11.61-28.06-11.94-38.09-11.94-54.35,0-62.04-.93-62.04-7.05,0-9.56,42.94-10.01,57.2-10.01,19.82,0,54.25,3.91,54.25-6.68,0-8.72-31.76-7.87-36.01-7.87-28.83,0-52.75,4.69-52.75-9.53,0-7.96,9-20.72,114.95-20.72,51.01,0,53.21,13.95,94.39,27.48-45.23-10.76-48.95-26.13-99.96-25.83-61.21.36-101.45,4.47-101.45,19.12,0,8.77,17.83,7.74,56.66,7.74,25.74,0,31.41,5.78,31.41,9.47,0,10.48-18.94,9.31-63.71,9.31-24.47,0-45.59,2.59-45.59,7.88s18.22,4.82,52.73,4.82c7.6,0,50.79-1.97,50.79,13.1,0,47.78-165.6,3.05-211.11,3.05-89.67,0-147.71,5.96-147.71-24.19,0-26.03-35.51-53.63-111.56-53.63s-129.89,38.42-171.33,38.42c-34.61,0-56.82-5.45-76.85-13.08s-25.7-11.45-44.27-11.45Z"
+                    fill="url(#landscapeGradient2)" />
+                </svg>
+            </div>
+
+            <div class="landscapeRyusuiBox1">
+                <svg id="landscapeRyusui1" viewBox="0 0 610.69 407.03">
+                  <defs>
+                    <linearGradient id="landscapeGradient3" x1="100%" y1="100%">
+                        <stop offset="0%" stop-color="#A2C9ED">
+                          <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+              
+                        <stop offset="50%" stop-color="#B9D9F6">
+                          <animate attributeName="stop-color" values="#B9D9F6;#A2C9ED;#A2C9ED;#B9D9F6" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+              
+                        <stop offset="100%" stop-color="#D0E9FF">
+                          <animate attributeName="stop-color" values="#D0E9FF;#A2C9ED;#A2C9ED;#D0E9FF" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+                    </linearGradient>
+                  </defs>
+            
+            
+            
+                  <path 
+                    d="m210.77,392.21c-41.46-.61-67.5-2.54-67.5-29.65s32.73-22.58,86.17-22.58,84.8,6.53,84.8-16.5-39.91-16.65-70.61-16.65c-38.82,0-51.99-3.78-51.99-22.81s24.95-22.73,73.09-22.73,99.03,4.26,99.03-31.49-66.93-33.99-120.94-33.99-151.36,5.08-151.36-31.42,119.42-37.51,177.22-37.51,208.41,14.69,208.41-24.1-82.21-27.42-107.13-27.42c-51.61,0-128.14.04-128.14-25.82s141.53-19.65,141.53-19.65c0,0-126.14-6.21-126.14,19.65s74.53,22.82,126.14,22.82,108.36-5.07,108.36,27.04c0,44.82-151.83,31.49-209.64,31.49s-177.22-3-177.22,33.51,97.36,29.42,151.36,29.42,120.94.24,120.94,35.99-50.89,33.49-99.03,33.49-73.09,1.7-73.09,20.73,21.29,20.81,51.99,20.81,70.61-4.37,70.61,18.65-32.78,17.77-86.22,17.77-82.75-5.79-82.75,21.31,10.5,27.56,52.11,29.65Z"
+                    fill="url(#landscapeGradient3)" />
+                  <path 
+                    d="m272.33,389.67c-41.82.77-100.63,2.14-100.63-24.97s60.97-19.61,114.41-19.61c29.26,0,60.11,4.74,60.11-18.29s-20.3-24.7-51.74-24.7-69.13-1.76-69.13-20.79,51.57-15.44,99.71-15.44,71.85-15.15,71.85-37.3c0-26.74-37.12-38.15-91.12-38.15s-186.66,7.13-186.66-26.72c0-36.51,153.15-28.41,210.96-28.41s172.78,2.25,172.78-36.54c0-34.59-51.73-32.01-86.63-32.01-51.61,0-123.5,3.24-123.5-17.85,0-25.86,106.77-13.73,106.77-13.73,0,0-96.44-1.89-96.44,13.73,0,16.91,86.44,15.81,138.05,15.81s78.12,10.77,78.12,36.59c0,39.04-103.15,37.2-176.78,37.2-57.81,0-209.94-11.3-209.94,25.21s132.66,22.97,186.66,22.97,91.12,19.19,91.12,41.89c0,29.17-23.71,39.3-71.85,39.3s-99.71-5.59-99.71,13.44,38.43,19.79,69.13,19.79c22.4,0,49.03,1.68,49.03,24.71s-25.6,21.27-57.4,21.27c-53.44,0-118.06-8.17-118.06,18.94s49.06,24.42,90.89,23.64Z"
+                    fill="url(#landscapeGradient3)" />
+                </svg>
+            </div>
+
+            <div class="landscapeRyusuiBox4">
+                <svg id="landscapeRyusui4" viewBox="0 0 734.12 251.23">
+                  <defs>
+                    <linearGradient id="landscapeGradient4" x1="100%" x2="0%" y1="0%" y2="0%">
+                        <stop offset="0%" stop-color="#D0E9FF">
+                            <animate attributeName="stop-color" values="#D0E9FF;#A2C9ED;#A2C9ED;#D0E9FF" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+                        <stop offset="100%" stop-color="#A2C9ED">
+                            <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED" dur="10s"
+                            repeatCount="indefinite" />
+                      </stop>
+            
+                      
+                    </linearGradient>
+                  </defs>
+            
+            
+            
+                  <path 
+                    d="m128.3,110.4c-38.31-2.67-94.86-4.16-94.86,24.45s39.44,40.52,92.25,40.52,65.52-12.63,97.89-12.63c28.06,0,52.64,57.1,96.04,57.1,80.03,0,54.37-57,172.11-57,156.12,0,193.31-.74,193.31-26.5s-49.04-27.23-86-27.23-85.11-7.49-85.11-37.73,119.07-49.76,119.07-49.76c0,0-128.33,21-128.33,51.24s52.1,37.54,89.05,37.54,84.91.77,84.91,26.53-62,21.54-188.89,21.54c-115.34,0-75.38,52.89-169.93,52.89-35.65,0-70.04-51.46-91.87-51.46s-57.67,13.91-101.87,13.91c-52.81,0-84.51-10.99-84.51-39.59s48.42-26.49,86.73-23.82Z"
+                    fill="url(#landscapeGradient4)" />
+                  <path 
+                    d="m140.23,113.62c-39.09-.82-91.43-7.88-91.43,20.73,0,16.92,18.65,36.88,71.46,36.88,65.9,0,75.2-14.91,107.06-14.91s46.27,51.05,95.63,51.05c98.63,0,35.11-53.78,186-53.77,103.55,0,153.74,6.27,153.74-19.49,0-20.14-29.72-21.51-89.57-21.51-48.05,0-77.83-15.02-77.83-38.82,0-32.42,114.79-53.21,114.79-53.21,0,0-122.7,19.28-122.7,53.21,0,22.43,29.35,40.64,79.87,40.64,36.95,0,84.55-.45,84.55,18.91,0,28.91-116.68,18.24-131.26,18.24-165.95,0-97.26,51.58-197.63,51.58-42.78,0-66.88-50.12-96.07-50.12-19.11,0-49.39,17.41-106.05,17.41-52.81,0-61.88-23.07-61.88-36.59,0-28.49,42.81-18.96,81.35-20.24Z"
+                    fill="url(#landscapeGradient4)" />
+                  <path 
+                    d="m162.49,117.55c-63.23,0-94.78,3.18-94.78,19.31,0,6.86,3.31,30.33,63.66,30.33,35.54,0,79.67-18.58,99.57-18.16,20.88.44,52.39,50.52,96.06,50.52,52.99,0,69.21-53.73,141.85-53.73,111.91,0,170.47,13.12,170.47-12.64,0-21.81-50.34-17.02-85.35-17.02-36.95,0-74.14-20.64-74.14-43.32,0-33.63,109.6-54.26,109.6-54.26,0,0-117.6,19.56-117.6,54.45,0,24.32,39.97,44.74,75.8,44.74,41.34,0,84.13-4.51,84.13,14.94,0,25.76-50.93,8.3-158.86,8.3-73.3,0-81.57,53.67-146.63,53.67-42.78,0-73.42-47.89-94.82-47.89-16.51,0-72.34,18.61-100.59,18.61-43.58,0-54.45-18.18-54.45-28.87,0-13.5,33.69-19.57,86.08-18.99Z"
+                    fill="url(#landscapeGradient4)" />
+                </svg>
+            </div>
+
+            <div class="landscapeRyusuiBox2">
+                <svg id="landscapeRyusui2" viewBox="0 0 552.96 325.53">
+                  <defs>
+                    <linearGradient id="landscapeGradient5" x1="100%" y1="100%">
+                        <stop offset="0%" stop-color="#A2C9ED">
+                          <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED;#A2C9ED" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+              
+                        <stop offset="25%" stop-color="#B9D9F6">
+                          <animate attributeName="stop-color" values="#B9D9F6;#D0E9FF;#D0E9FF;#B9D9F6" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+              
+                        <stop offset="50%" stop-color="#D0E9FF">
+                          <animate attributeName="stop-color" values="#D0E9FF;#A2C9ED;#A2C9ED;#D0E9FF" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+              
+                        <stop offset="75%" stop-color="#B9D9F6">
+                          <animate attributeName="stop-color" values="#B9D9F6;#D0E9FF;#D0E9FF;#B9D9F6" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+              
+                        <stop offset="100%" stop-color="#A2C9ED">
+                          <animate attributeName="stop-color" values="#A2C9ED;#D0E9FF;#D0E9FF;#A2C9ED;#A2C9ED" dur="10s"
+                            repeatCount="indefinite" />
+                        </stop>
+                      </linearGradient>
+                  </defs>
+            
+            
+            
+                  <path 
+                    d="m78.97,305.84c-35.55-.38-57.25-1.58-46.34-18.43,10.91-16.85,36.81-15.48,82.94-15.48s123.63,8.51,123.63-8.54-33.96-3.65-49.62-3.65c-39.04,0-46.87-6.72-46.87-20.81s16.14-18.81,57.7-18.81,91.13,11.14,91.13-11.03c0-12.81-25.57-9.85-104.97-9.89-73.81-.04-77.22-14.3-77.22-29.42,0-28.23,116.39-20.33,166.29-20.33,2.54,0,249.15,10.57,249.15-15.12,0-18.98-80.17-15.91-111.5-15.91s-100.39-10.85-100.39-44.61c0-42.23,133.64-42.14,133.64-42.14,0,0-117.07.21-117.07,41.46,0,31.9,61.71,42.67,82.8,43.64,35.73,1.64,118.74-7.27,118.74,15.8,0,28.57-168.09,18.11-248.94,18.11-49.9,0-161.18-6.13-161.18,19.08,0,13.98,7.91,27.32,65.63,28.01,84.64,0,112.96-6.4,112.96,11.08,0,23.01-49.33,13.19-99.04,13.19-12.73,0-49.58-.04-49.58,19.41,0,14.09,12.88,16.88,39.39,16.88,14.33,0,51.16-11.04,51.16,4.63,0,17.05-68.33,9.49-114.46,9.49s-71.86-1.9-82.78,14.95c-10.91,16.85-.31,17.13,34.78,18.43Z"
+                    fill="url(#landscapeGradient5)" />
+                  <path 
+                    d="m131,308.08c-37.19,1.87-87.73,1.33-76.82-15.52s60.53-12.19,106.66-12.19c25.26,0,68.17-4.78,68.17-14,0-14.41-8.41-10.84-35.56-10.84-31.87,0-37.28-4.07-37.28-15.1,0-20.94,46.2-14.82,91.56-14.82,41.56,0,55.66-1.27,55.66-17.67,0-19.3-18.75-14.65-61.55-14.65-57.84,0-103.8,8.39-103.8-18.65s81.74-22.62,131.65-22.62,270.53,16.74,270.53-22.02c0-7.84-21.75-19.42-67.78-19.42-51.72,0-80.94-17.06-80.94-42.87,0-24.09,40.28-30.99,40.28-30.99,0,0-29.25,3.74-29.25,32.02,0,13.23,16.72,40.43,70.01,40.43,50.17,0,77.55,7.49,77.55,23.2,0,43.39-216.4,21.63-279.96,21.63-49.9,0-120.54-7.39-120.54,20.65s45.62,16.65,92.24,16.65c40.76,0,73.11-3.7,73.11,16.65,0,24.01-39.29,18.49-67.82,18.49-48.98,0-83.32-2.29-83.32,14,0,14.09,6.76,12.59,33.27,12.59,19.33,0,37.15-.06,37.15,13.1,0,11.43-33.97,14.79-61.43,14.79-46.13,0-101.56-4.38-112.47,12.47-10.91,16.85,34.03,15.44,70.67,14.7Z"
+                    fill="url(#landscapeGradient5)" />
+                  <path
+                    d="m147.44,267.68s-47.99,7.82-47.99-23.95c0-28.58,43.33-29.26,85.77-29.26,50.31,0,67.61,6.78,67.61-2.69,0-6.39-22.88-5.81-75.76-5.81-92.39,0-139.37-5.63-139.37-33.2,0-40.17,110.14-43.32,180.89-43.32s257.45,24.83,257.45,6.64c0-11.81-57.28-7.51-83.85-7.51-72.33,0-126.44-15.85-126.44-53.34s97.69-42.69,97.69-42.69c0,0-72.83,5.69-72.83,43.66s67.09,48.08,100.03,48.08c26.57,0,108.2-7.38,108.2,10.74,0,22.46-229.2-.07-268.99-.07-93.32,0-157.32,7.06-157.32,37.81,0,12.99,47.82,30.2,116.76,30.2,52.88,0,81.76,2.42,81.76,8.81,0,10.83-24.52,4.69-73.61,4.69-23.31,0-85.77,3.79-85.77,27.26,0,28.68,35.77,23.95,35.77,23.95Z"
+                    fill="url(#landscapeGradient5)" />
+                </svg>
+            </div>
         </div>
+
+
+
 
         <div>    
             <ul class = "footer">
-                <li class = "leftFoot">Copyright © 2022 Kaoru Murai</li>
+                <li class = "leftFoot">
+                    <a class="resumeLink" href="https://drive.google.com/file/d/19TQHGo-kUkrRl7KI3OcFEA3ALZMBttwI/view?usp=sharing">Resume↗</a>
+                    <a class="mediumLink" href="https://medium.com/@kaolugo">Medium↗</a>
+                    <a class="linkedinLink" href="https://www.linkedin.com/in/kaolugo/">LinkedIn↗</a>
+                </li>
                 <li class = "rightFoot">Handcrafted with &lt3 on <a class = "github" href = "https://github.com/kaolugo/kaorumurai">kaolugo</a>.</li>
             </ul>
-        </div>
+          </div>
         
     </body>
 </html>

@@ -1,90 +1,468 @@
 /* general styling */
+@font-face {
+    font-family: 'Avenir';
+    src: url('./font/Avenir-Medium.woff2') format('woff2'),
+        url('Avenir-Medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('Avenir-Roman.woff2') format('woff2'),
+        url('Avenir-Roman.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./font/Avenir-Book.woff2') format('woff2'),
+        url('Avenir-Book.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('./font/Avenir-Light.woff2') format('woff2'),
+        url('Avenir-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
 html {
-    background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
 }
 
-.ctaContainer {
-    display: flex;
-    justify-content: center;
-}
-
-.cta {
-    position: absolute;
-    top: 90%;
-    z-index: 10;
-
-    color: white;
+body {
+    background: linear-gradient(to bottom, #0085FF 0%, #BCE3F8 20%,#5EB4FB 30%,#BCE3F8 50%, #0085FF 98%);
     
-    font-family: 'Overpass Mono';
+    background-size: 100% 300%;
+    background-repeat: no-repeat;
+    margin: 0;
+
+    z-index: -4;
+    /* overflow:hidden; */
+}
+
+.canvasContainer {
+    position: absolute; 
+    z-index: -2;
+    width: 100%;
+    height: 120vh;
+    
+    overflow: hidden;
+}
+
+#canvas0,
+#canvas1,
+#canvas2,
+#canvas3,
+#canvas4, 
+#canvas5,
+#canvas6,
+#canvas7,
+#canvas8,
+#canvas9,
+#canvas10, 
+#canvas11,
+#canvas12, 
+#canvas13,
+#canvas14, 
+#canvas15 {
+    z-index: -3;
+    position: absolute;
+
+    top: 0;
+    /* left: -5vw; */
+    left: 0;
+
+    width: 100vw;
+    height: 120vh;
+}
+
+#canvas0,
+#canvas1,
+#canvas2,
+#canvas3 {
+    max-width: 480px;
+}
+
+#canvas4, 
+#canvas5,
+#canvas6 {
+    min-width: 481px;
+    max-width: 768px;
+}
+
+#canvas7,
+#canvas8,
+#canvas9,
+#canvas10 {
+    min-width: 769px;
+    max-width: 1200px;
+}
+
+#canvas11,
+#canvas12, 
+#canvas13,
+#canvas14, 
+#canvas15 {
+    min-width: 1201px;
+}
+
+#intro {
+   
+    height: 92vh;
+    padding-bottom: 0;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    z-index: 1;
+}
+
+/* font styling */
+h1 {
+    font-family: 'Avenir';
+    font-weight: 500;
+    color: white;
+    z-index: 1;
+
+    /* text-shadow: 0px 0px 10px #0085FF; */
+
+}
+
+h1 span {
+    background: linear-gradient(rgba(81,163,253, 0), rgba(81,163,253, 0.5), rgba(81,163,253, 0));
+}
+
+h2 span {
+    background: linear-gradient(rgba(158,207,249, 0), rgba(158,207,249, 0.5), rgb(158,207,249, 0));
+}
+
+h3 span {
+    background: linear-gradient(rgba(94,180,251, 0), rgba(94,180,251, 0.5),rgba(94,180,251, 0))
+}
+
+h2 {
+    font-family: 'Avenir';
+    color: white;
+    font-weight: 300;
+    z-index: 1;
+
+    text-shadow: 0 0 1em #51A3FE, 1px 1px 5px #51A3FE;
+}
+
+h3 {
+    font-family: 'Nanum Gothic';
     font-weight: 700;
-    font-size: 20px;
+    color: white;
+    text-align: right;
+    letter-spacing: 3px;
+    
+    width: 60vw;
+    align-self: flex-end;
+    z-index: 1;
+
+    /* text-shadow: #0085FF 2px 0 5px; */
+    text-shadow: 0 0 1em #0085FF, 1px 1px 5px #0085FF;
+    /* text-shadow: 0px 0px 12px #0085FF; */
+}
+
+
+.aboutMe {
+    font-family: 'Avenir';
+    font-weight: 400;
+    /* color: #001364; */
+    color: black;
+    z-index: 1;
+}
+
+.secondaryBlue {
+    font-family: "Avenir";
+    color: #445DC9;
+    z-index: 1;
+}
+
+.tertiaryBlue {
+    font-family: "Avenir";
+    color: #6380FF;
+    z-index: 1;
+}
+
+.svg-container {
+    filter: drop-shadow(2px 2px 4px rgba(81, 163, 254, 0.8));
 }
 
 /* footer styling */
 .footer {
-    color: white;
+    color: black;
 
     list-style-type: none;
+    padding-left: 0;
+    padding-bottom: 40px;
 
     font-family: 'Nanum Gothic';
-    font-weight: 400;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 10;
 }
 
-.footer li {
-    padding: 0;
+.leftFoot {
+    display: flex;
+    gap: 20px;
 }
 
 .github {
-    color: white;
+    color: black;
     text-decoration: underline;
 }
 
-/* typewriter effect */
-#changeText {
-    z-index: -10;
+.resumeLink, .mediumLink, .linkedinLink {
+    color: black;
+    text-decoration: none;
 }
 
-@keyframes typewriter {
-    0%, 100% {
-        width: 0;
-    }
-    20%, 80% {
-        width: 7.8em;
+
+/* end footer styling */
+
+/* writing animation styling */
+.writing-animation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+
+    margin-top: -10vh;
+}
+
+#engineer {
+    width: 95%;
+    height: auto;
+    padding-top: 12%;
+}
+
+#designer {
+    width: 110%;
+    height: auto;
+    padding-top: 15%;
+}
+
+#artist {
+    width: 75%;
+    height: auto;
+    padding-top: 15%;
+}
+
+.stroke {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: draw 0.8s forwards;
+}
+
+.stroke1point2 {
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: draw 1.2s forwards;
+}
+
+.stroke1point8 {
+    stroke-dasharray: 1500;
+    stroke-dashoffset: 1500;
+    animation: draw 1.8s forwards;
+}
+
+
+.backstroke {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    animation: drawBackwards 0.8s forwards;
+}
+
+.eng1 {
+    animation-delay: 0s;
+}
+
+.eng2 {
+    animation-delay: 0s;
+}
+
+.eng3 {
+    animation-delay: 0.4s;
+}
+
+.eng4 {
+    animation-delay: 0.8s;
+}
+
+.eng5 {
+    animation-delay: 1.4s;
+}
+
+.eng6 {
+    animation-delay: 1.8s;
+}
+
+.eng7 {
+    animation-delay: 2.6s;
+}
+
+.eng8 {
+    animation-delay: 3s;
+}
+
+.eng9 {
+    animation-delay: 3.2s;
+}
+
+
+.des1 {
+    animation-delay: 0s;
+}
+
+.des2 {
+    animation-delay: 0.2s;
+}
+
+.des3 {
+    animation-delay: 0.8s;
+}
+
+.des4 {
+    animation-delay: 1.2s;
+}
+
+.des5 {
+    animation-delay: 1.6s;
+}
+
+.des6 {
+    animation-delay: 1.8s;
+}
+
+.des7 {
+    animation-delay: 2s;
+}
+
+.des8 {
+    animation-delay: 2.5s;
+}
+
+.des9 {
+    animation-delay: 3s;
+}
+
+
+.art1 {
+    animation-delay: 0s;
+}
+
+.art2 {
+    animation-delay: 0.2s;
+}
+
+.art3 {
+    animation-delay: 0.6s;
+}
+
+.art4 {
+    animation-delay: 0.8s;
+}
+
+.art5 {
+    animation-delay: 1.2s;
+}
+
+.art6 {
+    animation-delay: 1.2s;
+}
+
+.art7 {
+    animation-delay: 2s;
+}
+
+.art8 {
+    animation-delay: 2.2s;
+}
+
+.art9 {
+    animation-delay: 2.6s;
+}
+
+.art10 {
+    animation-delay: 3s;
+}
+
+.art11 {
+    animation-delay: 3.2s;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
     }
 }
+@keyframes drawBackwards {
+    to {
+        stroke-dashoffset: 900;
+    }
+}
+
+/* End writing animation styling */
+
+/* aboutMe styling */
+.aboutMe a:link {
+    text-decoration: none;
     
-@keyframes caret {
-    0%, 100% {
-        opacity: 0;
+}
+
+.aboutMe a:visited {
+    text-decoration: none;
+    font-weight: 800;
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+    /* cloud canvas styling */
+    #canvas0,
+    #canvas1,
+    #canvas2,
+    #canvas3 {
+        visibility: visible;
+        /* display: inline; */
     }
-    50% {
-        opacity: 1;
+
+    #canvas4, 
+    #canvas5,
+    #canvas6,
+    #canvas7,
+    #canvas8,
+    #canvas9,
+    #canvas10, 
+    #canvas11,
+    #canvas12, 
+    #canvas13,
+    #canvas14, 
+    #canvas15 {
+        visibility: hidden;
+        /* display: none; */
     }
-}
+    /* end cloud canvas styling */
 
-.typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typewriter;
-    display: inline-block;
-    position: relative;
-    animation-duration: 5s;
-    animation-timing-function: steps(25, end);
-    animation-iteration-count: infinite;
-}
-    
-    
-.typewriter::after {
-    content: "|";
-    position: absolute;
-    right: 0;
-    animation: caret infinite;
-    animation-duration: 1s;
-    animation-timing-function: steps(1, end);
-}
-
-
-@media only screen and (max-width: 520px) {
     /* mobile nav styling */
 
     .nav {
@@ -98,7 +476,7 @@ html {
     .open {
         background-color: white;
         width: 24px;
-        height: 4px;
+        height: 2px;
         display: block;
         border-radius: 2px;
         cursor: pointer;
@@ -110,7 +488,7 @@ html {
         content: "";
         background-color: white;
         width: 24px;
-        height: 4px;
+        height: 2px;
         display: block;
         border-radius: 2px;
         position: relative;
@@ -123,11 +501,11 @@ html {
         content: "";
         background-color: white;
         width: 24px;
-        height: 4px;
+        height: 2px;
         display: block;
         border-radius: 2px;
         position: relative;
-        top: 4px;
+        top: 6px;
         transform: rotate(0deg);
         transition: all 0.3s ease;
     }
@@ -139,6 +517,8 @@ html {
         padding: 15px;
         cursor: pointer;
         float: right;
+        margin-right: 15px;
+        margin-top: 20px;
     }
       
     .menuOpen:hover .open:before {
@@ -155,9 +535,8 @@ html {
         height: 100vh;
         top: 0;
         left: 0;
-        background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
-
-        z-index: 15;
+        z-index: 5;
+        background: linear-gradient(to bottom, #0057FF 0%, #0085FF 8%, #BCE3F8 60%); /* looks good on mobile*/
     }
       
     .menu label {
@@ -175,9 +554,10 @@ html {
         top: 50%;
         font-size:40px;
         line-height: 60px;
-        text-align: center;
+        text-align: left;
         padding-bottom: 20px;
-        margin-top: -170px;
+        margin-top: -150px;
+        margin-left: 30px;
     }
       
     .menu ul {
@@ -192,7 +572,7 @@ html {
         text-decoration: none;
         transition: color 0.2s;
         font-family: 'Nanum Gothic', sans-serif;
-        padding: 10px 0;
+        padding: 12px 0;
     }
     
     .menuEffects {
@@ -243,430 +623,13 @@ html {
     #menuToggle:not(:checked) ~ .menuEffects ul {
         transform: translateY(-30%);
     }
+    /* End nav */
 
     
     /* mobile title styling */
-    .squareLogo {
-        width: 50px;
-        height: auto;
 
-        margin-left: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .title {
-        margin-right: auto;
-        padding: 25px 25px;
-    
-        font-size: 25px;
-        font-family: 'Nanum Gothic', sans-serif;
-        font-weight: 700;
-    }
-
-    .title a:link {
-        padding: 0;
-        text-decoration: none;
-        color: white;
-    }
-
-    .mobileTitle {
-        list-style-type: none;
-        font-size: 18px;
-        font-family: 'Source Code Pro', monospace;
-        top: 0;
-        margin: 0;
-        padding: 0;
-    
-        /*flexbox*/
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: nowrap;
-    }
-    
-    .mobileTitle li {
-        list-style-type: none;
-        padding: 12px;
-        display: flex;            /* NEW; nested flex container */
-        justify-content: center;  /* NEW; align anchor elements horizontally */
-        align-items: center; 
-    }
-    
-    .mobileTitle a:visited {
-        text-decoration: none;
-        color: white;
-    }
-
-
-    /* introduction styling */
-    h1 {
-        font-family: 'Overpass Mono';
-        font-size: 18px;
-        font-weight: 400;
-        color: white;
-    }
-
-    h2 {
-        font-family: 'Scheherazade New';
-        font-size: 38px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: white;
-    }
-
-    h3 {
-        font-family: 'Overpass Mono';
-        font-size: 15px;
-        font-weight: 400;
-        color: white;
-        margin: 0;
-    }
-
-
-    /* for the wave */
-    @media (max-aspect-ratio: 10/11) {
-        #hokusai {
-            width: 100vw;
-            margin-left: -50vw;
-            position: absolute;
-            left: 50%;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding-top: 0;
-            padding-bottom: 0;
-            bottom: 0;
-            z-index: -10;
-        }
-
-        #intro {
-            height: 100vh;
-            margin-bottom: -60px;
-            padding-bottom: 0;
-        }
-    }
-
-    @media (min-aspect-ratio: 10/11) {
-        #hokusai {
-            width: 100vw;
-            margin-left: -50vw;
-            position: relative;
-            left: 50%;
-            margin-top: -50px;
-            margin-bottom: 0;
-            padding-top: 0;
-            padding-bottom: 0;
-            z-index: -10;
-        }
-
-        #intro {
-            height: 100vh;
-            margin-bottom: 300px;
-            padding-bottom: 0;
-        }
-    }
-
-
-    /* work experience styling */
-    h4 {
-        color: white;
-
-        font-family: 'Scheherazade New';
-        font-size: 25px;
-        font-weight: 100;
-        font-style: italic;
-        letter-spacing: 1px;
-
-        
-        margin-left: 10px;
-        margin-bottom: -20px;
-    }
-
-    .places {
-        list-style-type: none;
-        margin-bottom: 80px;
-    }
-
-    .places h5 {
-        padding: 0;
-        margin-bottom: 5px;
-    }
-
-    .places a:link {
-        color: white;
-        text-decoration: none;
-
-        font-family: 'Lora';
-        font-weight: 600;
-        font-size: 35px;
-        letter-spacing: 1px;
-    }
-
-    .places a:visited {
-        color: white;
-        text-decoration: none;
-    }
-
-    .places h6 {
-        color: white;
-
-        font-family: 'Overpass Mono';
-        font-weight: 400;
-        font-size: 13px;
-
-        padding-top: 0;
-        padding-bottom: -10px;
-        margin: 0;
-    }
-
-
-    /* work art styling */
-    .workArt {
-        display: none;
-    }
-
-
-    /* portfolio link styling */
-    .portfolio {
-        list-style-type: none;
-        margin-left: -10px;
-    }
-
-    .moreStuff {
-        padding-left: 10px;
-        margin-left: 4vw;
-        margin-right: 4vw;
-    }
-    
-    .moreStuff p {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .portfolio li {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .portfolio a:link {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-weight: 400;
-        font-size: 16px;
-    }
-
-    .portfolio a:visited {
-        color: white;
-    }
-
-
-    /* background clouds styling */
-    .cloud1, .cloud2 {
-        position: fixed;
-        z-index: -20;
-        width: 150vw;
-        height: auto;
-    }
-
-    .cloud1 {
-        right: -80vw;
-        top: 15vh;
-    }
-
-    .cloud2 {
-        right: 20vw;
-        top: 50vh;
-    }
-
-    .grid {
-        position: absolute;
-        z-index: -25;
-        width: 60vw;
-        height: auto;
-
-        right: 0vw;
-        top: 60vh;
-    }
-
-    /* footer styling */
-    .footer {
-        padding-left: 0;
-        margin-top: 50px;
-        
-        text-align: center;
-        font-size: 12px;
-    }
-}
-
-
-@media only screen and (min-width: 520px) {
-    /* mobile nav styling */
-
-    .nav {
-        display: none;
-    }
-
-    input {
-        display: none;
-    }
-      
-    .open {
-        background-color: white;
-        width: 24px;
-        height: 4px;
-        display: block;
-        border-radius: 2px;
-        cursor: pointer;
-        position: relative;
-        top: 8px;
-    }
-      
-    .open:before {
-        content: "";
-        background-color: white;
-        width: 24px;
-        height: 4px;
-        display: block;
-        border-radius: 2px;
-        position: relative;
-        top: -8px;
-        transform: rotate(0deg);
-        transition: all 0.3s ease;
-    }
-      
-    .open:after {
-        content: "";
-        background-color: white;
-        width: 24px;
-        height: 4px;
-        display: block;
-        border-radius: 2px;
-        position: relative;
-        top: 4px;
-        transform: rotate(0deg);
-        transition: all 0.3s ease;
-    }
-      
-    .menuOpen {
-        width: 24px;
-        height: 20px;
-        display: block;
-        padding: 15px;
-        cursor: pointer;
-        float: right;
-    }
-      
-    .menuOpen:hover .open:before {
-        top: -9px;
-    }
-      
-    .menuOpen:hover .open:after {
-        top: 5px;
-    }
-      
-    .menu {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background: linear-gradient(#445DC9, #BBA4F9, #445DC9) fixed;
-
-        z-index: 15;
-    }
-      
-    .menu label {
+    .mobileLogo {
         width: 30px;
-        height: 30px;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        background-size: 100%;
-        cursor: pointer;
-    }
-      
-    .menu .menuContent {
-        position: relative;
-        top: 50%;
-        font-size:40px;
-        line-height: 60px;
-        text-align: center;
-        padding-bottom: 20px;
-        margin-top: -170px;
-    }
-      
-    .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 auto;
-    }
-      
-    .menu ul li a {
-        display: block;
-        color:white;
-        text-decoration: none;
-        transition: color 0.2s;
-        font-family: 'Nanum Gothic', sans-serif;
-        padding: 10px 0;
-    }
-    
-    .menuEffects {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.5s, visibility 0.5s;
-    }
-    
-    .menuEffects ul {
-        transform: translateY(0%);
-        transition: all 0.5s;
-    }
-    
-    #menuToggle:checked ~ .menuEffects {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.5s;
-    }
-    
-    #menuToggle:checked ~ .menuEffects ul {
-        opacity: 1;
-    }
-    
-    #menuToggle:checked ~ .menuOpen .open {
-        background-color: transparent;
-    }
-    
-    #menuToggle:checked ~ .menuOpen .open:before {
-        content: "";
-        background-color: white;
-        transform: rotate(45deg);
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 1;
-    }
-    
-    #menuToggle:checked ~ .menuOpen .open:after {
-        content: "";
-        background-color:white;
-        transform: rotate(-45deg);
-        position: relative;
-        top: 0;
-        right: 0;
-        z-index: 1;
-    }
-    
-    #menuToggle:not(:checked) ~ .menuEffects ul {
-        transform: translateY(-30%);
-    }
-
-    
-    /* mobile title styling */
-    .squareLogo {
-        width: 50px;
         height: auto;
 
         margin-left: 0px;
@@ -675,28 +638,30 @@ html {
         align-items: center;
     }
     
-    .title {
+    .mobileTitle {
         margin-right: auto;
-        padding: 25px 25px;
+        padding: 7px 7px;
     
-        font-size: 25px;
+        font-size: 16px;
         font-family: 'Nanum Gothic', sans-serif;
         font-weight: 700;
     }
 
-    .title a:link {
+    .mobileTitle a:link {
         padding: 0;
         text-decoration: none;
         color: white;
     }
 
-    .mobileTitle {
+    .mobileHeader {
         list-style-type: none;
-        font-size: 18px;
-        font-family: 'Source Code Pro', monospace;
         top: 0;
-        margin: 0;
-        padding: 0;
+        margin-left: 30px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+
+        padding: 30px 0 0 0;
+
     
         /*flexbox*/
         display: flex;
@@ -704,349 +669,163 @@ html {
         flex-wrap: nowrap;
     }
     
-    .mobileTitle li {
+    .mobileHeader li {
         list-style-type: none;
-        padding: 12px;
         display: flex;            /* NEW; nested flex container */
         justify-content: center;  /* NEW; align anchor elements horizontally */
         align-items: center; 
     }
     
-    .mobileTitle a:visited {
+    .mobileHeader a:visited {
         text-decoration: none;
         color: white;
+    }
+
+    /* end mobile title styling */
+    
+    /* svg writing styling */
+
+    .container {
+        height: 40vw;
+        width: 60vw;
     }
 
 
     /* introduction styling */
-    h1 {
-        font-family: 'Overpass Mono';
-        font-size: 18px;
-        font-weight: 400;
-        color: white;
-    }
-
-    h2 {
-        font-family: 'Scheherazade New';
-        font-size: 38px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: white;
-    }
-
-    h3 {
-        font-family: 'Overpass Mono';
-        font-size: 15px;
-        font-weight: 400;
-        color: white;
-        margin: 0;
-    }
-
-
-    /* for the wave */
-    @media (max-aspect-ratio: 10/11) {
-        #hokusai {
-            width: 100vw;
-            margin-left: -50vw;
-            position: absolute;
-            left: 50%;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding-top: 0;
-            padding-bottom: 0;
-            bottom: 0;
-            z-index: -10;
-        }
-
-        #intro {
-            height: 100vh;
-            margin-bottom: -60px;
-            padding-bottom: 0;
-        }
-    }
-
-    @media (min-aspect-ratio: 10/11) {
-        #hokusai {
-            width: 100vw;
-            margin-left: -50vw;
-            position: relative;
-            left: 50%;
-            margin-top: -50px;
-            margin-bottom: 0;
-            padding-top: 0;
-            padding-bottom: 0;
-            z-index: -10;
-        }
-
-        #intro {
-            height: 100vh;
-            margin-bottom: 300px;
-            padding-bottom: 0;
-        }
-    }
-
-
-    /* work experience styling */
-    h4 {
-        color: white;
-
-        font-family: 'Scheherazade New';
-        font-size: 25px;
-        font-weight: 100;
-        font-style: italic;
-        letter-spacing: 1px;
-
-        
-        margin-left: 10px;
-        margin-bottom: -20px;
-    }
-
-    .places {
-        list-style-type: none;
-        margin-bottom: 80px;
-    }
-
-    .places h5 {
-        padding: 0;
-    }
-
-    .places a:link {
-        color: white;
-        text-decoration: none;
-
-        font-family: 'Lora';
-        font-weight: 600;
-        font-size: 35px;
-        letter-spacing: 1px;
-    }
-
-    .places a:visited {
-        color: white;
-        text-decoration: none;
-    }
-
-    .places h6 {
-        color: white;
-
-        font-family: 'Overpass Mono';
-        font-weight: 400;
-        font-size: 16px;
-
-        padding-top: 0;
-        padding-bottom: -10px;
-        margin: 0;
-    }
-
-
-    /* portfolio link styling */
-    .portfolio {
-        list-style-type: none;
-        margin-left: -10px;
-    }
-
-    .moreStuff {
-        padding-left: 10px;
-        margin-left: 4vw;
-        margin-right: 4vw;
-    }
-
-    .moreStuff p {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .portfolio li {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .portfolio a:link {
-        color: white;
-        font-family: 'Overpass Mono';
-        font-weight: 400;
-        font-size: 16px;
-    }
-
-    .portfolio a:visited {
-        color: white;
-    }
-
-
-    /* work art styling */
-    .workArt {
-        display: none;
-    }
-
-
-    /* background clouds styling */
-    .cloud1, .cloud2 {
-        position: fixed;
-        z-index: -20;
-        width: 120vw;
-        height: auto;
-    }
-
-    .cloud1 {
-        right: -60vw;
-        top: 5vh;
-    }
-
-    .cloud2 {
-        right: 20vw;
-        top: 50vh;
-    }
-
-    .grid {
-        position: absolute;
-        z-index: -25;
-        width: 60vw;
-        height: auto;
-
-        right: 0vw;
-        top: 60vh;
-    }
-
-    /* footer styling */
-    .footer {
-        padding-left: 0;
-        margin-top: 50px;
-        
-        text-align: center;
-        font-size: 12px;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    /* intro styling */
-    #text {
-        margin-left: 5vw;
-    }
-    
-    /* the wave styling */
-    #hokusai {
-        width: 100vw;
-        margin-left: -50vw;
-        position: absolute;
-        left: 50%;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        bottom: -10vh;
-        z-index: -15;
-    }
-
     #intro {
-        height: 100vh;
-        margin-bottom: 0;
-        padding-bottom: 0;
+        width: calc(100vw - 60px);
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
+    h1 {
+        font-size: 16px;
+    }
 
-    /* work art styling */
-    #work {
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .writing-animation {
+        gap: 12px;
+    }
+
+    .aboutMe {
+        font-size: 15px;
+        margin-top: 60px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    /* end about me stylining */
+
+    /* ryusui styling */
+    .mobileRyusuiCanvas {
         display: flex;
+        flex-direction: column;
     }
 
-    .workArt {
-        display: block;
-    } 
-
-    .grid2 {
-        position: absolute;
-        z-index: -25;
-        width: 60vw;
-        height: auto;
-
-        right:70vw;
-        top: 120vh;
-    }
-
-    .gifaoru2 {
+    .tabletRyusuiCanvas {
         display: none;
     }
 
-    .gifaoru {
-        width: 50vw;
+    .landscapeRyusuiCanvas {
+        display: none;
+    }
+
+    .ryusuiBox2 {
+        width: 100vw;
+        height: 90vw;
+        /* border:1px solid black; */
+        overflow: hidden;
+
+        align-self: flex-end;
+        position: relative;
+
+        margin-top: -22vw;
+    }
+
+    #ryusui2 {
+        width: 140vw;
         height: auto;
 
-        padding-right: 0;
-        margin-right: -10vw;
+        position: absolute;
+        left: -12vw;
     }
 
-    .workContent {
-        padding-right: 4vw;
+    .ryusuiBox5 {
+        width: 100vw;
+        height: 45vw;
+        overflow: hidden;
+
+        align-self: flex-start;
+        position: relative;
     }
 
+    #ryusui5 {
+        width: 290vw;
+        height: auto;
 
-    /* portfolio content styling */
-    .moreStuff {
+        position: absolute;
+        left: -165vw;
+    }
+
+    /* end ryusui styling */
+
+    /* footer styling */
+    .footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+        gap: 10px;
+        margin-top: -10px;
 
-    .moreStuff p {
-        font-size: 16px;
-    }
-
-    .portfolio li {
-        font-size: 16px;
-    }
-
-    .portfolio a:link {
-        font-size: 16px;
-    }
-
-    .portfolio a:hover {
-        background-color: #445DC9;
-    }
-
-
-    /* background image styling */
-
-    .grid {
-        position: absolute;
-        z-index: -25;
-        width: 40vw;
-        height: auto;
-
-        right: 0vw;
-        top: 60vh;
-    }
-
-
-    /* footer styling */
-    .footer {
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: nowrap;
-        text-align: left;
-    }
-
-    .leftFoot {
-        margin-right: 20vw;
-        margin-left: 0;
-    }
-    
-    .rightFoot {
-        margin-left: 20vw;
-        margin-right: 0;
+        font-size: 14px;
     }
 }
 
+@media only screen and (min-width: 481px) {
+    /* cloud canvas styling */
+    #canvas4, 
+    #canvas5,
+    #canvas6 {
+        visibility: visible;
+        /* display: inline; */
+    }
+
+    #canvas0,
+    #canvas1,
+    #canvas2,
+    #canvas3,
+    #canvas7,
+    #canvas8,
+    #canvas9,
+    #canvas10, 
+    #canvas11,
+    #canvas12, 
+    #canvas13,
+    #canvas14, 
+    #canvas15 {
+        visibility: hidden;
+        /* display: none; */
+    }
+    /* end cloud canvas styling */
 
 
-@media only screen and (min-width: 835px) {
     /* putting away mobile nav */
     .mobileNav {
         display: none;
     }
 
+    .mobileLogo {
+        display: none;
+    }
+
     .mobileTitle {
         display: none;
     }
@@ -1063,310 +842,504 @@ html {
         display: none;
     }
 
-    /* title styling */
-    .squareLogo {
-        width: 50px;
-        height: auto;
-    
-        padding: 10px 10px;
-        margin-left: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .mobileHeader {
+        display: none;
     }
     
-    .logo {
-        padding: 25px 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-        font-size: 25px;
-        font-family: 'Nanum Gothic', sans-serif;
-        font-weight: 700;
-    
-        margin-right: auto;
-    }
+    /* end putting away mobile nav */
 
     /* navigation bar styling */
     .nav {
         list-style-type: none;
         font-size: 16px;
         font-family: 'Nanum Gothic';
-        top: 0;
-        margin: 0;
-        padding: 0;
     
         /*flexbox*/
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;;
+        align-items: center;
         flex-wrap: nowrap;
+        gap: 10px;
+
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-top: 30px;
+    }
+
+    .navLink {
+        font-size: 14px;
+        text-decoration: none;
+        color: white;
+        margin-left: 10px;
+    }
+    /* end navigation styling */
+
+    /* site logo styling */
+    .squareLogo {
+        width: 40px;
+        height: auto;
     }
     
-    .nav li {
-        list-style-type: none;
-        padding: 12px;
+    .logo {
+        font-size: 20px;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+
+        margin-right: auto;
+    }
+
+    .squareLogo, .logo, .navLink {
         display: flex;            /* NEW; nested flex container */
         justify-content: center;  /* NEW; align anchor elements horizontally */
         align-items: center; 
     }
+
+    /* end site logo styling */
     
-    .more {
-        margin-right: 20px;
+    /* introduction styling */
+    #intro {
+        margin-left: 50px;
+        margin-right: 50px;
     }
-    
-    .more a:link, .navLink a:link {
-        text-decoration: none;
-        color: white;
-        padding: 5px;
+
+    /* svg writing styling */
+    .writing-animation {
+        gap: 20px;
     }
-    
-    .logo a:link {
-        padding: 0;
-        text-decoration: none;
-        color:white;
-    }
-    
-    .nav a:visited {
-        text-decoration: none;
-        color: white;
-    }
-    
-    .more a:hover, .navLink a:hover {
-        color: white;
-        background-color: #FF655F;
+
+    .container {
+        height: 40vw;
+        width: 60vw;
     }
 
 
-    /* intro styling */
-    #text {
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
-
+    /* introduction styling */
     h1 {
-        font-size: 18px;
-        margin-bottom: -30px;
-        padding-bottom: 0;
+        font-size: 20px;
     }
 
     h2 {
-        font-size: 45px;
-        padding-bottom: 0;
-        margin-bottom: -10px;
+        font-size: 26px;
     }
 
     h3 {
+        
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .aboutMe {
+        font-size: 16px;
+        margin-top: 60px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    /* end about me stylining */
+
+    /* ryusui styling */
+
+    .mobileRyusuiCanvas {
+        display: none;
+        /* display: flex;
+        flex-direction: column; */
+    }
+
+    .tabletRyusuiCanvas {
+        display: flex;
+        flex-direction: column; 
+        margin-top: -80px;
+    }
+
+    .landscapeRyusuiCanvas {
+        display: none;
+    }
+
+    .tabletRyusuiBox2 {
+        width: 100vw;
+        height: 90vw;
+        /* border:1px solid black; */
+        overflow: hidden;
+
+        align-self: flex-end;
+        position: relative;
+
+        margin-top: -22vw;
+    }
+
+    #tabletRyusui2 {
+        width: 140vw;
+        height: auto;
+
+        position: absolute;
+        left: -12vw;
+    }
+
+    .tabletRyusuiBox5 {
+        width: 100vw;
+        height: 45vw;
+        overflow: hidden;
+
+        align-self: flex-start;
+        position: relative;
+    }
+
+    #tabletRyusui5 {
+        width: 290vw;
+        height: auto;
+
+        position: absolute;
+        left: -165vw;
+
+        outline: none;
+    }
+
+    /* end ryusui styling */
+
+    /* footer styling */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: -50px;
+
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    /* cloud canvas styling */
+    #canvas7,
+    #canvas8,
+    #canvas9,
+    #canvas10 {
+        visibility: visible;
+        /* display: inline; */
+    }
+
+    #canvas0,
+    #canvas1,
+    #canvas2,
+    #canvas3,
+    #canvas4, 
+    #canvas5,
+    #canvas6,
+    #canvas11,
+    #canvas12, 
+    #canvas13,
+    #canvas14, 
+    #canvas15 {
+        visibility: hidden;
+        /* display: none; */
+    }
+    /* end cloud canvas styling */
+
+    /* intro styling */
+    .nav {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    .squareLogo {
+        width: 50px;
+        height: auto;
+    }
+
+    #intro {
+        width: calc(100vw - 140px);
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    /* svg writing animation styling */
+    #engineer {
+        width: 30vw;
+        height: auto;
+        padding-top: 23%;
+    }
+    
+    #designer {
+        width: 40vw;
+        height: auto;
+        padding-top: 23%;
+    }
+    
+    #artist {
+        width: 25vw;
+        height: auto;
+        padding-top: 23%;
+    }
+
+    /* end writing animation style */
+
+    /* about me style */
+    .aboutMe {
+        width: 75vw;
+    }
+
+    /* ryusui animation */
+
+    .tabletRyusuiCanvas {
+        display: none;
+    }
+
+    .landscapeRyusuiCanvas {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .landscapeRyusuiBox3 {
+        width: 45vw;
+        height: 40vw;
+        /* border:1px solid black; */
+        overflow: hidden;
+
+        align-self: flex-end;
+        position: relative;
+        margin-top: -15vw;
+    }
+
+    #landscapeRyusui3 {
+        width: 55vw;
+        height: auto;
+
+        position: absolute;
+        
+    }
+
+    .landscapeRyusuiBox5 {
+        width: 70vw;
+        height: 20vw;
+        overflow: hidden;
+        position: relative;
+        margin-top: -14vw;
+    }
+
+    #landscapeRyusui5 {
+        width: 85vw;
+        height: auto;
+
+        position: absolute;
+        left: -16vw;
+    }
+
+    .landscapeRyusuiBox1 {
+        width: 45vw;
+        height: 40vw;
+
+        overflow: hidden;
+        position: relative;
+        align-self: flex-end;
+
+        margin-top: -26vw;
+    }
+
+    #landscapeRyusui1 {
+        width: 60vw;
+        height: auto;
+
+        position: absolute;
+        left: 8vw;
+    }
+
+
+    .landscapeRyusuiBox4 {
+        width: 70vw;
+        height: 20vw;
+
+        overflow: hidden;
+        position: relative;
+        margin-top: -29vw;
+        align-self: center;
+    }
+
+    #landscapeRyusui4 {
+        width: 60vw;
+        height: auto;
+
+        position: absolute;
+        left: 10vw;
+    }
+
+
+    .landscapeRyusuiBox2 {
+        width: 45vw;
+        height: 30vw;
+
+        overflow: hidden;
+        position: relative;
+        margin-top: -14vw;
+
+        z-index: -5;
+    }
+
+    #landscapeRyusui2 {
+        width: 45vw;
+        height: auto;
+
+        position: absolute;
+        left: -8vw;
+    }
+
+
+    /* footer styling */
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-left: 70px;
+        margin-right: 70px;
+
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    /* intro styling */
+    .nav {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .squareLogo {
+        width: 40px;
+        height: auto;
+    }
+
+    #intro {
+        width: calc(100vw - 200px);
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    h1 {
+        margin-top: 12vh;
+    }
+
+    h3 {
+        margin-bottom: 12vh;
+    }
+
+
+    .aboutMe {
+        font-size: 16px;
+        width: 60vw;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 10vh;
+    }
+
+    .landscapeRyusuiCanvas {
+        margin-top: -70px;
+    }
+
+    .footer {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    /* cloud canvas styling */
+    #canvas11,
+    #canvas12, 
+    #canvas13,
+    #canvas14, 
+    #canvas15 {
+        visibility: visible;
+        /* display: inline; */
+    }
+
+    #canvas0,
+    #canvas1,
+    #canvas2,
+    #canvas3,
+    #canvas7,
+    #canvas8,
+    #canvas9,
+    #canvas10 {
+        visibility: hidden;
+        /* display: none; */
+    }
+    /* end cloud canvas styling */
+
+     /* intro styling */
+    .nav {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .navLink {
         font-size: 16px;
     }
 
     #intro {
-        margin-bottom: 50px;
+        width: 70vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
     }
 
-    /* the wave styling */
-    #hokusai {
-        position: absolute;
-        bottom: -20vh;
-    }
-
-    
-    /* background images styling */
-    .cloud1 {
-        width: 100vw;
-        height: auto;
-        right: -20vw;
-        top: 20vh;
-    }
-
-    .cloud2 {
-        width: 100vw;
-        height: auto;
-        right: 50vw;
-        top: 60vh;
-    }
-
-    .grid {
-        z-index: -15;
-        right: 5vw;
-        top: 20vh;
-    }
-
-
-    /* work experience styling */
-    h4 {
-        font-size: 30px;
-        margin-bottom: -30px;
-    }
-
-    .places h5 {
-        margin-bottom: 5px;
-    }
-
-    .places a:link {
-        font-size: 38px;
-        font-weight: 400;
-    }
-
-    .places a:hover {
-        color: #FFEE9D;
-    }
-
-    .places h6 {
-        font-size: 16px;
-    }
-
-
-    /* work art styling */
-    .grid2 {
-        top: 130vh;
-    }
-
-    .gifaoru {
-        width: 55vw;
-        margin-right: -20vw;
-    }
-
-    /* footer styling */
-    .footer {
-        font-size: 16px;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-    h2 {
-        font-size: 60px;
-    }
-    
-    .workContent {
-        margin-top: 50px;
-    }
-
-    /* work experience styling */
-    h4 {
-        font-size: 35px;
-        margin-bottom: -30px;
-    }
-
-    .places h5 {
-        margin-bottom: 5px;
-    }
-
-    .places a:link {
-        font-size: 42px;
-        font-weight: 600;
-    }
-
-    .places a:hover {
-        color: #FFEE9D;
-    }
-
-    .places h6 {
-        font-size: 18px;
-    }
-
-    /* work art styling */
-
-    .gifaoru {
-        margin-right: -10vw;
-    }
-
-    /* portfolio links styling */
-    .moreStuff p {
-        font-size: 20px;
-    }
-    
-    .portfolio a:link {
-        font-size: 20px;
-    }
-}
-
-
-@media only screen and (min-width: 1200px) {
-    /* title styling */
-    .logo {
-        font-size: 30px;
-    }
-
-    .squareLogo {
-        width: 50px;
-    }
-
-    /* intro styling */
     h1 {
         font-size: 22px;
+        margin-top: 10vh;
     }
 
     h2 {
-        font-size: 70px;
+        font-size: 32px;
+        margin-bottom: 5vh;
     }
 
     h3 {
-        font-size:20px;
+        font-size: 18px;
+        width: 33vw;
     }
 
-    #text {
-        margin-right: 40vw;
+    /* svg writing animation styling */
+    .writing-animation {
+        gap: 2vw;
     }
 
-    /* work experience styling */
-    #work {
-        margin-top: 100px;
-    }
-
-    .workContent {
-        margin-top: 0;
-        margin-right: 5vw;
-    }
-
-    /* work art styling */
-    .grid2 {
-        width: 40vw;
-
-        right: 55vw;
-        top: 130vh;
-    }
-
-    .gifaoru {
-        display: none;
-    }
-
-    .gifaoru2 {
-        display: block;
-        width: 55vw;
+    #engineer {
+        width: 22vw;
         height: auto;
-        padding: 0;
-        margin-top: 100px;
+        padding-top: 24%;
+    }
+    
+    #designer {
+        width: 28vw;
+        height: auto;
+        padding-top: 25%;
+    }
+    
+    #artist {
+        width: 18vw;
+        height: auto;
+        padding-top: 25%;
+    }
+
+    .aboutMe {
+        font-size: 17px;
+        width: 45vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-top: 10vh;
+    }
+
+    .landscapeRyusuiCanvas {
+        margin-top: -150px;
+
+    }
+
+    .footer {
+        margin-top: -80px;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        font-size: 16px;
     }
 }
 
 
-@media only screen and (min-width: 1500px) {
-    /* intro styling */
-    h1 {
-        font-size: 25px;
-    }
 
-    h2 {
-        font-size: 80px;
-    }
 
-    h3 {
-        font-size:22px;
-    }
-
-    #text {
-        margin-right: 40vw;
-    }
-
-    /* work experience styling */
-    #work {
-        margin-top: 150px;
-    }
-
-    /* work art styling */
-    .gifaoru2 {
-        width: 50vw;
-        height: auto;
-    }
-}
