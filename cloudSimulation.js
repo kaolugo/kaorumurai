@@ -321,8 +321,6 @@ class Cloud {
         this.isMoving = false;
 
         this.initialPos = cloudData.initialPos;
-        console.log("this.initialPos", this.initialPos);
-        console.log("cloudData", cloudData);
 
         this.cloudX = 0;
         this.cloudY = 0;
@@ -431,7 +429,6 @@ class ResponsiveCanvas {
 
 
     resizeCanvas() {
-        console.log("resize fired");
         // save current canvas content to offscreen context
         this.offscreenCanvas.width = this.canvas.width;
         this.offscreenCanvas.height = this.canvas.height;
@@ -443,7 +440,6 @@ class ResponsiveCanvas {
     }
 
     clearCanvas() {
-        console.log("clear canvas fired");
         this.newCloud.pauseAnimation();
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
@@ -463,124 +459,4 @@ for (let i = 0; i < cloudPaths.length; i++) {
 
 responsiveCanvas.forEach((x) => {
     x.newCloud.startAnimation();
-})
-
-function startXSClouds() {
-    for (let i = 0; i < 4; i++) {
-        responsiveCanvas[i].newCloud.startAnimation();
-    }
-}
-
-function startSClouds() {
-    // starting clouds
-    for (let i = 4; i < 7; i++) {
-        responsiveCanvas[i].newCloud.startAnimation();
-    }
-}
-
-function startMLClouds() {
-    for (let i = 7; i < 11; i++) {
-        responsiveCanvas[i].newCloud.startAnimation();
-    }
-}
-
-function startXLClouds() {
-    for (let i = 11; i < 16; i++) {
-        responsiveCanvas[i].newCloud.startAnimation();
-    }
-}
-
-function pauseXSClouds() {
-    for (let i = 0; i < 4; i++) {
-        responsiveCanvas[i].newCloud.pauseAnimation();
-    }
-}
-
-function pauseSClouds() {
-    for (let i = 4; i < 7; i++) {
-        responsiveCanvas[i].newCloud.pauseAnimation();
-    }
-}
-
-function pauseMLClouds() {
-    for (let i = 7; i < 11; i++) {
-        responsiveCanvas[i].newCloud.pauseAnimation();
-    }
-}
-
-function pauseXLClouds() {
-    setTimeout(() => {responsiveCanvas[11].newCloud.startAnimation()}, 40000);
-    for (let i = 12; i < 16; i++) {
-        responsiveCanvas[i].newCloud.pauseAnimation();
-    }
-}
-
-function toggleClouds() {
-    console.log("toggling clouds");
-    if (window.innerWidth < 481) {
-        pauseSClouds();
-        pauseMLClouds();
-        pauseXLClouds();
-        startXSClouds();
-    } else if (window.innerWidth < 769) {
-        pauseXSClouds();
-        pauseMLClouds();
-        pauseXLClouds();
-        startSClouds();
-    } else if (window.innerWidth < 1201) {
-        pauseXSClouds();
-        pauseSClouds();
-        pauseXLClouds();
-        startMLClouds();
-    } else {
-        pauseXSClouds();
-        pauseSClouds();
-        pauseMLClouds();
-        startXLClouds();
-    }
-}
-
-
-// window.addEventListener('resize', () => toggleClouds());
-
-// addEventListener("DOMContentLoaded", () => {
-//     console.log("Content loaded");
-//     // toggleClouds();
-//     startSClouds();
-//     startXSClouds();
-//     startMLClouds();
-//     startXLClouds();
-// });
-
-
-
-// xs DONE
-// responsiveCanvas[0].newCloud.startAnimation();
-// responsiveCanvas[1].newCloud.startAnimation();
-// responsiveCanvas[2].newCloud.startAnimation();
-// responsiveCanvas[3].newCloud.startAnimation();
-
-// s DONE
-// + 6
-// responsiveCanvas[4].newCloud.startAnimation();
-// responsiveCanvas[5].newCloud.startAnimation();
-// responsiveCanvas[6].newCloud.startAnimation();
-
-// m & l DONE 
-// + 6 
-// responsiveCanvas[7].newCloud.startAnimation();
-// responsiveCanvas[8].newCloud.startAnimation();
-// responsiveCanvas[9].newCloud.startAnimation();
-// responsiveCanvas[10].newCloud.startAnimation();
-
-// xl　DONE
-// + 12
-// setTimeout(() => {responsiveCanvas[11].newCloud.startAnimation()}, 40000);
-// responsiveCanvas[12].newCloud.startAnimation(); // delay starts
-// responsiveCanvas[13].newCloud.startAnimation();
-// responsiveCanvas[14].newCloud.startAnimation();
-// responsiveCanvas[15].newCloud.startAnimation();
-
-
-
-
+});

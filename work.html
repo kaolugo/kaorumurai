@@ -241,10 +241,6 @@
 
 
         <script>
-            // const eng = document.getElementById("eng");
-            // const both = document.getElementById("both");
-            // const design = document.getElementById("design");
-
             const eng = document.getElementsByClassName("project eng");
             const both = document.getElementsByClassName("project both");
             const design = document.getElementsByClassName("project design");
@@ -256,8 +252,6 @@
 
 
             function showAllWork() {
-                console.log('all work')
-
                 engArray.forEach((card) => {
                     card.style.display = "inline";
                 });
@@ -266,17 +260,9 @@
                 });
 
                 last.style.display = "inline";
-                // both.forEach((card) )
-                // eng.style.display = "inline";
-                // design.style.display = "inline";
-                // both.style.display = "inline";
             }
 
             function showEngineeringWork() {
-                // console.log("eng work")
-                // eng.style.display = "inline";
-                // both.style.display = "inline";
-                // design.style.display = "none";
                 engArray.forEach((card) => {
                     card.style.display = "inline";
                 });
@@ -288,10 +274,6 @@
             }
 
             function showDesignWork() {
-                console.log("design")
-                // eng.style.display = "none";
-                // both.style.display = "inline";
-                // design.style.display = "inline";
                 engArray.forEach((card) => {
                     card.style.display = "none";
                 });
